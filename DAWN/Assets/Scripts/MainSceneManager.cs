@@ -5,12 +5,12 @@ public class MainSceneManager : MonoBehaviour
 {
     public void btn_Play() {
         // SceneManager.LoadScene("Cutscene0");
-        print("Game Start")  // Validating whether each buttons are working well or not by printing each sentence on the terminal
+        print("Game Start");  // Validating whether each buttons are working well or not by printing each sentence on the terminal
     }
 
     public void btn_Config() {
         // SceneManager.LoadScene("Setting");
-        print("Configuration")
+        print("Configuration");
     }
 
     public void btn_Quit() {
@@ -19,6 +19,6 @@ public class MainSceneManager : MonoBehaviour
 
     public void btn_MainScene() {
         // SceneManager.LoadScene("MainMenu");
-        print("Undefined for Now")
+        print("Undefined for Now");
     }
 }
