@@ -12,6 +12,11 @@ public class PlayerAction : MonoBehaviour
     private float _vertical;
     private bool _isHorizonMove; // Flag to determine if horizontal movement is prioritized
 
+    private float _raycastDistance = 1.5f;
+    private Vector2 _rayDirection;
+    public RaycastHit2D hit;
+    public Customer hitCustomer;
+
     // Components for Rigidbody2D and Animator
     private Rigidbody2D _rigid;
     private Animator _anim;
@@ -26,6 +31,13 @@ public class PlayerAction : MonoBehaviour
 
     void Update()
     {
+        // Update the direction of the ray based on player's movement
+        RotateRay();
+
+        // Generate and visualize the raycast in the scene
+        GenerateRay();
+
+
         // Get input values for horizontal and vertical axes
         _horizontal = Input.GetAxisRaw("Horizontal");
         _vertical = Input.GetAxisRaw("Vertical");
@@ -69,5 +81,40 @@ public class PlayerAction : MonoBehaviour
 
         // Apply velocity to the Rigidbody2D to move the player
         _rigid.velocity = moveVec * _speed;
+    }
+
+    // Method to generate a raycast for detecting objects in front of the player
+    public void GenerateRay()
+    {
+        // Cast a ray in the current direction (_rayDirection) to detect objects in the "Customer" layer
+        hit = Physics2D.Raycast(transform.position, _rayDirection, _raycastDistance, LayerMask.GetMask("Customer"));
+
+        // Visualize the raycast in the Scene view using a green line
+        Debug.DrawLine(transform.position, (Vector2)transform.position + _rayDirection * _raycastDistance, Color.green);
+    }
+
+    // Method to update the direction of the ray based on player's movement input
+    public void RotateRay()
+    {
+        // Get the current velocity of the player from the Rigidbody2D
+        Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
+
+        // Determine the ray direction based on player's movement input
+        if (_horizontal > 0f)
+        {
+            _rayDirection = Vector2.right; // Ray points to the right
+        }
+        else if (_horizontal < 0f)
+        {
+            _rayDirection = Vector2.left; // Ray points to the left
+        }
+        else if (_vertical > 0f)
+        {
+            _rayDirection = Vector2.up; // Ray points upwards
+        }
+        else if (_vertical < 0f)
+        {
+            _rayDirection = Vector2.down; // Ray points downwards
+        }
     }
 }
