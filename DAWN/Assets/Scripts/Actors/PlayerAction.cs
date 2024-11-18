@@ -12,10 +12,11 @@ public class PlayerAction : MonoBehaviour
     private float _vertical;
     private bool _isHorizonMove; // Flag to determine if horizontal movement is prioritized
 
-    private float _raycastDistance = 1.5f;
-    private Vector2 _rayDirection;
-    public RaycastHit2D hit;
-    public Customer hitCustomer;
+    // Raycasting-related variables
+    private float _raycastDistance = 1.5f; // The distance the raycast will cover to detect objects
+    private Vector2 _rayDirection; // The direction in which the ray is cast
+    public RaycastHit2D hit; // Holds information about the object hit by the ray
+    public Customer hitCustomer; // Reference to the detected customer object, if any
 
     // Components for Rigidbody2D and Animator
     private Rigidbody2D _rigid;
