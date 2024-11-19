@@ -2,39 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    /*public Queue<MenuSO> menuQueue = new Queue<MenuSO>(8);*/
+    public Queue<MenuSO> menuQueue = new Queue<MenuSO>(8);
     public Queue<GameObject> readyQueue = new Queue<GameObject>(8);
     public GameObject[] completeFood = new GameObject[5];
     public GameObject[] cookingFood = new GameObject[2];
-    /*public MenuSO servingMenu;*/
+    public MenuSO servingMenu;
     private PlayerAction playerAction;
-    // public PlayerStateMachine playerStateMachine;
+    public PlayerStateMachine playerStateMachine;
     public bool isServing { get; private set; }
     [SerializeField] private GameObject servingObject;
 
-    public void StartServing(/*MenuSO servingMenu*/)
+    public void StartServing(MenuSO servingMenu)
     {
-        // This will be filled after MenuSO is implemented.
+        this.servingMenu = servingMenu;
+        DisplayServedFood(this.servingMenu, true);
+        isServing = true;
     }
 
-    public void EndServing(/*MenuSO servingMenu*/)
+    public void EndServing(MenuSO servingMenu)
     {
-        // This will be filled after MenuSO is implemented.
+        this.servingMenu = null;
+        DisplayServedFood(this.servingMenu, true);
+        isServing = false;
     }
 
-    public void DisplayServedFood(/*MenuSO servingMenu,*/ bool isDisplay)
+    public void DisplayServedFood(MenuSO servingMenu, bool isDisplay)
     {
-        // This will be filled after MenuSO is implemented.
+        if (isDisplay)
+        {
+            playerStateMachine.TransitionTo(playerStateMachine.servingState);
+            servingObject.GetComponent<SpriteRenderer>().sprite = servingMenu.GetSprite();
+        }
+        else
+        {
+            playerStateMachine.TransitionTo(playerStateMachine.waitingState);
+            servingObject.GetComponent<SpriteRenderer>().sprite = null;
+            servingMenu = null;
+        }
     }
     
     private void Start()
     {
         playerAction = GetComponent<PlayerAction>();
-        // PlayerStateMachine.Init()?;
+        playerStateMachine.Initialize();
+        isServing = false;
     }
 
     private void Update()
@@ -51,8 +67,8 @@ public class PlayerController : MonoBehaviour
 
     private void Throwaway()    // This function will be changed as "Eat" later
     {
-        DisplayServedFood(/*servingMenu,*/ false);
-        // servingMenu = null;
+        DisplayServedFood(servingMenu, false);
+        servingMenu = null;
         isServing = false;
     }
 }
