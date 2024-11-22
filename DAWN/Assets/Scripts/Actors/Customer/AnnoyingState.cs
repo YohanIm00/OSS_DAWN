@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AggressiveState : CustomerState
+public class AnnoyingState : CustomerState
 {
     public override void Enter()
     {

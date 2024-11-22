@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuWaitingState : CustomerState
+public class OrderingState : CustomerState
 {
     public override void Enter()
     {
