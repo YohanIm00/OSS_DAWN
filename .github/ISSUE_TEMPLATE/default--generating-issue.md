@@ -9,7 +9,7 @@ assignees: ''
 
 <!--- 
 ❗️ check List 
-- Reviewrs?
+- Reviewers?
 - Assignee?
 - Labels?
 
