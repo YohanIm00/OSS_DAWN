@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd18871b6ec33d94f9849c51f5609cb5
+guid: c21a807d5701318469deaa3046489a10
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,7 +149,259 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_0
+      name: Customer2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd1cf8329d8cf84d82362b83dfa2a9b
+      internalID: -1963329278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d2b1c5a47aacd4aacbe872d5c81770
+      internalID: -580927265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a4ed4711ff8ac4aa89264de147f610
+      internalID: -1422916506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0646033f284b1cd468224de3e2b6201d
+      internalID: -878213534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363c2d2c6baae374cbe8562380ecda61
+      internalID: 465118661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882a3a3b57ac15c40b987686b6f75a80
+      internalID: 291266782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8588efe01dd98140ad68e0f1ea4e3d8
+      internalID: -2079921162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1cec93933e1e3045a59731ba7b128cc
+      internalID: 1699454212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d0d267cd61acd4caba1ba5789f5df2
+      internalID: 5758576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b21a68bbe6b1741968269b9a009921
+      internalID: 113886762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a78690e8f011de4eb4f50a8068350e4
+      internalID: 897258207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9f2bc142cea9d4baad9dc622387438
+      internalID: 469154780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer2_12
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d6b9df90acabcf4983c4b134ea1f991
-      internalID: -1675846178
+      spriteID: 9ecda8e7f4117fa4ba19a7fc298772e9
+      internalID: 1450087351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_1
+      name: Customer2_13
       rect:
         serializedVersion: 2
         x: 17
@@ -184,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0f5470b5a39a9e4396b079e347d05a3
-      internalID: 150914778
+      spriteID: 4684b8da44e7cd2408f8d42685f419ba
+      internalID: 1020263944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_2
+      name: Customer2_14
       rect:
         serializedVersion: 2
         x: 34
@@ -205,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c44ce7ac9aef1274fa716f6e0dfa51f8
-      internalID: 594726038
+      spriteID: 05ebc2f19d650cb469d88448f0a0d283
+      internalID: -1180574136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_3
+      name: Customer2_15
       rect:
         serializedVersion: 2
         x: 51
@@ -226,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32430543c360aff46a9dd68c790b2133
-      internalID: 553880914
+      spriteID: b0d5e5caf8d20454f9bdaa9bc8f9f6ae
+      internalID: -304063073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_4
+      name: Customer2_16
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6324bd9fee8aa5a49abe2a0939865227
-      internalID: 122983542
+      spriteID: 7d1a85131be665b43930f70300898944
+      internalID: -883654387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_5
+      name: Customer2_17
       rect:
         serializedVersion: 2
         x: 17
@@ -268,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a0fe6deffa6f194c9f2ed213cce2b25
-      internalID: -425470793
+      spriteID: 9a56eaf371121b841abde651f3a33e1d
+      internalID: 776509888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_6
+      name: Customer2_18
       rect:
         serializedVersion: 2
         x: 34
@@ -289,14 +541,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fee50ffbe6abb64f8ca91d699999b1c
-      internalID: 9875488
+      spriteID: 5f6ce37387b43ce41b888cba5f3f8bba
+      internalID: 739700225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_7
+      name: Customer2_19
       rect:
         serializedVersion: 2
         x: 51
@@ -310,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41fc3dc33ccf6954393273a39bc6adf4
-      internalID: 903380433
+      spriteID: ec8afc0845b01f548a1796b436c7ea17
+      internalID: 1869313161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_8
+      name: Customer2_20
       rect:
         serializedVersion: 2
         x: 0
@@ -331,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c17d00e2ab02cf043b0e1a7f1273b5c7
-      internalID: -229422808
+      spriteID: a9b96848a4aa0c84a99d59e4a68e69bf
+      internalID: 1159221200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_9
+      name: Customer2_21
       rect:
         serializedVersion: 2
         x: 17
@@ -352,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fde1f43b26931a44be333e11a46873a
-      internalID: 3905467
+      spriteID: 999a929f3b91657469398f06dd676f8d
+      internalID: 128261141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_10
+      name: Customer2_22
       rect:
         serializedVersion: 2
         x: 34
@@ -373,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94c6b8481a314d048aaea476697a05a9
-      internalID: -2105944406
+      spriteID: 12c9be952a4613a43a36a093b55f9d9e
+      internalID: -707464517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_11
+      name: Customer2_23
       rect:
         serializedVersion: 2
         x: 51
@@ -394,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52bc80336e2f7ee44a5ab4ce0f9bb6b2
-      internalID: -1632059261
+      spriteID: 019a96558489ef840a0368b8a0e7995d
+      internalID: -1521508558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_12
+      name: Customer2_24
       rect:
         serializedVersion: 2
         x: 0
@@ -415,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cd0d233feadf8f4fab2f97515ec95de
-      internalID: 1127226142
+      spriteID: 7c4da7b2ea212c742854165196434f33
+      internalID: 72967934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_13
+      name: Customer2_25
       rect:
         serializedVersion: 2
         x: 17
@@ -436,14 +688,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baf7ba92d6fdec84e882094d7daa5889
-      internalID: -2103303405
+      spriteID: 3bd63e0ee4b185e4c88389ded526e177
+      internalID: -1974222680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_14
+      name: Customer2_26
       rect:
         serializedVersion: 2
         x: 34
@@ -457,14 +709,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c19dbcfddfa397045a9ad95ef16173af
-      internalID: 1921851143
+      spriteID: 4a7c9607a967c3641ab06ff7766f8a31
+      internalID: 1705858060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Provang_Sprite_15
+      name: Customer2_27
       rect:
         serializedVersion: 2
         x: 51
@@ -478,8 +730,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 172e8993db7417544a834753897e03fe
-      internalID: -1210799028
+      spriteID: c896ee036433ee848b1a62b03b892ee0
+      internalID: -1597523311
       vertices: []
       indices: 
       edges: []
@@ -495,22 +747,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Customer_Provang_Sprite_0: -1675846178
-      Customer_Provang_Sprite_1: 150914778
-      Customer_Provang_Sprite_10: -2105944406
-      Customer_Provang_Sprite_11: -1632059261
-      Customer_Provang_Sprite_12: 1127226142
-      Customer_Provang_Sprite_13: -2103303405
-      Customer_Provang_Sprite_14: 1921851143
-      Customer_Provang_Sprite_15: -1210799028
-      Customer_Provang_Sprite_2: 594726038
-      Customer_Provang_Sprite_3: 553880914
-      Customer_Provang_Sprite_4: 122983542
-      Customer_Provang_Sprite_5: -425470793
-      Customer_Provang_Sprite_6: 9875488
-      Customer_Provang_Sprite_7: 903380433
-      Customer_Provang_Sprite_8: -229422808
-      Customer_Provang_Sprite_9: 3905467
+      Customer2_0: -1963329278
+      Customer2_1: -580927265
+      Customer2_10: 897258207
+      Customer2_11: 469154780
+      Customer2_12: 1450087351
+      Customer2_13: 1020263944
+      Customer2_14: -1180574136
+      Customer2_15: -304063073
+      Customer2_16: -883654387
+      Customer2_17: 776509888
+      Customer2_18: 739700225
+      Customer2_19: 1869313161
+      Customer2_2: -1422916506
+      Customer2_20: 1159221200
+      Customer2_21: 128261141
+      Customer2_22: -707464517
+      Customer2_23: -1521508558
+      Customer2_24: 72967934
+      Customer2_25: -1974222680
+      Customer2_26: 1705858060
+      Customer2_27: -1597523311
+      Customer2_3: -878213534
+      Customer2_4: 465118661
+      Customer2_5: 291266782
+      Customer2_6: -2079921162
+      Customer2_7: 1699454212
+      Customer2_8: 5758576
+      Customer2_9: 113886762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

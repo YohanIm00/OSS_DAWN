@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40e46f0aad02e004d87c673b8661c3d0
+guid: be105cfc90ed2db40b795eb306f0267e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,7 +149,259 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_0
+      name: Customer_Serika_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43caab0dd8a9824ea5419c71fb17da8
+      internalID: 828001718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebb7bb53d7e7db4ba919bdc18f9fff2
+      internalID: 1854297128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fc4b9b609881b4a8a013243e17ca76
+      internalID: -652312215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7d6ef868244a549ab1731b3707b224
+      internalID: -1774839722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ff6d0fca9a0e9489486c049034a088
+      internalID: -239000648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2e1d9cd550aca44a91b1d062c32116
+      internalID: -547196749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cb3c2336860fe4086adc6734df202c
+      internalID: 1325084598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc6b97c5776a234491ac40d63e17a95
+      internalID: 1832707759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27cc7774bf57bea4a86d1d3fa47e2dcd
+      internalID: 1637892545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56979f22a4b3c4c43b8bd222b6271b0b
+      internalID: 1693397319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eece804c1424af84b8d39f47dbf4d22e
+      internalID: 1306302301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9250474a98ab045ac5ca5f83fb3591
+      internalID: -416049810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Serika_12
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c65fbb0f7d4aa5e4784edaa70d8c72c4
-      internalID: -700249768
+      spriteID: 3775f525b0bd03d4b80245345ab50447
+      internalID: 1450972126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_1
+      name: Customer_Serika_13
       rect:
         serializedVersion: 2
         x: 17
@@ -184,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7882d21523288454bba77f9a574f845d
-      internalID: 1914002915
+      spriteID: 0f79d79b99f2ed54d840afdc17ca2b76
+      internalID: -485516855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_2
+      name: Customer_Serika_14
       rect:
         serializedVersion: 2
         x: 34
@@ -205,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66c2606626a2e2842824aea80ddac0fb
-      internalID: 1766088982
+      spriteID: 1f8db53bbe6c3fd4b9b842d797b67b35
+      internalID: 214470648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_3
+      name: Customer_Serika_15
       rect:
         serializedVersion: 2
         x: 51
@@ -226,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd6d733c6db16564fb3a17fe753e57f3
-      internalID: 843579262
+      spriteID: d766e608e7a91fd429231c284a29590d
+      internalID: 662109553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_4
+      name: Customer_Serika_16
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 146a644c51b987b4a8a5b841bae937f8
-      internalID: -1598248095
+      spriteID: 1b18630dfc9ea3643bd8c2c9c6599374
+      internalID: -1458985847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_5
+      name: Customer_Serika_17
       rect:
         serializedVersion: 2
         x: 17
@@ -268,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f599c79285be894082ec01232ecd056
-      internalID: -1558656479
+      spriteID: 662b242362227df4ea5777b842648585
+      internalID: 1799599146
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_6
+      name: Customer_Serika_18
       rect:
         serializedVersion: 2
         x: 34
@@ -289,14 +541,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48907089a798bab4ab861ccbccfdce71
-      internalID: -620683120
+      spriteID: 4e3c6e4232b1b8a4f8bdfe4c3d415f87
+      internalID: 1341967015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_7
+      name: Customer_Serika_19
       rect:
         serializedVersion: 2
         x: 51
@@ -310,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3481dc2f4c35dd9459a6b89f241218f0
-      internalID: -241632024
+      spriteID: 4d0c89b3466ecf74f91f917dcfa876c5
+      internalID: 958337487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_8
+      name: Customer_Serika_20
       rect:
         serializedVersion: 2
         x: 0
@@ -331,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c7e4d5dafdbd84408a101f2961dc8d2
-      internalID: -661198903
+      spriteID: 2ad554a3fd8bbac449cb267a5cced34c
+      internalID: 710251380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_9
+      name: Customer_Serika_21
       rect:
         serializedVersion: 2
         x: 17
@@ -352,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1542f25023a6c945b016207cd28b414
-      internalID: 22123238
+      spriteID: 649b5c87b7edc694c9b1f2dd9866b300
+      internalID: -2080019328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_10
+      name: Customer_Serika_22
       rect:
         serializedVersion: 2
         x: 34
@@ -373,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eb1539402717e542953704253805bd3
-      internalID: 1575522954
+      spriteID: d8e36d9f5f206e047aee80dcedf13ebf
+      internalID: -1123057455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_11
+      name: Customer_Serika_23
       rect:
         serializedVersion: 2
         x: 51
@@ -394,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd7d9847781878b43bb8fd9b8ab94bee
-      internalID: 2092373287
+      spriteID: 4cb41df0a6d51b549907ce788882349b
+      internalID: -1264322021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_12
+      name: Customer_Serika_24
       rect:
         serializedVersion: 2
         x: 0
@@ -415,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abb5024c1a2368b4f94f81e7adfe2b02
-      internalID: 113006418
+      spriteID: 377905b02df04c54596e53b22e0b68af
+      internalID: -1401029082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_13
+      name: Customer_Serika_25
       rect:
         serializedVersion: 2
         x: 17
@@ -436,14 +688,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46d104bf4bd35ad41adbcdca8b3f489a
-      internalID: -563328075
+      spriteID: ad436ae807ff2164f8020fb7601372d7
+      internalID: -215924617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_14
+      name: Customer_Serika_26
       rect:
         serializedVersion: 2
         x: 34
@@ -457,14 +709,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7abd210910c40924aac4cc42090915f2
-      internalID: -1700530776
+      spriteID: e6667abaab260a94480ace09bf0988cd
+      internalID: 1450224547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer_Serika_Sprite_15
+      name: Customer_Serika_27
       rect:
         serializedVersion: 2
         x: 51
@@ -478,8 +730,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d798c42c76dbd1644a96cbcb219ea97a
-      internalID: -137902584
+      spriteID: 197e3e3ae5fea4d4b8e6e05b141b046f
+      internalID: 2121426685
       vertices: []
       indices: 
       edges: []
@@ -495,22 +747,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Customer_Serika_Sprite_0: -700249768
-      Customer_Serika_Sprite_1: 1914002915
-      Customer_Serika_Sprite_10: 1575522954
-      Customer_Serika_Sprite_11: 2092373287
-      Customer_Serika_Sprite_12: 113006418
-      Customer_Serika_Sprite_13: -563328075
-      Customer_Serika_Sprite_14: -1700530776
-      Customer_Serika_Sprite_15: -137902584
-      Customer_Serika_Sprite_2: 1766088982
-      Customer_Serika_Sprite_3: 843579262
-      Customer_Serika_Sprite_4: -1598248095
-      Customer_Serika_Sprite_5: -1558656479
-      Customer_Serika_Sprite_6: -620683120
-      Customer_Serika_Sprite_7: -241632024
-      Customer_Serika_Sprite_8: -661198903
-      Customer_Serika_Sprite_9: 22123238
+      Customer_Serika_0: 828001718
+      Customer_Serika_1: 1854297128
+      Customer_Serika_10: 1306302301
+      Customer_Serika_11: -416049810
+      Customer_Serika_12: 1450972126
+      Customer_Serika_13: -485516855
+      Customer_Serika_14: 214470648
+      Customer_Serika_15: 662109553
+      Customer_Serika_16: -1458985847
+      Customer_Serika_17: 1799599146
+      Customer_Serika_18: 1341967015
+      Customer_Serika_19: 958337487
+      Customer_Serika_2: -652312215
+      Customer_Serika_20: 710251380
+      Customer_Serika_21: -2080019328
+      Customer_Serika_22: -1123057455
+      Customer_Serika_23: -1264322021
+      Customer_Serika_24: -1401029082
+      Customer_Serika_25: -215924617
+      Customer_Serika_26: 1450224547
+      Customer_Serika_27: 2121426685
+      Customer_Serika_3: -1774839722
+      Customer_Serika_4: -239000648
+      Customer_Serika_5: -547196749
+      Customer_Serika_6: 1325084598
+      Customer_Serika_7: 1832707759
+      Customer_Serika_8: 1637892545
+      Customer_Serika_9: 1693397319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

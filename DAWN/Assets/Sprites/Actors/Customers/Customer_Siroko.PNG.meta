@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1dd625f5abd406d4f8efefbb722a8f49
+guid: 0d3ade8ac54742e4b80fc73804880a9d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,7 +149,259 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Customer3_Sprite_0
+      name: Customer_Siroko_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ab6b6cc78bdac4187d3e9e8bf03d15
+      internalID: -459018364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e401e889f9babe45b882ed075ba246d
+      internalID: 1869200273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a947193f900c0a74785b5477cb1a3828
+      internalID: 1051044996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1612075381a95d4ca1d833031d6e3a8
+      internalID: -213875346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae088321e723e547a02f3765e59a09e
+      internalID: 351790653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f9b665dc21dd044b9622a152e2b57d
+      internalID: 1972742935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bb3671104c53447809e4423a0c9523
+      internalID: 1783073180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6a13bea34329540aa40c01707ecb7c
+      internalID: -1589917507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8ce942f859fce45814dbdde6a37d0b
+      internalID: -1199022680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a510eabb063ee8348af0ad4152448046
+      internalID: 1045301087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953bf3ff009a18d4ba34740caf88f568
+      internalID: -1577326440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09ce030ad44ffb488bd189c48f8f77a
+      internalID: -1285718931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Siroko_12
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c093945ba509544e86933e6abd13d64
-      internalID: -613558631
+      spriteID: 3ee2f2ef401a46d4f8cd28ea989b92af
+      internalID: -1330697087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_1
+      name: Customer_Siroko_13
       rect:
         serializedVersion: 2
         x: 17
@@ -184,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f55fc24b4110b8246aae3c0be8aeac66
-      internalID: 1469107351
+      spriteID: fd1c4a455c63eec40b211d2b0ad0379d
+      internalID: 1939529846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_2
+      name: Customer_Siroko_14
       rect:
         serializedVersion: 2
         x: 34
@@ -205,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75bbd03bfdf94684b98e207ff9ea2db0
-      internalID: 1002081580
+      spriteID: 2a5bc726944d47c42856237c71b84170
+      internalID: 543499846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_3
+      name: Customer_Siroko_15
       rect:
         serializedVersion: 2
         x: 51
@@ -226,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 368e1226a8682074b9138b5ddd979a1a
-      internalID: 1894777815
+      spriteID: 52a18d9f655a2af4a8b32fcd90fe39e2
+      internalID: -1933274044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_4
+      name: Customer_Siroko_16
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56b4c1aa2b679764cae1e7940afc11db
-      internalID: -1401686977
+      spriteID: a717fecdfe8f41343a4d074d7968ba8c
+      internalID: -204211515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_5
+      name: Customer_Siroko_17
       rect:
         serializedVersion: 2
         x: 17
@@ -268,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5789a97030b894446b366d12cf9e9ab9
-      internalID: -1218137936
+      spriteID: 73ca41003ed5aba4288a8c4fd52157f0
+      internalID: 963093983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_6
+      name: Customer_Siroko_18
       rect:
         serializedVersion: 2
         x: 34
@@ -289,14 +541,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a923aa5cf84e0254fafbbe2e33b62b17
-      internalID: 1807099053
+      spriteID: 72c462036bc33004699051784d3261f7
+      internalID: -1392189657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_7
+      name: Customer_Siroko_19
       rect:
         serializedVersion: 2
         x: 51
@@ -310,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b2e3bf0f43bdd44c94a0f5e970997a5
-      internalID: 888755313
+      spriteID: 4c3d537743d3ced469eaed33ffb16e80
+      internalID: -405526367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_8
+      name: Customer_Siroko_20
       rect:
         serializedVersion: 2
         x: 0
@@ -331,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e36b0ec8809056a4c97824f166081ccb
-      internalID: -1234064860
+      spriteID: 5e64097270eca464e8527714a14a1cf8
+      internalID: 1121196282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_9
+      name: Customer_Siroko_21
       rect:
         serializedVersion: 2
         x: 17
@@ -352,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faf8c88181195344e89c169951cd6be1
-      internalID: -2120279064
+      spriteID: b63a240f63713e748973d353801971aa
+      internalID: 281777649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_10
+      name: Customer_Siroko_22
       rect:
         serializedVersion: 2
         x: 34
@@ -373,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf307d27d67f30749ba7b470822277a1
-      internalID: 494566956
+      spriteID: ebf693049be28b34c8ebf9e965315b4a
+      internalID: -1468017467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_11
+      name: Customer_Siroko_23
       rect:
         serializedVersion: 2
         x: 51
@@ -394,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd14fad43bbabe944ace3ab8bcc817f2
-      internalID: 92028032
+      spriteID: 97d3a0fda99896646a8a692a9b87b4b1
+      internalID: 308433448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_12
+      name: Customer_Siroko_24
       rect:
         serializedVersion: 2
         x: 0
@@ -415,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee44804d5edb27e40bbe1ffae71741b4
-      internalID: 1857425349
+      spriteID: 756d5586cb3c58a4899e2286ffd8e6c9
+      internalID: 1284011944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_13
+      name: Customer_Siroko_25
       rect:
         serializedVersion: 2
         x: 17
@@ -436,14 +688,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5825d82c4b2fb62418af1df6d5719acc
-      internalID: -11493395
+      spriteID: 00cda46bdb180ce4ea88837dbf4caaf9
+      internalID: -770765520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_14
+      name: Customer_Siroko_26
       rect:
         serializedVersion: 2
         x: 34
@@ -457,14 +709,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ce9ff2502eafe942b584c4de8d31401
-      internalID: 610983822
+      spriteID: d544e322e98d57d46a910ba782a912d4
+      internalID: 684802321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer3_Sprite_15
+      name: Customer_Siroko_27
       rect:
         serializedVersion: 2
         x: 51
@@ -478,8 +730,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eca765334b30b6242a4876ff3507e227
-      internalID: -1761676213
+      spriteID: bc16305381aa6b2448b4ace6ce09139b
+      internalID: -191194289
       vertices: []
       indices: 
       edges: []
@@ -495,22 +747,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Customer3_Sprite_0: -613558631
-      Customer3_Sprite_1: 1469107351
-      Customer3_Sprite_10: 494566956
-      Customer3_Sprite_11: 92028032
-      Customer3_Sprite_12: 1857425349
-      Customer3_Sprite_13: -11493395
-      Customer3_Sprite_14: 610983822
-      Customer3_Sprite_15: -1761676213
-      Customer3_Sprite_2: 1002081580
-      Customer3_Sprite_3: 1894777815
-      Customer3_Sprite_4: -1401686977
-      Customer3_Sprite_5: -1218137936
-      Customer3_Sprite_6: 1807099053
-      Customer3_Sprite_7: 888755313
-      Customer3_Sprite_8: -1234064860
-      Customer3_Sprite_9: -2120279064
+      Customer_Siroko_0: -459018364
+      Customer_Siroko_1: 1869200273
+      Customer_Siroko_10: -1577326440
+      Customer_Siroko_11: -1285718931
+      Customer_Siroko_12: -1330697087
+      Customer_Siroko_13: 1939529846
+      Customer_Siroko_14: 543499846
+      Customer_Siroko_15: -1933274044
+      Customer_Siroko_16: -204211515
+      Customer_Siroko_17: 963093983
+      Customer_Siroko_18: -1392189657
+      Customer_Siroko_19: -405526367
+      Customer_Siroko_2: 1051044996
+      Customer_Siroko_20: 1121196282
+      Customer_Siroko_21: 281777649
+      Customer_Siroko_22: -1468017467
+      Customer_Siroko_23: 308433448
+      Customer_Siroko_24: 1284011944
+      Customer_Siroko_25: -770765520
+      Customer_Siroko_26: 684802321
+      Customer_Siroko_27: -191194289
+      Customer_Siroko_3: -213875346
+      Customer_Siroko_4: 351790653
+      Customer_Siroko_5: 1972742935
+      Customer_Siroko_6: 1783073180
+      Customer_Siroko_7: -1589917507
+      Customer_Siroko_8: -1199022680
+      Customer_Siroko_9: 1045301087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

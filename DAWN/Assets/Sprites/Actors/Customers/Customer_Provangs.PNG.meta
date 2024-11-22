@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7e8dc99ea53c98e4bb4fde459befd23e
+guid: a61279bf0168d3a4ebf7126f754e0a6c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,7 +149,259 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Custromer_Shiroko_0
+      name: Customer_Provangs_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b91b3af9f099949ab745cf216b26dd
+      internalID: -521053708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6faa823ed3dbada4aa370c3d8cf7aadd
+      internalID: -1721606495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3ca29eec208df41b482b44d5f39cf3
+      internalID: 1133410525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751f47cb76b7c894fa4c6fb0e69b3407
+      internalID: 308166649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd71f1301e2ff73429dc0f97e8ec2c25
+      internalID: -241975882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fa5ab929e79484da86b87d72b39633
+      internalID: -430007452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e00a55233c5f304e830dcea4184d278
+      internalID: -1565723206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794e9a410c75ef84c96c30f9a8adcc31
+      internalID: -30684835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed582577d5a56242ab5936dc47ad3ab
+      internalID: -1917479529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df365e11765f70541a71b3415b583e3e
+      internalID: 780343278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813803c20b7d10c4f81e1a280f158851
+      internalID: -2095743413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1055016b127d54e9f1df1aa5eff049
+      internalID: -375164478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Provangs_12
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95a428b33c2599646ab63c10439f2f66
-      internalID: 621041596
+      spriteID: 480b41b26f565634d8ea62b28b822972
+      internalID: -1127717165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_1
+      name: Customer_Provangs_13
       rect:
         serializedVersion: 2
         x: 17
@@ -184,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c3ceb9e51bfa2a4495a5dae4c8b5b60
-      internalID: 1230814520
+      spriteID: 6d86eb171ef73a94fb95b51902456ba3
+      internalID: -262008132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_2
+      name: Customer_Provangs_14
       rect:
         serializedVersion: 2
         x: 34
@@ -205,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43705edbb1b540c44b0da49cbb6c9c19
-      internalID: -804192288
+      spriteID: 7769fcb5a7708fa4aaddb4d87970ff2b
+      internalID: 563487036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_3
+      name: Customer_Provangs_15
       rect:
         serializedVersion: 2
         x: 51
@@ -226,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32d1b1764bfa082419e1eee0ccbff93e
-      internalID: -1005461182
+      spriteID: d4877c27d2f10c346aa10e26af07c7e4
+      internalID: 951221328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_4
+      name: Customer_Provangs_16
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aceb29945d4e4944adf51229bc5bd74
-      internalID: -237020935
+      spriteID: 89c44060247a7764eaf87800cdc12820
+      internalID: 101989296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_5
+      name: Customer_Provangs_17
       rect:
         serializedVersion: 2
         x: 17
@@ -268,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39058b2c0da4a4b448e754648e9ba207
-      internalID: -111253605
+      spriteID: 37468f54638b04c49b2846e85f3b0935
+      internalID: -323347151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_6
+      name: Customer_Provangs_18
       rect:
         serializedVersion: 2
         x: 34
@@ -289,14 +541,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b4ac548440e5824b8c64e714b3b947d
-      internalID: -218083450
+      spriteID: 56ea21b534150eb439ade44318bff4c5
+      internalID: 2092738516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_7
+      name: Customer_Provangs_19
       rect:
         serializedVersion: 2
         x: 51
@@ -310,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56677a24cb15a544e8b571ede18deac1
-      internalID: 1294401685
+      spriteID: fcba8fec25213bd49913a03257213997
+      internalID: -1756592575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_8
+      name: Customer_Provangs_20
       rect:
         serializedVersion: 2
         x: 0
@@ -331,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3d4866ff8f17444d8a470d2877cd078
-      internalID: -1970365579
+      spriteID: 7cb8c0f9e5bb17045b903ebfffedc6f7
+      internalID: 546983515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_9
+      name: Customer_Provangs_21
       rect:
         serializedVersion: 2
         x: 17
@@ -352,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54414fff384d07648974cea67f89ae79
-      internalID: 1820614381
+      spriteID: 8dd7ac3cce68c874495a222188a87633
+      internalID: 1612201688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_10
+      name: Customer_Provangs_22
       rect:
         serializedVersion: 2
         x: 34
@@ -373,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58182566a8646174b9416a1ef8ce8a26
-      internalID: 1274122699
+      spriteID: 055b20db76a66c740b976ef9ccce4310
+      internalID: -36171341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_11
+      name: Customer_Provangs_23
       rect:
         serializedVersion: 2
         x: 51
@@ -394,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64361d58f49ff8c4e95e272d38651a6c
-      internalID: 418036148
+      spriteID: 83e24884e7b88d84cbbc19d5ca27ab47
+      internalID: 1075077638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_12
+      name: Customer_Provangs_24
       rect:
         serializedVersion: 2
         x: 0
@@ -415,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1db54af02663efe45b1dec25a2c49e54
-      internalID: 694594724
+      spriteID: 5cb2dd50be7b37f41b2454fa885dd163
+      internalID: 195028415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_13
+      name: Customer_Provangs_25
       rect:
         serializedVersion: 2
         x: 17
@@ -436,14 +688,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0846acf25bc82d44b7d9f1bbcf059f9
-      internalID: 1830245393
+      spriteID: a5fbba385d0ab124c971e985df58d557
+      internalID: -2101781082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_14
+      name: Customer_Provangs_26
       rect:
         serializedVersion: 2
         x: 34
@@ -457,14 +709,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6058fc86b4c1f03449dbc6ee465d46ce
-      internalID: 70168245
+      spriteID: 6edd6c0b36b8fc44cbace24dc967bac1
+      internalID: -805202355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Custromer_Shiroko_15
+      name: Customer_Provangs_27
       rect:
         serializedVersion: 2
         x: 51
@@ -478,8 +730,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31c7cd886d66e0141bb7d326648629d9
-      internalID: -1438437846
+      spriteID: c62873c61ad360d4ca15b26651525085
+      internalID: -773139836
       vertices: []
       indices: 
       edges: []
@@ -495,22 +747,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Custromer_Shiroko_0: 621041596
-      Custromer_Shiroko_1: 1230814520
-      Custromer_Shiroko_10: 1274122699
-      Custromer_Shiroko_11: 418036148
-      Custromer_Shiroko_12: 694594724
-      Custromer_Shiroko_13: 1830245393
-      Custromer_Shiroko_14: 70168245
-      Custromer_Shiroko_15: -1438437846
-      Custromer_Shiroko_2: -804192288
-      Custromer_Shiroko_3: -1005461182
-      Custromer_Shiroko_4: -237020935
-      Custromer_Shiroko_5: -111253605
-      Custromer_Shiroko_6: -218083450
-      Custromer_Shiroko_7: 1294401685
-      Custromer_Shiroko_8: -1970365579
-      Custromer_Shiroko_9: 1820614381
+      Customer_Provangs_0: -521053708
+      Customer_Provangs_1: -1721606495
+      Customer_Provangs_10: -2095743413
+      Customer_Provangs_11: -375164478
+      Customer_Provangs_12: -1127717165
+      Customer_Provangs_13: -262008132
+      Customer_Provangs_14: 563487036
+      Customer_Provangs_15: 951221328
+      Customer_Provangs_16: 101989296
+      Customer_Provangs_17: -323347151
+      Customer_Provangs_18: 2092738516
+      Customer_Provangs_19: -1756592575
+      Customer_Provangs_2: 1133410525
+      Customer_Provangs_20: 546983515
+      Customer_Provangs_21: 1612201688
+      Customer_Provangs_22: -36171341
+      Customer_Provangs_23: 1075077638
+      Customer_Provangs_24: 195028415
+      Customer_Provangs_25: -2101781082
+      Customer_Provangs_26: -805202355
+      Customer_Provangs_27: -773139836
+      Customer_Provangs_3: 308166649
+      Customer_Provangs_4: -241975882
+      Customer_Provangs_5: -430007452
+      Customer_Provangs_6: -1565723206
+      Customer_Provangs_7: -30684835
+      Customer_Provangs_8: -1917479529
+      Customer_Provangs_9: 780343278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

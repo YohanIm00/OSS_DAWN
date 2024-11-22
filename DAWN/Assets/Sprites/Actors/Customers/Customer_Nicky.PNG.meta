@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 42b1131ff6ddd6d4eae7aeeb7b6bfb88
+guid: 66dfe69346ec4fa4d99ae81f0a3e675f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -149,7 +149,259 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Customer0_Sprite_0
+      name: Customer_Nicky_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7fd6f27076ff44f8916bdd62d46a50
+      internalID: -343838560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c935c3b7bcfc66c479e13f7934c2d657
+      internalID: 514780863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7d73717f8625f4a949b2af2f5eff1c
+      internalID: 69233867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 102
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823b4133df2f16347950a85f55f87eba
+      internalID: -508822917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9f6409017763f4e8859c47d074d62f
+      internalID: -996512886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcdc3be90d412e4d9c989c984624eed
+      internalID: 1516125423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_6
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704d057ea2a4d714298af988fcd639a0
+      internalID: 1982543916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 85
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbdd62ab8d6e754688850fdf8bb0a1f
+      internalID: -189611915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d0a09f17358f641b76e1fd7362e527
+      internalID: 1776214980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b033a262dc0db499f692b0c67d2330
+      internalID: 411629156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_10
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d230ab800760034dbaf55ac52d55695
+      internalID: 230661648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 68
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6365bac2eef9daf489393ebaedf2c43e
+      internalID: 1849995318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Customer_Nicky_12
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb8c5b3ddd2de724ba24f2ee1d7c7463
-      internalID: -1514737524
+      spriteID: 4eaae9adbdf927e4084088222f684fe4
+      internalID: 2089449557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_1
+      name: Customer_Nicky_13
       rect:
         serializedVersion: 2
         x: 17
@@ -184,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35c6654ff1a657a47996a0df39b3f8a2
-      internalID: -692140928
+      spriteID: e1636d33e53bf4042a0d1f830fb67d27
+      internalID: -378952862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_2
+      name: Customer_Nicky_14
       rect:
         serializedVersion: 2
         x: 34
@@ -205,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: badb6cc58091d4c47b6c859df5510718
-      internalID: -1219821565
+      spriteID: 4d42d83afbe56e94a98b67ce65f26b56
+      internalID: 1329034807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_3
+      name: Customer_Nicky_15
       rect:
         serializedVersion: 2
         x: 51
@@ -226,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a00bfde7cee97434d99c7e4763699c9f
-      internalID: 1228783929
+      spriteID: 819afa132a82af1469bb6d270a887e35
+      internalID: 1878882516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_4
+      name: Customer_Nicky_16
       rect:
         serializedVersion: 2
         x: 0
@@ -247,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed343758e1e489f42ba78f475e6119e8
-      internalID: 1231911591
+      spriteID: 18d9b40eb794c46489be56ae0f64ed50
+      internalID: -495728162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_5
+      name: Customer_Nicky_17
       rect:
         serializedVersion: 2
         x: 17
@@ -268,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b205d81c2794a744bbdc6917164dbe29
-      internalID: 1570983803
+      spriteID: 5158321f504f43348ba3337ec20c33bd
+      internalID: -1367049952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_6
+      name: Customer_Nicky_18
       rect:
         serializedVersion: 2
         x: 34
@@ -289,14 +541,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad11d32f345a03d408a0da7188689561
-      internalID: 1212914545
+      spriteID: 8b25e2f33bd7d9542a23e8fdb7e9a4a6
+      internalID: 976627602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_7
+      name: Customer_Nicky_19
       rect:
         serializedVersion: 2
         x: 51
@@ -310,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39205f1540ab8fb4abb751deeb0c4c5b
-      internalID: 522891703
+      spriteID: 91bf0bd259e1cec46a6e4c24641d2dff
+      internalID: -1245379976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_8
+      name: Customer_Nicky_20
       rect:
         serializedVersion: 2
         x: 0
@@ -331,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbc444b9b0e6a30429c3cdad4dc0eaf8
-      internalID: 1277422250
+      spriteID: 4b6cb073d095d9b4daf0733cff318847
+      internalID: 71440679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_9
+      name: Customer_Nicky_21
       rect:
         serializedVersion: 2
         x: 17
@@ -352,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b06732e5febc0754d96be778b3420de2
-      internalID: 127437154
+      spriteID: 95470dbe73c49394eb26a4b4cd4df527
+      internalID: 1582245240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_10
+      name: Customer_Nicky_22
       rect:
         serializedVersion: 2
         x: 34
@@ -373,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33baab6f4653a774899537bb2f716954
-      internalID: 961588977
+      spriteID: ad95d8a4f64f51743b996379edd93bc0
+      internalID: 1144298684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_11
+      name: Customer_Nicky_23
       rect:
         serializedVersion: 2
         x: 51
@@ -394,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dd02ddfb3cf098448682268478bc33d
-      internalID: 1586600398
+      spriteID: 28632cbe1fdc67f4d89cc87961a788c0
+      internalID: -1539237908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_12
+      name: Customer_Nicky_24
       rect:
         serializedVersion: 2
         x: 0
@@ -415,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ee79292345b2ac449b32eed77bf168e
-      internalID: -951707992
+      spriteID: f41775d17be58864abf7f579d63af73d
+      internalID: 1284629483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_13
+      name: Customer_Nicky_25
       rect:
         serializedVersion: 2
         x: 17
@@ -436,14 +688,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a0e822eb4531b84fa7eb61881587886
-      internalID: -1541474512
+      spriteID: ea0d73b1934216843aa8759fd962ab5c
+      internalID: 1382064029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_14
+      name: Customer_Nicky_26
       rect:
         serializedVersion: 2
         x: 34
@@ -457,14 +709,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bd3c3ce00e4f274db476630291d4f2f
-      internalID: 1234084883
+      spriteID: c114b107630492e4880bf7a511e6fe0b
+      internalID: -412110525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Customer0_Sprite_15
+      name: Customer_Nicky_27
       rect:
         serializedVersion: 2
         x: 51
@@ -478,8 +730,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e1f4470b9588d740b43417f77176f77
-      internalID: -787191935
+      spriteID: 3284f01bd52f2c7488d16c1831d387ad
+      internalID: 893307393
       vertices: []
       indices: 
       edges: []
@@ -495,22 +747,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Customer0_Sprite_0: -1514737524
-      Customer0_Sprite_1: -692140928
-      Customer0_Sprite_10: 961588977
-      Customer0_Sprite_11: 1586600398
-      Customer0_Sprite_12: -951707992
-      Customer0_Sprite_13: -1541474512
-      Customer0_Sprite_14: 1234084883
-      Customer0_Sprite_15: -787191935
-      Customer0_Sprite_2: -1219821565
-      Customer0_Sprite_3: 1228783929
-      Customer0_Sprite_4: 1231911591
-      Customer0_Sprite_5: 1570983803
-      Customer0_Sprite_6: 1212914545
-      Customer0_Sprite_7: 522891703
-      Customer0_Sprite_8: 1277422250
-      Customer0_Sprite_9: 127437154
+      Customer_Nicky_0: -343838560
+      Customer_Nicky_1: 514780863
+      Customer_Nicky_10: 230661648
+      Customer_Nicky_11: 1849995318
+      Customer_Nicky_12: 2089449557
+      Customer_Nicky_13: -378952862
+      Customer_Nicky_14: 1329034807
+      Customer_Nicky_15: 1878882516
+      Customer_Nicky_16: -495728162
+      Customer_Nicky_17: -1367049952
+      Customer_Nicky_18: 976627602
+      Customer_Nicky_19: -1245379976
+      Customer_Nicky_2: 69233867
+      Customer_Nicky_20: 71440679
+      Customer_Nicky_21: 1582245240
+      Customer_Nicky_22: 1144298684
+      Customer_Nicky_23: -1539237908
+      Customer_Nicky_24: 1284629483
+      Customer_Nicky_25: 1382064029
+      Customer_Nicky_26: -412110525
+      Customer_Nicky_27: 893307393
+      Customer_Nicky_3: -508822917
+      Customer_Nicky_4: -996512886
+      Customer_Nicky_5: 1516125423
+      Customer_Nicky_6: 1982543916
+      Customer_Nicky_7: -189611915
+      Customer_Nicky_8: 1776214980
+      Customer_Nicky_9: 411629156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
