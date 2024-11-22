@@ -30,9 +30,14 @@ public abstract class CustomerState : MonoBehaviour
     {
         switch(emoji.name)
         {
-            case "0/*name these later" :
-                // Implement this after implementing Data Manager?
-                break;
+            case "Order" :
+                return DataManager.instance.emojis["Order"].GetSprite();
+            case "Wait" :
+                return customer.menu.GetSprite();
+            case "Enjoy" :
+                return DataManager.instance.emojis["Enjoy"].GetSprite();
+            case "Anger" :
+                return DataManager.instance.emojis["Anger"].GetSprite();
         }
         Debug.LogError("There is no corresponding sprite.");
         return null;
