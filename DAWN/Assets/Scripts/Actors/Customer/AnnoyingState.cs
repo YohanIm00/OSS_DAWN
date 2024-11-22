@@ -6,9 +6,8 @@ public class AnnoyingState : CustomerState
     {
         base.Enter(stateMachine);
         customer.init(customer.sit, true);
-        // ShowEmoji();  // Implement this after creating DataManager
+        ShowEmoji(DataManager.instance.emojis["Anger"]);
         GetComponent<BoxCollider2D>().enabled = false;
-
     }
 
     public override void Exit()
@@ -33,7 +32,7 @@ public class AnnoyingState : CustomerState
             if ((transform.position - customer.wayPoints[0].position).magnitude < 0.05f)
                 customer.wayPoints.RemoveAt(0);
         }
-        
+
         Animate();
     }
 }

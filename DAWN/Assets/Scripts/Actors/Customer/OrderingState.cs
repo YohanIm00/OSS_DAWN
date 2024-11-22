@@ -9,7 +9,7 @@ public class OrderingState : CustomerState
     public override void Enter(CustomerStateMachine stateMachine)
     {
         base.Enter(stateMachine);
-        // ShowEmoji() // Implement this part after creating DataManager
+        ShowEmoji(DataManager.instance.emojis["Order"]);
         maxTime = customer.orderWaitingTime;
         direction = Vector2.zero;
         Animate();

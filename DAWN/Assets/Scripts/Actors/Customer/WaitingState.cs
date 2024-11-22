@@ -9,7 +9,7 @@ public class WaitingState : CustomerState
     public override void Enter(CustomerStateMachine stateMachine)
     {
         base.Enter(stateMachine);
-        // ShowEmoji();
+        ShowEmoji(DataManager.instance.emojis["Wait"]);
         maxTime = customer.menuWaitingTime;
         direction = Vector2.zero;
         Animate();
