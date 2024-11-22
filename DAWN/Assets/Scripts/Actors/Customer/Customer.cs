@@ -30,8 +30,23 @@ public class Customer : MonoBehaviour
 
     public void init(Sit dst, bool reverse = false)
     {
-        // implementing initializing each customer object
-        // Create this part after implementing DataManager
+        menu = DataManager.instance.GetRandomMenu();
+
+        if (!reverse)
+        {
+            for (int i = 0; i < dst.wayPoints.Count; ++i)
+                wayPoints.Add(dst.wayPoints[i]);
+            wayPoints.Add(dst.transform);
+            sit = dst;
+            orderWaitingTime = Random.Range(8, 16);
+            menuWaitingTime = menu.GetCookingTime() + Random.Range(12, 18);
+        }
+        else
+        {
+            for (int i = dst.wayPoints.Count - 1; i >= 0; --i)
+                wayPoints.Add(dst.wayPoints[i]);
+            // Some part should have to be connected with Customer Spawner
+        }
     }
 
     public void Update()
