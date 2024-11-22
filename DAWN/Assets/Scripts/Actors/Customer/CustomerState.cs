@@ -7,7 +7,7 @@ public abstract class CustomerState : MonoBehaviour
     protected Customer customer;
     protected Vector2 direction = Vector2.zero;
 
-    public virtual void Enter()
+    public virtual void Enter(CustomerStateMachine customerStateMachine)
     {
         // Make customer to enter the bakery
     }
