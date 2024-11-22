@@ -4,18 +4,26 @@ using UnityEngine;
 
 public class OrderingState : CustomerState
 {
-    public override void Enter()
+    private float maxTime;
+
+    public override void Enter(CustomerStateMachine stateMachine)
     {
-        base.Enter();
+        base.Enter(stateMachine);
+        // ShowEmoji() // Implement this part after creating DataManager
+        maxTime = customer.orderWaitingTime;
+        direction = Vector2.zero;
+        Animate();
     }
 
-    public override void Exit()
-    {
-        throw new System.NotImplementedException();
-    }
+    public override void Exit() {}
 
     public override void _Update()
     {
-        throw new System.NotImplementedException();
+        if (customer.isOrdered)
+            stateMachine.ChangeState(stateMachine.Wait);
+        customer.orderWaitingTime -= Time.deltaTime;
+        customer.timer.fillAmount = customer.orderWaitingTime / maxTime;
+        if (customer.orderWaitingTime < 0)
+            stateMachine.ChangeState(stateMachine.Anger);
     }
 }

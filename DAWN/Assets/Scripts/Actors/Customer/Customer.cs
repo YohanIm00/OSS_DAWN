@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Customer : MonoBehaviour
 {
     public List<Transform> wayPoints = new List<Transform>();
-    // Need to implement FiniteStateMachine
+    public CustomerStateMachine stateMachine;
     public Sit sit;
     public MenuSO menu;
     // Variables related to Ordering
@@ -23,7 +23,7 @@ public class Customer : MonoBehaviour
 
     private void Awake()
     {
-        // StateMachine
+        stateMachine = gameObject.AddComponent<CustomerStateMachine>();
         _anim = GetComponent<Animator>();
         canvas.gameObject.SetActive(false);
     }
@@ -31,16 +31,21 @@ public class Customer : MonoBehaviour
     public void init(Sit dst, bool reverse = false)
     {
         // implementing initializing each customer object
+        // Create this part after implementing DataManager
     }
 
     public void Update()
     {
-        // connecting this method with FSM
+        stateMachine.currentState._Update();
     }
 
     public void ReceiveMenu(MenuSO menu)
     {
-        // a method that distinguish whether each customer receive what they ordered or not
+        if (this.menu.name != menu.name)
+        {
+            Debug.LogError("Menu name isn't same.");
+            return;
+        }
     }
 
     public void OnDestroy()

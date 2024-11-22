@@ -1,35 +1,44 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public abstract class CustomerState : MonoBehaviour
 {
-    // Need to implement StateMachine
+    protected CustomerStateMachine stateMachine;
     protected Customer customer;
     protected Vector2 direction = Vector2.zero;
 
-    public virtual void Enter(CustomerStateMachine customerStateMachine)
+    public virtual void Enter(CustomerStateMachine stateMachine)
     {
-        // Make customer to enter the bakery
+        Debug.Log($"State : {this.GetType().Name}");
+        this.stateMachine = stateMachine;
+        customer = GetComponent<Customer>();
+        customer.timer.fillAmount = 1;
     }
 
     public abstract void _Update();
     public abstract void Exit();
 
-    public virtual void ShowEmoji(/*EmojiSO emoji*/)
+    public virtual void ShowEmoji(EmojiSO emoji)
     {
-        // Set speech bubble active and showing each customer's emoji
+        customer.canvas.SetActive(true);
+        customer.emoji.GetComponent<Image>().sprite = GetEmojiSprite(emoji);
+        customer.timer.GetComponent<Image>().sprite = GetEmojiSprite(emoji);
     }
 
-    Sprite GetEmojiSprite(/*EmojiSO emoji*/)
+    Sprite GetEmojiSprite(EmojiSO emoji)
     {
-        // Calling appropriate Emoji based on the current state
+        switch(emoji.name)
+        {
+            case "0/*name these later" :
+                // Implement this after implementing Data Manager?
+                break;
+        }
+        Debug.LogError("There is no corresponding sprite.");
         return null;
     }
 
-    public virtual void HideEmoji()
-    {
-        // Deactivate speech bubble
-    }
+    public virtual void HideEmoji() { customer.canvas.SetActive(false); }
 
     protected bool _horizontal;
     protected bool _vertical;
@@ -37,7 +46,6 @@ public abstract class CustomerState : MonoBehaviour
     protected void Animate()
     {
         // Setting animator based on each objects direction
+        // Implement this after creating animator
     }
-
-
 }

@@ -1,12 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public class EnjoyingState : CustomerState
 {
-    public override void Enter()
+    private float maxTime;
+
+    public override void Enter(CustomerStateMachine stateMachine)
     {
-        base.Enter();
+        base.Enter(stateMachine);
+        GetComponent<BoxCollider2D>().enabled = false;
+        customer.enjoyingTime += Random.Range(0, 2);
+        maxTime = customer.enjoyingTime;
+        // ShowEmoji();  // Implement this after creating DataManager
+        direction = Vector2.zero;
+        Animate();
+        // GameManager... // Implement this after creating GameManager
+
     }
 
     public override void Exit()
@@ -16,6 +27,9 @@ public class EnjoyingState : CustomerState
 
     public override void _Update()
     {
-        throw new System.NotImplementedException();
+        customer.enjoyingTime -= Time.deltaTime;
+        customer.timer.fillAmount = customer.enjoyingTime / maxTime;
+        if (customer.enjoyingTime < 0)
+        stateMachine.ChangeState(stateMachine.Leave);
     }
 }
