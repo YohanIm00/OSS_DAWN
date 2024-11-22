@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fad0c3de75ed8047836afbd272c599e, type: 3}
   m_Name: SwissRoll
   m_EditorClassIdentifier: 
-  cookingDuration: 0
-  foodSprite: {fileID: 0}
+  cookingDuration: 3
+  foodSprite: {fileID: 21300000, guid: afbba6a142e5eb243bc8c94aa810ec9e, type: 3}
