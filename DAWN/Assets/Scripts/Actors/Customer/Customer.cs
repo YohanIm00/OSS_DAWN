@@ -19,12 +19,12 @@ public class Customer : MonoBehaviour
     public GameObject canvas;
     public Image emoji;
     public Image timer;
-    public Animator _anim;
+    public Animator animator;
 
     private void Awake()
     {
         stateMachine = gameObject.AddComponent<CustomerStateMachine>();
-        _anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         canvas.gameObject.SetActive(false);
     }
 

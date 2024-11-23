@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public abstract class CustomerState : MonoBehaviour
@@ -50,7 +49,30 @@ public abstract class CustomerState : MonoBehaviour
 
     protected void Animate()
     {
-        // Setting animator based on each objects direction
-        // Implement this after creating animator
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            _horizontal = true;
+            _vertical = false;
+            customer.animator.SetBool("isChanged", true);
+        }
+        if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
+        {
+            _horizontal = false;
+            _vertical = true;
+            customer.animator.SetBool("isChanged", true);
+        }
+        if (direction == Vector2.zero)
+        {
+            _horizontal = false;
+            _vertical = false;
+            customer.animator.SetBool("isChanged", true);
+        }
+        if (_horizontal != customer.animator.GetBool("isHori") || _vertical != customer.animator.GetBool("isVert"))
+            customer.animator.SetBool("isChanged", false);
+        
+        customer.animator.SetBool("isHori", _horizontal);
+        customer.animator.SetBool("isVert", _vertical);
+        customer.animator.SetFloat("hori", direction.x);
+        customer.animator.SetFloat("vert", direction.y);
     }
 }
