@@ -45,7 +45,7 @@ public class Customer : MonoBehaviour
         {
             for (int i = dst.wayPoints.Count - 1; i >= 0; --i)
                 wayPoints.Add(dst.wayPoints[i]);
-            // Some part should have to be connected with Customer Spawner
+            wayPoints.Add(CustomerSpawner.instance.entrance);
         }
     }
 
@@ -65,6 +65,6 @@ public class Customer : MonoBehaviour
 
     public void OnDestroy()
     {
-        // Need to implement GameManager
+        GameManager.instance.customers.Remove(gameObject);
     }
 }

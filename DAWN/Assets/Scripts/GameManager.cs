@@ -33,11 +33,12 @@ public class GameManager : MonoBehaviour
     {
         if (isGame)
         {
-            // later
+            UpdateTimer();
+            UpdateBalloon();
         }
     }
 
-    public void GainBallon(bool plus)
+    public void GainBalloon(bool plus)
     {
         if (plus)
             currentBalloon += Random.Range(3, 8);
@@ -78,7 +79,7 @@ public class GameManager : MonoBehaviour
             txt_timer.text = Mathf.Max(totalGameTime, 0).ToString("NO");
     }
 
-    void UpdateBallon()
+    void UpdateBalloon()
     {
         sld_balloon.value = currentBalloon;
         txt_balloon.text = $"{currentBalloon} / {totalBalloon}";

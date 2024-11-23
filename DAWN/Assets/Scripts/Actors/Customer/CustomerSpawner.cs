@@ -41,7 +41,7 @@ public class CustomerSpawner : MonoBehaviour
         GameManager.instance.isGame = true;
         while (GameManager.instance.isGame && GameManager.instance.totalGameTime > 0)
         {
-            // SpawnCustomer();
+            SpawnCustomer();
             yield return new WaitForSeconds(Random.Range(0, 16));
         }
     }

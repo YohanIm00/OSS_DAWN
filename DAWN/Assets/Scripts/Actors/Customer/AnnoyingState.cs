@@ -10,14 +10,16 @@ public class AnnoyingState : CustomerState
         GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    public override void Exit()
-    {
-        throw new System.NotImplementedException();
-    }
+    public override void Exit() {}
 
     public override void _Update()
     {
-        throw new System.NotImplementedException();
+        Move();
+        if (customer.wayPoints.Count == 0)
+        {
+            GameManager.instance.GainBalloon(false);
+            Destroy(gameObject);
+        }
     }
 
     void Move()

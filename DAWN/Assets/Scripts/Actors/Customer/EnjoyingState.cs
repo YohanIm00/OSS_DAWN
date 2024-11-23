@@ -16,8 +16,7 @@ public class EnjoyingState : CustomerState
         ShowEmoji(DataManager.instance.emojis["Enjoy"]);  // Implement this after creating DataManager
         direction = Vector2.zero;
         Animate();
-        // GameManager... // Implement this after creating GameManager
-
+        GameManager.instance.GainBalloon(true);
     }
 
     public override void Exit() {}
