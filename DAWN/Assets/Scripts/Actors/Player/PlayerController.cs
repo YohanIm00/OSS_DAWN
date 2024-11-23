@@ -60,8 +60,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && playerAction.hit.collider != null)
         {
-            // Former part will be implemented after the Customer object
-            // playerStateMachine.Update(this, playerAction);
+            playerAction.hitCustomer = playerAction.hit.collider.GetComponent<Customer>();
+            playerStateMachine.Update(this, playerAction);
         }
     }
 
