@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainSceneManager : MonoBehaviour
+public class ButtonManager : MonoBehaviour
 {
     public void btn_Play() {
         // SceneManager.LoadScene("Cutscene0");
@@ -19,6 +19,6 @@ public class MainSceneManager : MonoBehaviour
 
     public void btn_MainScene() {
         // SceneManager.LoadScene("MainMenu");
-        print("Undefined for Now");
+        print("Return to MainMenu");
     }
 }
