@@ -7,6 +7,6 @@ public class LampTransform : AbstractParts
     protected override IEnumerator Alter()
     {
         // yield return image.DOFade(1f, 0f);
-        yield return image.transform.DOMoveY(972, 3f, true);
+        yield return image.transform.DOMoveY(972, 1.5f, true);
     }
 }
