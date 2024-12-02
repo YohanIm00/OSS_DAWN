@@ -1,49 +1,64 @@
-using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-[System.Serializable]
-public class SortableObject : ScriptableObject
+public class SortingGame : MonoBehaviour
 {
-    public Sprite sprite;
-    public string correctKey; // "Left" or "Right"
-}
+    public static SortingGame instance;
 
-public class SortingGame_Tentative : MonoBehaviour
-{
     [Header("UI Elements")]
-    public Text scoreText;
+    public TMP_Text scoreText;
     public Slider timerSlider;
-    public Text comboText;
-    public Text feverText;
-    public GameObject feverEffect;
+    public TMP_Text comboText;
+    public TMP_Text feverText;
+    // public GameObject feverEffect;
 
     [Header("Game Settings")]
     public float gameDuration = 60f;
-    public int comboThreshold = 5;
-    public float feverDuration = 5f;
-    public int baseScore = 10;
+    public int comboThreshold = 20;
+    public float feverDuration = 3f;
+    public int baseScore = 2;
 
     [Header("Conveyor Settings")]
-    public Transform[] conveyorPoints; // Positions for objects on conveyor
-    public SortableObject tiramisu;
-    public SortableObject milk;
-    public SortableObject tiramisuSet;
+    public GameObject[] commonPoints; // Positions for objects on conveyor
+    public GameObject[] feverPoints; // Positions for objects on conveyor
+    public Dictionary<string, SortSO> snacks = new Dictionary<string, SortSO>();
+    private List<SortSO> currentConveyor = new List<SortSO>(8);
 
     private int score = 0;
     private float timer;
     private int comboCount = 0;
-    private bool isFeverActive = false;
-    private Queue<GameObject> conveyorQueue = new Queue<GameObject>();
+    private bool isFever = false;
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     void Start()
     {
-        timer = gameDuration;
-        UpdateUI();
-        feverEffect.SetActive(false);
+        LoadSnacks();
+        if (snacks.Count == 0)
+        {
+            Debug.LogError("Snacks dictionary is empty!");
+            return;
+        }
 
-        InitializeConveyor();
+        timer = gameDuration;
+
+        InitConveyor();
+        if (currentConveyor == null)
+        {
+            Debug.LogError("currentQueue is not initialized!");
+        }
+
+        UpdateUI();
+        // feverEffect.SetActive(false);
     }
 
     void Update()
@@ -69,23 +84,46 @@ public class SortingGame_Tentative : MonoBehaviour
         }
     }
 
+    private void LoadSnacks()
+    {
+        SortSO[] loadData = Resources.LoadAll<SortSO>("SortingSnacks");
+
+        if (loadData.Length == 0)
+        {
+            Debug.LogError("No snacks found in Resources/SortingSnacks!");
+        }
+
+        foreach (SortSO snack in loadData)
+        {
+            snacks.Add(snack.name, snack);
+            Debug.Log($"Loaded snack: {snack.name}");
+        }
+    }
+
     public void SortObject(string key)
     {
-        if (conveyorQueue.Count > 0)
+        if (currentConveyor.Count > 0)
         {
-            GameObject frontObject = conveyorQueue.Dequeue();
-            SortableObject sortable = frontObject.GetComponent<SortableData>().data;
+            SortSO firstSnack = currentConveyor[0];
 
-            if (isFeverActive && sortable == tiramisuSet)
+            if (firstSnack == null)
+            {
+                Debug.LogError("Dequeued a null object from the currentQueue!");
+                return;
+            }
+
+            if (isFever)
             {
                 score += baseScore * 2; // Double score during Fever mode
             }
-            else if (sortable.correctKey == key)
+            else if (firstSnack.GetKeyValue() == key)
             {
-                score += isFeverActive ? baseScore * 2 : baseScore;
+                score += isFever ? baseScore * 2 : baseScore;
+                currentConveyor.RemoveAt(0);
+                FixedUpdateConveyor();
                 comboCount++;
 
-                if (comboCount >= comboThreshold && !isFeverActive)
+                if (comboCount >= comboThreshold && !isFever)
                 {
                     StartCoroutine(ActivateFeverMode());
                 }
@@ -95,84 +133,77 @@ public class SortingGame_Tentative : MonoBehaviour
                 comboCount = 0; // Reset combo on incorrect sort
             }
 
-            Destroy(frontObject);
-            ReplaceConveyorObjectImmediately();
             UpdateUI();
         }
+        else
+        {
+            Debug.LogWarning("currentQueue is empty, nothing to sort!");
+        }
     }
+
 
     private IEnumerator ActivateFeverMode()
     {
-        isFeverActive = true;
+        isFever = true;
         feverText.text = "Fever!";
-        feverEffect.SetActive(true);
-
-        // Replace all objects in queue with Tiramisu Set
-        foreach (GameObject obj in conveyorQueue)
-        {
-            obj.GetComponent<SpriteRenderer>().sprite = tiramisuSet.sprite;
-            obj.GetComponent<SortableData>().data = tiramisuSet;
-        }
+        // feverEffect.SetActive(true);
 
         yield return new WaitForSeconds(feverDuration);
 
-        // Reset all objects to normal
-        foreach (GameObject obj in conveyorQueue)
-        {
-            SortableObject randomObject = Random.Range(0, 2) == 0 ? tiramisu : milk;
-            obj.GetComponent<SpriteRenderer>().sprite = randomObject.sprite;
-            obj.GetComponent<SortableData>().data = randomObject;
-        }
-
         feverText.text = "";
-        feverEffect.SetActive(false);
-        isFeverActive = false;
+        // feverEffect.SetActive(false);
+        isFever = false;
         comboCount = 0; // Reset combo after Fever ends
     }
 
-    private void InitializeConveyor()
+    private void InitConveyor()
     {
-        for (int i = 0; i < conveyorPoints.Length; i++)
+        for (int i = 0; i < commonPoints.Length; i++)
         {
-            SpawnConveyorObject(i);
+            feverPoints[i].GetComponent<Image>().sprite = snacks["TiramSet"].GetSprite();
+        }
+
+        for (int i = 0; i < commonPoints.Length; i++)
+        {
+            SortSO randomSnack = Random.Range(0, 2) == 0 ? snacks["Tiram"] : snacks["Milk"];
+            currentConveyor.Add(randomSnack);
+            Debug.Log($"Enqueued: {randomSnack.name}");
+            commonPoints[i].GetComponent<Image>().sprite = randomSnack.GetSprite();
         }
     }
 
-    private void SpawnConveyorObject(int positionIndex)
+    private void FixedUpdateConveyor()
     {
-        SortableObject randomObject = Random.Range(0, 2) == 0 ? tiramisu : milk;
-        GameObject newObject = new GameObject("ConveyorObject");
-        SpriteRenderer renderer = newObject.AddComponent<SpriteRenderer>();
-        renderer.sprite = randomObject.sprite;
-
-        SortableData data = newObject.AddComponent<SortableData>();
-        data.data = randomObject;
-
-        newObject.transform.position = conveyorPoints[positionIndex].position;
-        float scaleFactor = 1f + (positionIndex * 0.1f); // Increase size for objects closer to user
-        newObject.transform.localScale = Vector3.one * scaleFactor;
-        conveyorQueue.Enqueue(newObject);
-    }
-
-    private void ReplaceConveyorObjectImmediately()
-    {
-        SpawnConveyorObject(conveyorPoints.Length - 1);
-
-        // Reposition and resize remaining objects
-        GameObject[] objects = conveyorQueue.ToArray();
-        for (int i = 0; i < objects.Length; i++)
+        SortSO randomSnack = Random.Range(0, 2) == 0 ? snacks["Tiram"] : snacks["Milk"];
+        currentConveyor.Add(randomSnack);
+        for (int i = 0; i < commonPoints.Length; ++i)
         {
-            objects[i].transform.position = conveyorPoints[i].position;
-            float scaleFactor = 1f + (i * 0.1f);
-            objects[i].transform.localScale = Vector3.one * scaleFactor;
+            commonPoints[i].GetComponent<Image>().sprite = currentConveyor[i].GetSprite();
         }
     }
 
     private void UpdateUI()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = $"{score}";
         timerSlider.value = timer / gameDuration;
         comboText.text = "Combo: " + comboCount;
+
+        if (isFever)
+        {
+            for (int i = 0; i < feverPoints.Length; ++i)
+            {
+                feverPoints[i].SetActive(true);
+                commonPoints[i].SetActive(false);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < feverPoints.Length; ++i)
+            {
+                feverPoints[i].SetActive(false);
+                commonPoints[i].SetActive(true);
+            }
+        }
     }
 
     private void EndGame()
@@ -182,9 +213,3 @@ public class SortingGame_Tentative : MonoBehaviour
         // Implement end game logic here, such as showing a result screen or restarting.
     }
 }
-
-public class SortableData : MonoBehaviour
-{
-    public SortableObject data;
-}
-
