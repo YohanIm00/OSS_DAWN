@@ -11,23 +11,50 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI conversationText;
     [SerializeField] private GameObject forwardMark;
 
-    
-    private bool isTellAll;
+    private Queue<DialogueText.SpeakerData> dialogueQueue = new Queue<DialogueText.SpeakerData>();
+
+    private bool isAllSaid;
 
     private static bool isConversation = false;
-
     public static bool IsConversation
     {
         get { return isConversation; }
     }
 
+    private DialogueText.SpeakerData temp;
     private Coroutine typingRoutine = null;
 
-    public void DisplayNextText()
+    public void DisplayNextText(DialogueText dialogueText)
     {
         forwardMark.SetActive(false);
 
-        // Implement these part after creating DialogueText
+        if (dialogueQueue.Count == 0 && typingRoutine == null)
+        {
+            if(!isAllSaid)
+                StartConversation();
+            else
+            {
+                EndConversation();
+                return;
+            }
+        }
+
+        if (typingRoutine != null)
+        {
+            StopCoroutine(typingRoutine);
+            typingRoutine = null;
+            conversationText.text = temp.dialogueText;
+            forwardMark.SetActive(true);
+            return;
+        }
+
+        if (dialogueQueue.Count > 0 && typingRoutine == null)
+        {
+            temp = dialogueQueue.Dequeue();
+            nameText.text = temp.speakerName;
+            conversationText.text = temp.dialogueText;
+            typingRoutine = StartCoroutine(TypingRoutine());
+        }
     }
 
     private void StartConversation()
@@ -37,7 +64,7 @@ public class DialogueController : MonoBehaviour
 
     private void EndConversation()
     {
-        isTellAll = false;
+        isAllSaid = false;
 
         if (gameObject.activeSelf)
         {
@@ -46,8 +73,8 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    // IEnumerator TypingRoutine()
-    // {
-    //     // Implement these part after creating DialogueText
-    // }
+    IEnumerator TypingRoutine()
+    {
+        yield return null;
+    }
 }
