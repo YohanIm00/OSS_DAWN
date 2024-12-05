@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d90c1f64dd342e479769f3a9c262900, type: 3}
   m_Name: Enjoy
   m_EditorClassIdentifier: 
-  emoji: {fileID: 0}
+  emoji: {fileID: 21300000, guid: 609033f66e5e97745b58ac8d8e305c33, type: 3}
