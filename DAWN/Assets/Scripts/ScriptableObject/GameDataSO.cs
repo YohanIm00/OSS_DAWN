@@ -6,7 +6,8 @@ using UnityEngine;
 public class GameDataSO : ScriptableObject
 {
     public int currentBalloon = 0;
-    public void Init(){
+    public void Init()
+    {
         currentBalloon = 0;
     }
 }

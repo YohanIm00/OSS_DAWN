@@ -15,7 +15,7 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject go;
 
     [Header("Prefabs")]
-    public GameObject[] pre_customers;
+    public GameObject[] preCustomers;
 
     public void Awake()
     {
@@ -49,6 +49,7 @@ public class CustomerSpawner : MonoBehaviour
     private void SpawnCustomer()
     {
         bool isFull = true;
+
         foreach (var s in sits)
             isFull &= s.isUsing;
 
@@ -60,12 +61,13 @@ public class CustomerSpawner : MonoBehaviour
 
         int idx = Random.Range(0, sits.Length);
         Sit selectedSit = sits[idx];
+
         while (selectedSit.isUsing)
         {
             idx = Random.Range(0, sits.Length);
             selectedSit = sits[idx];
         }
-        GameObject customer = Instantiate(pre_customers[Random.Range(0, pre_customers.Length)], entrance.position, Quaternion.identity);
+        GameObject customer = Instantiate(preCustomers[Random.Range(0, preCustomers.Length)], entrance.position, Quaternion.identity);
         customer.GetComponent<Customer>().init(selectedSit);
         GameManager.instance.customers.Add(customer);
     }

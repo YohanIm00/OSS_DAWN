@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnteringState : CustomerState
@@ -10,7 +8,10 @@ public class EnteringState : CustomerState
         GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    public override void Exit() { GetComponent<BoxCollider2D>().enabled = true; }
+    public override void Exit()
+    { 
+        GetComponent<BoxCollider2D>().enabled = true;
+    }
 
     public override void _Update()
     {

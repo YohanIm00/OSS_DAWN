@@ -102,20 +102,12 @@ public class PlayerAction : MonoBehaviour
 
         // Determine the ray direction based on player's movement input
         if (_horizontal > 0f)
-        {
             _rayDirection = Vector2.right; // Ray points to the right
-        }
         else if (_horizontal < 0f)
-        {
             _rayDirection = Vector2.left; // Ray points to the left
-        }
         else if (_vertical > 0f)
-        {
             _rayDirection = Vector2.up; // Ray points upwards
-        }
         else if (_vertical < 0f)
-        {
             _rayDirection = Vector2.down; // Ray points downwards
-        }
     }
 }

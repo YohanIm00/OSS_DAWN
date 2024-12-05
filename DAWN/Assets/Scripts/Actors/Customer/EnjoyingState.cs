@@ -25,6 +25,7 @@ public class EnjoyingState : CustomerState
     {
         customer.enjoyingTime -= Time.deltaTime;
         customer.timer.fillAmount = customer.enjoyingTime / maxTime;
+        
         if (customer.enjoyingTime < 0)
             stateMachine.ChangeState(stateMachine.Leave);
     }

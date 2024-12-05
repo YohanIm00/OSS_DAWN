@@ -21,8 +21,10 @@ public class OrderingState : CustomerState
     {
         if (customer.isOrdered)
             stateMachine.ChangeState(stateMachine.Wait);
+
         customer.orderWaitingTime -= Time.deltaTime;
         customer.timer.fillAmount = customer.orderWaitingTime / maxTime;
+        
         if (customer.orderWaitingTime < 0)
             stateMachine.ChangeState(stateMachine.Anger);
     }

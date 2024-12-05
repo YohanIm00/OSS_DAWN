@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
     void UpdateTimer()
     {
         totalGameTime -= Time.deltaTime;
-        if (totalGameTime < 0 && GameManager.instance.customers.Count <= 0)
+        if (totalGameTime < 0 && instance.customers.Count <= 0)
         {
             isGame = false;
             if (totalBalloon > currentBalloon)
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(ToResultClear());
         }
         else
-            txt_timer.text = Mathf.Max(totalGameTime, 0).ToString("NO");
+            txt_timer.text = Mathf.Max(totalGameTime, 0).ToString("N0");
     }
 
     void UpdateBalloon()

@@ -1,8 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] completeFood = new GameObject[5];
     public GameObject[] cookingFood = new GameObject[2];
     public MenuSO servingMenu;
-    private PlayerAction playerAction;
+    private PlayerAction _playerAction;
     public PlayerStateMachine playerStateMachine;
     public bool isServing { get; private set; }
     [SerializeField] private GameObject servingObject;
@@ -24,10 +20,10 @@ public class PlayerController : MonoBehaviour
         isServing = true;
     }
 
-    public void EndServing(MenuSO servingMenu)
+    public void EndServing()
     {
-        this.servingMenu = null;
-        DisplayServedFood(this.servingMenu, true);
+        servingMenu = null;
+        DisplayServedFood(servingMenu, true);
         isServing = false;
     }
 
@@ -42,26 +38,26 @@ public class PlayerController : MonoBehaviour
         {
             playerStateMachine.TransitionTo(playerStateMachine.waitingState);
             servingObject.GetComponent<SpriteRenderer>().sprite = null;
-            servingMenu = null;
+            this.servingMenu = null;
         }
     }
     
     private void Start()
     {
-        playerAction = GetComponent<PlayerAction>();
+        _playerAction = GetComponent<PlayerAction>();
         playerStateMachine.Initialize();
         isServing = false;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))    // Each KeyCode can be changed later
+        if (Input.GetKeyDown(KeyCode.R) && servingMenu != null)    // Each KeyCode can be changed later
             Throwaway();
 
-        if (Input.GetKeyDown(KeyCode.E) && playerAction.hit.collider != null)
+        if (Input.GetKeyDown(KeyCode.E) && _playerAction.hit.collider != null)
         {
-            playerAction.hitCustomer = playerAction.hit.collider.GetComponent<Customer>();
-            playerStateMachine.Update(this, playerAction);
+            _playerAction.hitCustomer = _playerAction.hit.collider.GetComponent<Customer>();
+            playerStateMachine.Update(this, _playerAction);
         }
     }
 

@@ -9,7 +9,7 @@ public abstract class CustomerState : MonoBehaviour
 
     public virtual void Enter(CustomerStateMachine stateMachine)
     {
-        Debug.Log($"State : {this.GetType().Name}");
+        Debug.Log($"State : {GetType().Name}");
         this.stateMachine = stateMachine;
         customer = GetComponent<Customer>();
         customer.timer.fillAmount = 1;
@@ -42,7 +42,10 @@ public abstract class CustomerState : MonoBehaviour
         return null;
     }
 
-    public virtual void HideEmoji() { customer.canvas.SetActive(false); }
+    public virtual void HideEmoji() 
+    { 
+        customer.canvas.SetActive(false); 
+    }
 
     protected bool _isHori;
     protected bool _isVert;
