@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.iOS;
 using UnityEngine;
 
 public class DataManager : MonoBehaviour
@@ -27,7 +25,7 @@ public class DataManager : MonoBehaviour
 
     private void LoadMenus()
     {
-        MenuSO[] loadData = Resources.LoadAll<MenuSO>("Menus");
+        MenuSO[] loadData = Resources.LoadAll<MenuSO>("Cuisines");
 
         foreach (MenuSO menu in loadData)
         {

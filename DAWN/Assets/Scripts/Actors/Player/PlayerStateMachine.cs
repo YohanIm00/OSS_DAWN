@@ -3,6 +3,7 @@ using Unity.IO.LowLevel.Unsafe;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
+[Serializable]
 public class PlayerStateMachine
 {
     public PlayerStateSO currentState;
