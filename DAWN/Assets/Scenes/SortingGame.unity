@@ -1413,6 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739a0e0c8e119954385e0fe23b6b31eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameDataSO: {fileID: 11400000, guid: fb9bc283d888dae45adeea545eca1519, type: 2}
   scoreText: {fileID: 866773101}
   timerSlider: {fileID: 316411035}
   comboText: {fileID: 567672759}

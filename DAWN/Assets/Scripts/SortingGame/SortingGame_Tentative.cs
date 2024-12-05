@@ -7,7 +7,9 @@ using TMPro;
 public class SortingGame : MonoBehaviour
 {
     public static SortingGame instance;
-
+    
+    [Header("Game Data SO")]
+    [SerializeField] private GameDataSO gameDataSO;
     [Header("UI Elements")]
     public TMP_Text scoreText;
     public Slider timerSlider;
@@ -210,6 +212,7 @@ public class SortingGame : MonoBehaviour
     {
         timer = 0;
         Debug.Log("Game Over! Final Score: " + score);
+        gameDataSO.currentBalloon = score;
         // Implement end game logic here, such as showing a result screen or restarting.
     }
 }

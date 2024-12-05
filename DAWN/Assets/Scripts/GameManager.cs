@@ -8,11 +8,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameDataSO gameDataSO;
 
     [Header("Data")]
     public bool isGame = false;
     public float totalGameTime = 75;
-    public int totalBalloon = 40;
+    public int totalBalloon = 1000;
     public int currentBalloon = 0;
     // Audio would be managed by AudioManager later
 
@@ -24,7 +25,11 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> customers = new List<GameObject>();
 
-    private void Awake() { instance = this; }
+    private void Awake() 
+    { 
+            instance = this;
+            this.currentBalloon = gameDataSO.currentBalloon;
+    }
 
     private void Start() { sld_balloon.maxValue = totalBalloon; }
 
