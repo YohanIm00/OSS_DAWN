@@ -1,0 +1,272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a2bc972b674264aa05120f2daa78b4, type: 3}
+  m_Name: Dialogue0
+  m_EditorClassIdentifier: 
+  speakerData:
+  - isIllust: 1
+    isWand: 0
+    characterSprite: {fileID: 0}
+    illustSprite: {fileID: 21300000, guid: 367c08a874da05042a2a20321b7993e9, type: 3}
+    speakerName: ???
+    dialogueText: "\uC548\uB155!!"
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 0}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: ?!?!?!?!?!?!
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 0}
+    illustSprite: {fileID: 0}
+    speakerName: ???
+    dialogueText: "\uC5B4\uC774\uCFE0, \uD658\uC601 \uC778\uC0AC\uAC00 \uACA9\uD558\uB124!"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 95f9582a8be792a46a9a5c57b2621096, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: '!!!'
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: ???
+    dialogueText: "\uB108! \uAD49\uC7A5\uD558\uB354\uB77C? \uC774\uB807\uAC8C \uB9DB\uC788\uB294
+      \uB514\uC800\uD2B8\uB294 \uC624\uB79C\uB9CC\uC774\uC57C!"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 63373e014cd5e0c4bb989788099fe362, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: ......
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: ???
+    dialogueText: "\uADF8\uB798\uC11C! \uC624\uB298\uBD80\uD130 \uB124 \uD32C\uC774
+      \uB418\uAE30\uB85C \uD588\uC5B4."
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: a6f40f37ab0bb4a46b95629eb177259c, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: ...?
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: 4770d80fd33ddc4448c82cd3b8f48080, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC544\uCC28\uCC28, \uC18C\uAC1C\uAC00 \uB2A6\uC5C8\uB124, \uB0B4
+      \uC774\uB984\uC740 \uD478\uC57C. \n\uACF0\uB3CC\uC774 \uD478 \uB9D0\uACE0 \uACE0\uC591\uC774
+      \uD478. \uD558\uC9C0\uB9CC \uBC8C\uAFC0\uC740 \uC88B\uC544\uD558\uC9C0. \uB108\uB294?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: ab5dacf3ee144ca4c8c22074a2623dcc, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: ......
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC644\uB4DC\uB77C\uACE0 \uD558\uB294\uAD6C\uB098~ \uADF8\uB7F0\uB370
+      \uD2F0\uB77C\uBBF8\uC218\uBC16\uC5D0 \uC548 \uB9CC\uB4E4\uC5B4?\n\uADF8 \uC815\uB3C4
+      \uC2E4\uB825\uC774\uBA74 \uBD84\uBA85 \uB2E4\uB978 \uAC83\uB3C4 \uC798 \uB9CC\uB4E4\uD150\uB370.
+      \uADF8\uB807\uC9C0?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: f5616f739cd51544498df5e54e0549d4, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: ............!
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC88B\uC544!! \uC5B4\uCC28\uD53C \uB354 \uC62C \uC190\uB2D8\uB3C4
+      \uC5C6\uC73C\uB2C8 \uC9C0\uAE08 \uB9CC\uB4E4\uC5B4\uC8FC\uBA74 \uB418\uACA0\uB2E4.
+      \r\n\uC8FC\uBB38\uC740, \uBC8C\uAFC0 \uCF00\uC774\uD06C!\n\uC544, \uC7AC\uB8CC\uB294
+      \uB0B4\uAC00 \uAC00\uC838\uC654\uC73C\uB2C8\uAE4C \uAC71\uC815 \uBD99\uB4E4\uC5B4
+      \uB9E4\uB77C\uACE0."
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 0}
+    illustSprite: {fileID: 0}
+    speakerName: 
+    dialogueText: "(\uC7A0\uC2DC \uD6C4)"
+  - isIllust: 1
+    isWand: 0
+    characterSprite: {fileID: 0}
+    illustSprite: {fileID: 21300000, guid: 364c53e1df8e36a49ae99cf3be7c8dc3, type: 3}
+    speakerName: 
+    dialogueText: 
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 6b3733f99c991614a8c09db014b38b26, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: ......
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: 5c49e87b98315e346921175b364fd3b2, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC5C7, \uC5E5? \uC73C\uC73C\uC73C\uC73C\uC751???\r\n\uADF8, \uB0B4\uAC00
+      \uC900 \uAC70 \uBC8C\uAFC0 \uC544\uB2C8\uC5C8\uB098? \uC65C \uD2F0\uB77C\uBBF8\uC218\uAC00
+      \uB41C \uAC70\uC57C?"
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: 4770d80fd33ddc4448c82cd3b8f48080, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC644\uB4DC, \uB108 \uD639\uC2DC... \uD2F0\uB77C\uBBF8\uC218\uBC16\uC5D0
+      \uBABB \uB9CC\uB4E4\uC5B4?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 7ec34df6f4af79642b9559da81f19339, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: '!!'
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC624, \uC74C... \uC640... \uB2E4\uB978 \uC758\uBBF8\uB85C \uAD49\uC7A5\uD558\uB124!
+      \"\uD2F0\uB77C\uBBF8\uC218 \uC190\", \uADF8\uB7F0 \uAC70\uC9C0?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 6b3733f99c991614a8c09db014b38b26, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: ......
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: 07a3213a5204e264c9c9c09cccde8d6c, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC774\uC57C~ \uBC8C\uAFC0\uB85C \uB9CC\uB4E4\uC5C8\uB294\uB370\uB3C4
+      \uAE30\uAE54\uB098\uB124."
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: 07a3213a5204e264c9c9c09cccde8d6c, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uB9DE\uB2E4, \uAD81\uAE08\uD588\uB294\uB370... \uC65C \uB3C8
+      \uB300\uC2E0 \uD48D\uC120\uC744 \uBC1B\uC544?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 5e78667d3e301c04f86c9bf3b4b9f8e1, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: "(\uD718\uC801\uD718\uC801)"
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC544\uC544, \uC800 \uD0D1\uC758 \uAF2D\uB300\uAE30\uB85C \uC62C\uB77C\uAC00\uACE0
+      \uC2F6\uB2E4\uACE0? \n\uAC11\uC790\uAE30 \uB545\uC5D0\uC11C \uC193\uC544\uB09C
+      \uC800\uAC70 \uB9D0\uD558\uB294 \uAC70 \uB9DE\uC9C0? \n\uB8E8\uD504\uD0D1\uC758
+      \uBD80\uADC0\uC601\uD654, \uBB50 \uADF8\uB7F0 \uAC74\uAC00?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 5e78667d3e301c04f86c9bf3b4b9f8e1, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: "(\uB3C4\uB9AC\uB3C4\uB9AC)"
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: 5c49e87b98315e346921175b364fd3b2, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC544\uB2C8, \uBB50\uC5B4?! \uC704\uC5D0 \uB3D9\uC0DD\uC774 \uC788\uC5B4?!?!?!?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: a6f40f37ab0bb4a46b95629eb177259c, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: "! (\uB208 \uB561\uAE00)"
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: 4770d80fd33ddc4448c82cd3b8f48080, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: "\uADF8\uB098\uC800\uB098, \uB09C \uC5B4\uB5BB\uAC8C \uC54C\uC544\uB4E4\uC740
+      \uAC70\uC9C0?"
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uADF8\uB7F0\uB370 \uC644\uB4DC, \uD5C8\uAC00\uB97C \uBC1B\uC9C0
+      \uC54A\uC740 \uB9E4\uB9E4\uB294 \uBD88\uBC95\uC778 \uAC70 \uC54C\uC9C0?\n\uB0B4\uAC00
+      \uCF71 \uC2E0\uACE0\uD574\uBC84\uB9AC\uBA74 \uC1C4\uACE0\uB791\uCC30\uC9C0\uB3C4
+      \uBAB0\uB77C~"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 95f9582a8be792a46a9a5c57b2621096, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: '!!!!!!'
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: 7ec34df6f4af79642b9559da81f19339, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: "......(\uD6CC\uCA4D)"
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uD558\uC9C0\uB9CC \uB09C \uB124 \uD32C\uC774\uACE0~ \uADF8\uB7F0
+      \uC0AC\uC815\uC744 \uB4E4\uC5B4\uBC84\uB838\uC73C\uB2C8, \uC5B4\uCA54 \uC218
+      \uC5C6\uB124.\n\uAC10\uBC29\uC5D0 \uAC00\uB294 \uAC83 \uB300\uC2E0\uC5D0 \uB0B4
+      \uAC00\uAC8C\uC5D0\uC11C \uC77C\uD558\uB294 \uAC74 \uC5B4\uB54C?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: a6f40f37ab0bb4a46b95629eb177259c, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: '!'
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: "\uBAA8\uB4E0 \uBA54\uB274\uB294 \uB0B4\uAC00 \uB9CC\uB4E4\uAC70\uC57C.
+      \uB10C \uADF8\uAC78 \uC62E\uAE30\uACE0 \uD48D\uC120\uB9CC \uBAA8\uC73C\uBA74
+      \uB3FC\n\uC5B4\uB54C, \uC880 \uB04C\uB9AC\uC9C0 \uC54A\uC544?"
+  - isIllust: 0
+    isWand: 1
+    characterSprite: {fileID: 21300000, guid: a6f40f37ab0bb4a46b95629eb177259c, type: 3}
+    illustSprite: {fileID: 0}
+    speakerName: "\uC644\uB4DC"
+    dialogueText: "(\uACE0\uAC1C \uB044\uB355\uB044\uB355\uB044\uB355)"
+  - isIllust: 1
+    isWand: 0
+    characterSprite: {fileID: 0}
+    illustSprite: {fileID: 21300000, guid: 0b9ba5fa2f35a324593388641f95fbe6, type: 3}
+    speakerName: 
+    dialogueText: 
+  - isIllust: 0
+    isWand: 0
+    characterSprite: {fileID: 0}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD478"
+    dialogueText: "\uC88B\uC544, \uC774\uC81C\uBD80\uD130 \uC6B0\uB9AC\uB294 \uB3D9\uC5C5\uC790\uB2E4!"

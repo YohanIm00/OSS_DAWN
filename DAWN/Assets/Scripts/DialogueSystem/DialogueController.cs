@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using KoreanTyper;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
@@ -11,9 +13,15 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI conversationText;
     [SerializeField] private GameObject forwardMark;
 
+    [Header("Dialogue Objects")]
+    [SerializeField] private GameObject wand;
+    [SerializeField] private GameObject pu;
+    [SerializeField] private GameObject illustration;
+    [SerializeField] private GameObject tiramisu;   //todo SetActive() related task: implement later
+
     private Queue<DialogueText.SpeakerData> dialogueQueue = new Queue<DialogueText.SpeakerData>();
 
-    private bool isAllSaid;
+    private bool isAllSaid = false;
 
     private static bool isConversation = false;
     public static bool IsConversation
@@ -24,14 +32,21 @@ public class DialogueController : MonoBehaviour
     private DialogueText.SpeakerData temp;
     private Coroutine typingRoutine = null;
 
+    void Awake()
+    {
+        wand.SetActive(false);
+        pu.SetActive(false);
+        illustration.SetActive(false);
+    }
     public void DisplayNextText(DialogueText dialogueText)
     {
         forwardMark.SetActive(false);
 
         if (dialogueQueue.Count == 0 && typingRoutine == null)
         {
-            if(!isAllSaid)
-                StartConversation();
+            if(!isAllSaid){
+                StartConversation(dialogueText);
+            }
             else
             {
                 EndConversation();
@@ -50,22 +65,65 @@ public class DialogueController : MonoBehaviour
 
         if (dialogueQueue.Count > 0 && typingRoutine == null)
         {
+            if(dialogueQueue.Peek().isIllust)
+            {
+                illustration.SetActive(true);
+                wand.SetActive(false);
+                pu.SetActive(false);
+                illustration.GetComponent<Image>().sprite = dialogueQueue.Peek().illustSprite;
+            }
+            else if (dialogueQueue.Peek().characterSprite != null)
+            {
+                illustration.SetActive(false);
+                wand.SetActive(true);
+                pu.SetActive(true);
+                
+                if(dialogueQueue.Peek().isWand)
+                {
+                    wand.GetComponent<Image>().sprite = dialogueQueue.Peek().characterSprite;
+                }
+                else
+                {
+                    pu.GetComponent<Image>().sprite = dialogueQueue.Peek().characterSprite;
+                }
+            }
+            else
+            {
+                illustration.SetActive(true);
+                wand.SetActive(false);
+                pu.SetActive(false);
+            }
+            
             temp = dialogueQueue.Dequeue();
             nameText.text = temp.speakerName;
             conversationText.text = temp.dialogueText;
             typingRoutine = StartCoroutine(TypingRoutine());
         }
+
+        if (dialogueQueue.Count == 0)
+        {
+            isAllSaid = true;
+            //SceneManager.LoadScene("asldkfm");
+        }
     }
 
-    private void StartConversation()
+    private void StartConversation(DialogueText dialogueText)
     {
-        // Implement these part after creating DialogueText
+        if (!gameObject.activeSelf)
+        {
+            
+            isConversation = true;
+            gameObject.SetActive(true);
+        }
+Debug.Log("대화 시작");
+        for (int i = 0; i < dialogueText.speakerData.Length; ++i)
+            dialogueQueue.Enqueue(dialogueText.speakerData[i]);
     }
 
     private void EndConversation()
     {
         isAllSaid = false;
-
+Debug.Log("대화 끝");
         if (gameObject.activeSelf)
         {
             gameObject.SetActive(false);
@@ -75,6 +133,15 @@ public class DialogueController : MonoBehaviour
 
     IEnumerator TypingRoutine()
     {
-        yield return null;
+        temp.dialogueText = conversationText.text;
+
+        int typingLength = temp.dialogueText.GetTypingLength();
+        for (int index = 0; index <= typingLength; ++index)
+        {
+            conversationText.text = temp.dialogueText.Typing(index);
+            yield return new WaitForSeconds(0.05f);
+        }
+        forwardMark.SetActive(true);
+        typingRoutine = null;
     }
 }
