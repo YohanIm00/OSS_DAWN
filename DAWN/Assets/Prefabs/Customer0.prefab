@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5443525911367461477}
   - component: {fileID: 2496457757873844936}
   - component: {fileID: 1117988277347419645}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,9 +117,9 @@ GameObject:
   - component: {fileID: 7642879009334446567}
   - component: {fileID: 4817528722151606704}
   - component: {fileID: 6792692026176893750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Customer0
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +270,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: -0.25099152}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -281,7 +281,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.5}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!1 &4425208728555158805
 GameObject:
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 4950748567302772076}
   - component: {fileID: 593299897400820571}
   - component: {fileID: 2139838023102410231}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Emoji
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 447402578996950160}
   - component: {fileID: 4287250837606316019}
   - component: {fileID: 3129929362177580962}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpeechBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 5519362804455120971}
   - component: {fileID: 3904045506318591723}
   - component: {fileID: 2214682863709210288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
