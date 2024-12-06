@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Chef : NPC
 {
-    public Queue<MenuSO> WaitingQueue = new Queue<MenuSO>(8);
-    public Queue<MenuSO> CookingQueue = new Queue<MenuSO>(2);
-    public Queue<MenuSO> CompleteQueue = new Queue<MenuSO>(5);
+    public Queue<MenuSO> waitingQueue = new Queue<MenuSO>(8);
+    public Queue<MenuSO> cookingQueue = new Queue<MenuSO>(2);
+    public Queue<MenuSO> completeQueue = new Queue<MenuSO>(5);
 
     [SerializeField] private Slider slider1;
     [SerializeField] private Slider slider2;
@@ -36,9 +34,9 @@ public class Chef : NPC
 
     protected override void _Update()
     {
-        if (WaitingQueue.Count > 0 && CookingQueue.Count < 2)
-            CookingQueue.Enqueue(WaitingQueue.Dequeue()); // Start to Bake!
-        if (CookingQueue.Count > 0)
+        if (waitingQueue.Count > 0 && cookingQueue.Count < 2)
+            cookingQueue.Enqueue(waitingQueue.Dequeue()); // Start to Bake!
+        if (cookingQueue.Count > 0)
         {
             if (cooking1 == null)
                 cooking1 = StartCoroutine(Cooking(1));
@@ -50,23 +48,30 @@ public class Chef : NPC
     private void GetOrder()
     {
         while (player.menuQueue.Count > 0)
-            WaitingQueue.Enqueue(player.menuQueue.Dequeue());
+        {
+                waitingQueue.Enqueue(player.menuQueue.Dequeue());
+                Debug.Log($"{waitingQueue.Peek()} is added to waitingQueue");
+        }
+        
     }
 
     private void GiveCook()
     {
-        if (CompleteQueue.Count == 0)
+        if (completeQueue.Count == 0)
             return;
         if (player.isServing)
             return;
 
-        player.servingMenu = CompleteQueue.Dequeue();
+        player.servingMenu = completeQueue.Dequeue();
         Debug.Log("Let's serve " + player.servingMenu + "!");
         player.DisplayServedFood(player.servingMenu, true);
         PickComplete();
     }
 
-    private void Break() { currentState = State.Cook; }
+    private void Break() 
+    { 
+        currentState = State.Cook;
+    }
     
     private void FinishCook(MenuSO currentMenu)
     {
@@ -95,17 +100,22 @@ public class Chef : NPC
         }
     }
 
-    private Sprite CurrentSpriteChoicer(MenuSO currentMenu) { return currentMenu.GetSprite(); }
+    private Sprite CurrentSpriteChoicer(MenuSO currentMenu)
+    { 
+        return currentMenu.GetSprite();
+    }
 
-    private void PickComplete() { player.readyQueue.Dequeue().SetActive(false); }
+    private void PickComplete() 
+    { 
+        player.readyQueue.Dequeue().SetActive(false); 
+    }
 
     private void StartCook(MenuSO currentMenu)
     {
-            foreach (var item in player.completeFood)
+        foreach (var item in player.completeFood)
         {
             if (item.activeSelf == false)
             {
-                player.readyQueue.Enqueue(item);
                 item.SetActive(true);
                 SpriteRenderer spriteRenderer =item.GetComponent<SpriteRenderer>();
                 if(spriteRenderer != null)
@@ -152,7 +162,7 @@ public class Chef : NPC
         }
 
         cookingCount++;
-        MenuSO currentCook = CookingQueue.Dequeue();
+        MenuSO currentCook = cookingQueue.Dequeue();
         StartCook(currentCook);
 
         Debug.Log("Start to bake " + currentCook.name + "!");
@@ -172,7 +182,7 @@ public class Chef : NPC
 
         currentState = State.Complete;
         Debug.Log("It is done baking " + currentCook.name + "!");
-        CompleteQueue.Enqueue(currentCook);
+        completeQueue.Enqueue(currentCook);
 
         // Resetting the slider
         slider.value = 0;
