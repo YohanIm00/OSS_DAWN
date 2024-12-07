@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class Chef : NPC
 {
-    public Queue<MenuSO> orderQueue = new Queue<MenuSO>(8);
-    public Queue<MenuSO> bakeQueue = new Queue<MenuSO>(2);
-    public Queue<MenuSO> completeQueue = new Queue<MenuSO>(5);
+    public Queue<MenuSO> orderQueue = new Queue<MenuSO>(10);
+    public Queue<MenuSO> bakeQueue = new Queue<MenuSO>(4);
+    public Queue<MenuSO> completeQueue = new Queue<MenuSO>(6);
 
-    [SerializeField] private Slider slider1;
-    [SerializeField] private Slider slider2;
+    [SerializeField] private Slider oven1;
+    [SerializeField] private Slider oven2;
+    [SerializeField] private Slider oven3;
+    [SerializeField] private Slider oven4;
 
     enum State { Cook, Break, Complete }
 
@@ -20,8 +22,10 @@ public class Chef : NPC
 
     int cookingCount = 0;
 
-    private Coroutine cooking1;
-    private Coroutine cooking2;
+    private Coroutine baking1;
+    private Coroutine baking2;
+    private Coroutine baking3;
+    private Coroutine baking4;
 
     public override void Interact()
     {
@@ -29,19 +33,23 @@ public class Chef : NPC
         if (currentState == State.Break)
             Break();
         else if (currentState == State.Complete)
-            GiveCook();
+            GiveMenu();
     }
 
     protected override void _Update()
     {
-        if (orderQueue.Count > 0 && bakeQueue.Count < 2)
+        if (orderQueue.Count > 0 && bakeQueue.Count < 4)
             bakeQueue.Enqueue(orderQueue.Dequeue()); // Start to Bake!
         if (bakeQueue.Count > 0)
         {
-            if (cooking1 == null)
-                cooking1 = StartCoroutine(Cooking(1));
-            else if (cooking2 == null)
-                cooking2 = StartCoroutine(Cooking(2));
+            if (baking1 == null)
+                baking1 = StartCoroutine(Cooking(1));
+            else if (baking2 == null)
+                baking2 = StartCoroutine(Cooking(2));
+            else if (baking3 == null)
+                baking3 = StartCoroutine(Cooking(3));
+            else if (baking4 == null)
+                baking4 = StartCoroutine(Cooking(4));
         }
     }
 
@@ -55,17 +63,24 @@ public class Chef : NPC
         
     }
 
-    private void GiveCook()
+    private void GiveMenu()
     {
         if (completeQueue.Count == 0)
             return;
-        if (player.isServing)
+        if (player.isFull)
             return;
 
-        //todo) Change this part after implementing serving List<menuSO> in playerController
-        player.servingMenu = completeQueue.Dequeue();
-        Debug.Log("Let's serve " + player.servingMenu + "!");
-        player.DisplayServedFood(player.servingMenu, true);
+        for (int i = 0; i < player.servingPaws.Count; ++i)
+        {
+            if (player.servingPaws[i] == null)
+            {
+                player.servingPaws[i] = completeQueue.Dequeue();
+                Debug.Log("Let's serve " + player.servingPaws[i] + "!");
+                player.DisplayServedFood(player.servingPaws[i], i, true);
+                    break;
+            }
+        }
+        
         PickComplete();
     }
 
@@ -139,21 +154,30 @@ public class Chef : NPC
 
     IEnumerator Cooking(int slot)
     {
-        if (cookingCount >= 2)
+        if (cookingCount >= 4)
             yield break;
         
         Slider slider = null;
 
         // Settings for slider
-        if (slot == 1)
+        switch(slot)
         {
-            slider = slider1.GetComponent<Slider>();
-            slider1.gameObject.SetActive(true);
-        }
-        else if (slot == 2)
-        {
-            slider = slider2.GetComponent<Slider>();
-            slider2.gameObject.SetActive(true);
+            case 1:
+                slider = oven1.GetComponent<Slider>();
+                oven1.gameObject.SetActive(true);
+                break;
+            case 2:
+                slider = oven2.GetComponent<Slider>();
+                oven2.gameObject.SetActive(true);
+                break;
+            case 3:
+                slider = oven3.GetComponent<Slider>();
+                oven3.gameObject.SetActive(true);
+                break;
+            case 4:
+                slider = oven4.GetComponent<Slider>();
+                oven4.gameObject.SetActive(true);
+                break;
         }
 
         if (slider == null)
@@ -163,12 +187,12 @@ public class Chef : NPC
         }
 
         cookingCount++;
-        MenuSO currentCook = bakeQueue.Dequeue();
-        StartCook(currentCook);
+        MenuSO currentMenu = bakeQueue.Dequeue();
+        StartCook(currentMenu);
 
-        Debug.Log("Start to bake " + currentCook.name + "!");
+        Debug.Log("Start to bake " + currentMenu.name + "!");
 
-        float duration = currentCook.GetCookingTime();
+        float duration = currentMenu.GetCookingTime();
         slider.maxValue = duration; // Setting the maximum value of slider
 
         float elapsedTime = 0f;
@@ -182,24 +206,37 @@ public class Chef : NPC
         }
 
         currentState = State.Complete;
-        Debug.Log("It is done baking " + currentCook.name + "!");
-        completeQueue.Enqueue(currentCook);
+        Debug.Log("It is done baking " + currentMenu.name + "!");
+        completeQueue.Enqueue(currentMenu);
+        Debug.Log($"{currentMenu.name} is put on completeQueue.");
+        Debug.Log($"1st menu in completeQueue is {completeQueue.Peek()}");
 
         // Resetting the slider
         slider.value = 0;
         slider.gameObject.SetActive(false);
 
-        if (slot == 1)
+        switch(slot)
         {
-            cooking1 = null;
-            player.cookingFood[0].SetActive(false);
+            case 1:
+                baking1 = null;
+                player.cookingFood[0].SetActive(false);
+                break;
+            case 2:
+                baking2 = null;
+                player.cookingFood[1].SetActive(false);
+                break;
+            case 3:
+                baking3 = null;
+                player.cookingFood[2].SetActive(false);
+                break;
+            case 4:
+                baking4 = null;
+                player.cookingFood[3].SetActive(false);
+                break;
         }
-        else if (slot == 2)
-        {
-            cooking2 = null;
-            player.cookingFood[1].SetActive(false);
-        }
-        FinishCook(currentCook);
+
+
+        FinishCook(currentMenu);
         cookingCount--;
     }
 }
