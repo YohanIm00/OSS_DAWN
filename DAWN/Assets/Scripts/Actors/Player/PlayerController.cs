@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Queue<MenuSO> menuQueue = new Queue<MenuSO>(8);
-    public Queue<GameObject> readyQueue = new Queue<GameObject>(8);
+    public Queue<MenuSO> receiptQueue = new Queue<MenuSO>(8);
+    public Queue<GameObject> servingQueue = new Queue<GameObject>(8);
     public GameObject[] completeFood = new GameObject[5];
     public GameObject[] cookingFood = new GameObject[2];
     public MenuSO servingMenu;

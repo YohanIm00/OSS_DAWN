@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Chef : NPC
 {
-    public Queue<MenuSO> waitingQueue = new Queue<MenuSO>(8);
-    public Queue<MenuSO> cookingQueue = new Queue<MenuSO>(2);
+    public Queue<MenuSO> orderQueue = new Queue<MenuSO>(8);
+    public Queue<MenuSO> bakeQueue = new Queue<MenuSO>(2);
     public Queue<MenuSO> completeQueue = new Queue<MenuSO>(5);
 
     [SerializeField] private Slider slider1;
@@ -34,23 +34,23 @@ public class Chef : NPC
 
     protected override void _Update()
     {
-        if (waitingQueue.Count > 0 && cookingQueue.Count < 2)
-            cookingQueue.Enqueue(waitingQueue.Dequeue()); // Start to Bake!
-        if (cookingQueue.Count > 0)
+        if (orderQueue.Count > 0 && bakeQueue.Count < 2)
+            bakeQueue.Enqueue(orderQueue.Dequeue()); // Start to Bake!
+        if (bakeQueue.Count > 0)
         {
             if (cooking1 == null)
                 cooking1 = StartCoroutine(Cooking(1));
-            if (cooking2 == null)
+            else if (cooking2 == null)
                 cooking2 = StartCoroutine(Cooking(2));
         }
     }
 
     private void GetOrder()
     {
-        while (player.menuQueue.Count > 0)
+        while (player.receiptQueue.Count > 0)
         {
-                waitingQueue.Enqueue(player.menuQueue.Dequeue());
-                Debug.Log($"{waitingQueue.Peek()} is added to waitingQueue");
+                orderQueue.Enqueue(player.receiptQueue.Dequeue());
+                Debug.Log($"{orderQueue.Peek()} is added to orderQueue");
         }
         
     }
@@ -62,6 +62,7 @@ public class Chef : NPC
         if (player.isServing)
             return;
 
+        //todo) Change this part after implementing serving List<menuSO> in playerController
         player.servingMenu = completeQueue.Dequeue();
         Debug.Log("Let's serve " + player.servingMenu + "!");
         player.DisplayServedFood(player.servingMenu, true);
@@ -79,7 +80,7 @@ public class Chef : NPC
         {
             if (item.activeSelf == false)
             {
-                player.readyQueue.Enqueue(item);
+                player.servingQueue.Enqueue(item);
                 item.SetActive(true);
                 SpriteRenderer spriteRenderer =item.GetComponent<SpriteRenderer>();
                 if(spriteRenderer != null)
@@ -107,12 +108,12 @@ public class Chef : NPC
 
     private void PickComplete() 
     { 
-        player.readyQueue.Dequeue().SetActive(false); 
+        player.servingQueue.Dequeue().SetActive(false); 
     }
 
     private void StartCook(MenuSO currentMenu)
     {
-        foreach (var item in player.completeFood)
+        foreach (var item in player.cookingFood)
         {
             if (item.activeSelf == false)
             {
@@ -162,7 +163,7 @@ public class Chef : NPC
         }
 
         cookingCount++;
-        MenuSO currentCook = cookingQueue.Dequeue();
+        MenuSO currentCook = bakeQueue.Dequeue();
         StartCook(currentCook);
 
         Debug.Log("Start to bake " + currentCook.name + "!");

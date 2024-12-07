@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Data")]
     public bool isGame = false;
-    public float totalGameTime = 75;
+    public const float TOTAL_GAME_TIME = 80;
+    public float currentGameTime = TOTAL_GAME_TIME;
+    [SerializeField] private float timerValue = 0;
     public int totalBalloon = 1000;
     public int currentBalloon = 0;
     // Audio would be managed by AudioManager later
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text txt_timer;
     public TMP_Text txt_balloon;
     public Slider sld_balloon;
+    public Slider sld_timer;
     public GameObject finish;
 
     public List<GameObject> customers = new List<GameObject>();
@@ -28,7 +31,7 @@ public class GameManager : MonoBehaviour
     private void Awake() 
     { 
             instance = this;
-            this.currentBalloon = gameDataSO.currentBalloon;
+            currentBalloon = gameDataSO.currentBalloon;
     }
 
     private void Start() { sld_balloon.maxValue = totalBalloon; }
@@ -71,8 +74,11 @@ public class GameManager : MonoBehaviour
 
     void UpdateTimer()
     {
-        totalGameTime -= Time.deltaTime;
-        if (totalGameTime < 0 && instance.customers.Count <= 0)
+        timerValue += Time.deltaTime;
+        currentGameTime -= Time.deltaTime;
+        sld_timer.value = timerValue / TOTAL_GAME_TIME;
+
+        if (currentGameTime < 0 && instance.customers.Count <= 0)
         {
             isGame = false;
             if (totalBalloon > currentBalloon)
@@ -81,7 +87,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(ToResultClear());
         }
         else
-            txt_timer.text = Mathf.Max(totalGameTime, 0).ToString("N0");
+            txt_timer.text = Mathf.Max(currentGameTime, 0).ToString("N0");
     }
 
     void UpdateBalloon()

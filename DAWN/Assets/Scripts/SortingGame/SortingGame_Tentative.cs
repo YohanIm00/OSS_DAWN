@@ -147,7 +147,7 @@ public class SortingGame : MonoBehaviour
     private IEnumerator ActivateFeverMode()
     {
         isFever = true;
-        feverText.text = "Fever!";
+        feverText.text = "Fever!!";
         // feverEffect.SetActive(true);
 
         yield return new WaitForSeconds(feverDuration);
