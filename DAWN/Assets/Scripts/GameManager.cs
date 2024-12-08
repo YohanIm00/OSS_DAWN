@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,8 +13,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Data")]
     // Values for Character movement
-    public bool isInputActivated = true;
     public bool isGame = false;
+    public bool isInputActivated = true;
     // Values for timer
     private const float TOTAL_GAME_TIME = 90;
     public float currentGameTime = TOTAL_GAME_TIME;
@@ -34,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]  // It might be better to create UIManager later
     // UIs for Timer
-    public Slider TimerSlider;
+    public Slider timerSlider;
     public TMP_Text timerText;
     // UIs for score
     public Slider balloonSlider;
@@ -50,6 +49,7 @@ public class GameManager : MonoBehaviour
     { 
         if (instance == null)
             instance = this;
+        
         currentBalloon = gameDataSO.currentBalloon;
         int bias = Mathf.RoundToInt((TOTAL_BALLOON - currentBalloon) * 0.01f);
         maxBalloon = (TOTAL_BALLOON - currentBalloon) / EXPECTED_NUM_OF_CUSTOMER + bias;
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     private void Start() 
     { 
-        TimerSlider.maxValue = TOTAL_GAME_TIME;
+        timerSlider.maxValue = TOTAL_GAME_TIME;
         balloonSlider.maxValue = TOTAL_BALLOON;
         satietySlider.maxValue = STOMACH_CAPACITY;
     }
@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
     {
         timerValue += Time.deltaTime;
         currentGameTime -= Time.deltaTime;
-        TimerSlider.value = timerValue;
+        timerSlider.value = timerValue;
 
         if (currentGameTime < 0 && instance.customers.Count <= 0)
         {

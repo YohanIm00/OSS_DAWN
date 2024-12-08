@@ -12,7 +12,7 @@ public class CustomerSpawner : MonoBehaviour
 
     [Header("UIs")]
     public GameObject ready;
-    public GameObject go;
+    public GameObject start;
 
     [Header("Prefabs")]
     public GameObject[] preCustomers;
@@ -33,14 +33,14 @@ public class CustomerSpawner : MonoBehaviour
         GameManager.instance.isGame = false;
         GameManager.instance.isInputActivated = false;
         ready.SetActive(true);
-        go.SetActive(false);
+        start.SetActive(false);
         yield return new WaitForSeconds(1.5f);
         
         ready.SetActive(false);
-        go.SetActive(true);
+        start.SetActive(true);
         AudioManager.instance.PlaySfx(AudioManager.SFX.MainStart);
         yield return new WaitForSeconds(1.5f);
-        go.SetActive(false);
+        start.SetActive(false);
 
         GameManager.instance.isGame = true;
         GameManager.instance.isInputActivated = true;
