@@ -2,25 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
-public class SortingGame : MonoBehaviour
+public class SortingGameManager : MonoBehaviour
 {
     [Header("Game Data SO")]
     [SerializeField] private GameDataSO gameDataSO;
+
+    [Header("Data")]
+    // Values for maintaining inputs
+    public bool isGame = false;
+    public bool isInputActivated = false;
+    // Values for timer
+    private const float TOTAL_GAME_TIME = 60;
+    [SerializeField] private float currentGameTime = TOTAL_GAME_TIME;
+    // Values for balloon score
+    private const int BASE_SCORE = 1;
+    private int currentBalloon = 0;
+    // Values for combo system
+    private const int COMBO_THRESHOLD = 20;
+    private int comboCount = 0;
+    // Values for fever system
+    private const float FEVER_DURATION = 3f;
+    private bool isFever = false;
     
     [Header("UI Elements")]
-    public TMP_Text scoreText;
     public Slider timerSlider;
+    public TMP_Text timerText;
+    public TMP_Text balloonScore;
     public TMP_Text comboText;
     public TMP_Text feverText;
     // public GameObject feverEffect;
+    public GameObject comboObject;
+    public GameObject balloonObject;
 
-    [Header("Game Settings")]
-    public float gameDuration = 60f;
-    public int comboThreshold = 20;
-    public float feverDuration = 3f;
-    public int baseScore = 2;
+    [Header("EyeCatchers")]
+    public GameObject ready;
+    public GameObject start;
+    public GameObject finish;
 
     [Header("Conveyor Settings")]
     public GameObject[] commonPoints; // Positions for objects on conveyor
@@ -28,55 +48,55 @@ public class SortingGame : MonoBehaviour
     public Dictionary<string, SortSO> snacks = new Dictionary<string, SortSO>();
     private List<SortSO> currentConveyor = new List<SortSO>(7);
 
-    private int score = 0;
-    private float timer;
-    private int comboCount = 0;
-    private bool isFever = false;
-
-    void Awake() {}
-
-    void Start()
+    private void Awake()
     {
+        timerSlider.maxValue = TOTAL_GAME_TIME;
+
         LoadSnacks();
-        if (snacks.Count == 0)
-        {
-            Debug.LogError("Snacks dictionary is empty!");
-            return;
-        }
-
-        timer = gameDuration;
-
         InitConveyor();
-        if (currentConveyor == null)
-        {
-            Debug.LogError("currentQueue is not initialized!");
-        }
+    }
 
-        UpdateUI();
-        // feverEffect.SetActive(false);
+    private void Start()
+    {
+        StartCoroutine(GameStart());
     }
 
     void Update()
     {
-        if (timer > 0)
+        if (isInputActivated)
+            {
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                    SortObject("Left");
+                else if (Input.GetKeyDown(KeyCode.RightArrow))
+                    SortObject("Right");
+            }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isGame)
         {
-            timer -= Time.deltaTime;
+            UpdateTimer();
             UpdateUI();
-
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                SortObject("Left");
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                SortObject("Right");
-            }
-
-            if (timer <= 0)
-            {
-                EndGame();
-            }
         }
+    }
+
+    IEnumerator GameStart()
+    {
+        ready.SetActive(true);
+        start.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+        
+        ready.SetActive(false);
+        start.SetActive(true);
+        AudioManager.instance.PlaySfx(AudioManager.SFX.SortStart);
+        yield return new WaitForSeconds(1.5f);
+        start.SetActive(false);
+
+        comboObject.SetActive(true);
+        balloonObject.SetActive(true);
+        isGame = true;
+        isInputActivated = true;
     }
 
     private void LoadSnacks()
@@ -101,26 +121,20 @@ public class SortingGame : MonoBehaviour
         {
             SortSO firstSnack = currentConveyor[0];
 
-            if (firstSnack == null)
-            {
-                Debug.LogError("Dequeued a null object from the currentQueue!");
-                return;
-            }
-
             if (isFever)
             {
-                score += baseScore * 2; // Double score during Fever mode
+                currentBalloon += BASE_SCORE * 2; // Double score during Fever mode
                 AudioManager.instance.PlaySfx(AudioManager.SFX.CorrectSort);
             }
             else if (firstSnack.GetKeyValue() == key)
             {
-                score += isFever ? baseScore * 2 : baseScore;
+                currentBalloon += isFever ? BASE_SCORE * 2 : BASE_SCORE;
                 currentConveyor.RemoveAt(0);
-                FixedUpdateConveyor();
+                RefillConveyor();
                 AudioManager.instance.PlaySfx(AudioManager.SFX.CorrectSort);
                 comboCount++;
 
-                if (comboCount >= comboThreshold && !isFever)
+                if (comboCount >= COMBO_THRESHOLD && !isFever)
                 {
                     StartCoroutine(ActivateFeverMode());
                 }
@@ -128,15 +142,12 @@ public class SortingGame : MonoBehaviour
             else
             {
                 comboCount = 0; // Reset combo on incorrect sort
+                currentBalloon -= Mathf.RoundToInt(currentBalloon * 0.1f);
                 AudioManager.instance.PlaySfx(AudioManager.SFX.WrongSort);
             }
-
-            UpdateUI();
         }
         else
-        {
             Debug.LogWarning("currentQueue is empty, nothing to sort!");
-        }
     }
 
 
@@ -146,7 +157,7 @@ public class SortingGame : MonoBehaviour
         feverText.text = "Fever!!";
         // feverEffect.SetActive(true);
 
-        yield return new WaitForSeconds(feverDuration);
+        yield return new WaitForSeconds(FEVER_DURATION);
 
         feverText.text = "";
         // feverEffect.SetActive(false);
@@ -156,7 +167,7 @@ public class SortingGame : MonoBehaviour
 
     private void InitConveyor()
     {
-        for (int i = 0; i < commonPoints.Length; i++)
+        for (int i = 0; i < feverPoints.Length; i++)
         {
             feverPoints[i].GetComponent<Image>().sprite = snacks["TiramSet"].GetSprite();
         }
@@ -170,20 +181,18 @@ public class SortingGame : MonoBehaviour
         }
     }
 
-    private void FixedUpdateConveyor()
+    private void RefillConveyor()
     {
         SortSO randomSnack = Random.Range(0, 2) == 0 ? snacks["Tiram"] : snacks["Milk"];
         currentConveyor.Add(randomSnack);
+
         for (int i = 0; i < commonPoints.Length; ++i)
-        {
             commonPoints[i].GetComponent<Image>().sprite = currentConveyor[i].GetSprite();
-        }
     }
 
     private void UpdateUI()
     {
-        scoreText.text = $"{score}";
-        timerSlider.value = timer / gameDuration;
+        balloonScore.text = $"{currentBalloon}";
         comboText.text = "Combo: " + comboCount;
 
         if (isFever)
@@ -204,11 +213,32 @@ public class SortingGame : MonoBehaviour
         }
     }
 
-    private void EndGame()
+    void UpdateTimer()
     {
-        timer = 0;
-        Debug.Log("Game Over! Final Score: " + score);
-        gameDataSO.currentBalloon = score;
-        // Implement end game logic here, such as showing a result screen or restarting.
+        currentGameTime -= Time.deltaTime;
+        timerSlider.value = currentGameTime;
+
+        if (currentGameTime < 0)
+        {
+            Debug.Log("Game Over! Final Score: " + currentBalloon);
+            gameDataSO.currentBalloon = currentBalloon;
+
+            isGame = false;
+            isInputActivated = false;
+            comboObject.SetActive(false);
+            balloonObject.SetActive(false);
+
+            StartCoroutine(GameFinish());
+        }
+        else
+            timerText.text = Mathf.Max(currentGameTime, 0).ToString("N0");
+    }
+
+    IEnumerator GameFinish()
+    {
+        finish.SetActive(true);
+        AudioManager.instance.PlaySfx(AudioManager.SFX.SortFinish);
+        yield return new WaitForSeconds(4);
+        SceneManager.LoadScene("Dialogue");
     }
 }
