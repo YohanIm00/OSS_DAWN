@@ -49,6 +49,7 @@ public abstract class CustomerState : MonoBehaviour
 
     protected bool _isHori;
     protected bool _isVert;
+    protected bool _isEating;
 
     protected void Animate()
     {
@@ -77,5 +78,8 @@ public abstract class CustomerState : MonoBehaviour
         customer.animator.SetBool("isVert", _isVert);
         customer.animator.SetFloat("hori", direction.x);
         customer.animator.SetFloat("vert", direction.y);
+
+        if(stateMachine.currentState == stateMachine.Enjoy)
+            customer.animator.SetTrigger("munch");
     }
 }
