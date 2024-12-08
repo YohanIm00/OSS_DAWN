@@ -5051,9 +5051,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: READY?
+  m_text: READY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e75ce22175546cc4495979648a15dc5e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8dce99a258143cd41b99c55c0e54a6a8, type: 2}
   m_sharedMaterial: {fileID: -2866715295553079519, guid: e75ce22175546cc4495979648a15dc5e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -5061,7 +5061,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4286367231
-  m_fontColor: {r: 1, g: 0.773906, b: 0.48490566, a: 1}
+  m_fontColor: {r: 0.9960785, g: 0.7686275, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5117,7 +5117,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &390655781
