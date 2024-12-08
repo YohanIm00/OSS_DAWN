@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4817528722151606704}
   - component: {fileID: 6792692026176893750}
   m_Layer: 6
-  m_Name: Customer1
+  m_Name: Customer7
   m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: -2056887399, guid: 0e835352c05d5be4aaaf298f98f2960b, type: 3}
+  m_Sprite: {fileID: 828001718, guid: be105cfc90ed2db40b795eb306f0267e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: d0aa3b793e9d70242a17c635289c7d0b, type: 3}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 622309f5f48955a4fbb8201a9731349a, type: 3}
 --- !u!114 &3316396292563773477
 MonoBehaviour:
   m_ObjectHideFlags: 0
