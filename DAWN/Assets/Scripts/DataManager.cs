@@ -25,7 +25,7 @@ public class DataManager : MonoBehaviour
 
     private void LoadMenus()
     {
-        MenuSO[] loadData = Resources.LoadAll<MenuSO>("Cuisines");
+        MenuSO[] loadData = Resources.LoadAll<MenuSO>("Debug");
 
         foreach (MenuSO menu in loadData)
         {
