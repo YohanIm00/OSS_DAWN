@@ -38,7 +38,7 @@ public class Customer : MonoBehaviour
                 wayPoints.Add(dst.wayPoints[i]);
             wayPoints.Add(dst.transform);
             sit = dst;
-            orderWaitingTime = Random.Range(8, 16);
+            orderWaitingTime = Random.Range(10, 16);
             menuWaitingTime = menu.GetCookingTime() + Random.Range(12, 18);
         }
         else

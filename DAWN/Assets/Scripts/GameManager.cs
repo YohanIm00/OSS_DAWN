@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,14 +14,17 @@ public class GameManager : MonoBehaviour
     [Header("Data")]
     public bool isGame = false;
     // Values for timer
-    private const float TOTAL_GAME_TIME = 80;
+    private const float TOTAL_GAME_TIME = 90;
     public float currentGameTime = TOTAL_GAME_TIME;
     private float timerValue = 0;
     // Values for score
-    private int totalBalloon = 1000;
-    private int currentBalloon = 0;
+    [SerializeField] private const int EXPECTED_NUM_OF_CUSTOMER = 20;
+    private const int TOTAL_BALLOON = 1000;
+    [SerializeField] private int currentBalloon = 0;
+    [SerializeField] private int maxBalloon = 0;
     // Values for satiety
     private const float STOMACH_CAPACITY = 100;
+    private const float PIECE_OF_CAKE = 60;
     public float currentSatiety = 0;
 
     // Audio would be managed by AudioManager later
@@ -44,12 +48,14 @@ public class GameManager : MonoBehaviour
         if (instance == null)
             instance = this;
         currentBalloon = gameDataSO.currentBalloon;
+        int bias = Mathf.RoundToInt((TOTAL_BALLOON - currentBalloon) * 0.01f);
+        maxBalloon = (TOTAL_BALLOON - currentBalloon) / EXPECTED_NUM_OF_CUSTOMER + bias;
     }
 
     private void Start() 
     { 
         TimerSlider.maxValue = TOTAL_GAME_TIME;
-        balloonSlider.maxValue = totalBalloon;
+        balloonSlider.maxValue = TOTAL_BALLOON;
         satietySlider.maxValue = STOMACH_CAPACITY;
     }
 
@@ -67,16 +73,19 @@ public class GameManager : MonoBehaviour
     public void GainBalloon(bool plus)
     {
         if (plus)
-            currentBalloon += Random.Range(3, 8);
+            currentBalloon += Random.Range((int)(maxBalloon * 0.4f), maxBalloon);
         else
         {
-            currentBalloon -= Random.Range(1, 4);
+            currentBalloon -= Random.Range((int)(maxBalloon * 0.2f), (int)(maxBalloon * 0.5f));
             if (currentBalloon < 0)
                 currentBalloon = 0;
         }
     }
 
-    public void GainSatiety() { currentSatiety += 60; }
+    public void GainSatiety() 
+    { 
+        currentSatiety += PIECE_OF_CAKE;
+    }
 
     IEnumerator ToResultClear()
     {
@@ -101,7 +110,7 @@ public class GameManager : MonoBehaviour
         if (currentGameTime < 0 && instance.customers.Count <= 0)
         {
             isGame = false;
-            if (totalBalloon > currentBalloon)
+            if (TOTAL_BALLOON > currentBalloon)
                 StartCoroutine(ToResultFail());
             else
                 StartCoroutine(ToResultClear());
@@ -113,7 +122,7 @@ public class GameManager : MonoBehaviour
     void UpdateBalloon()
     {
         balloonSlider.value = Mathf.Lerp(balloonSlider.value, currentBalloon, Time.deltaTime * 10);
-        balloonText.text = $"{currentBalloon} / {totalBalloon}";
+        balloonText.text = $"{currentBalloon} / {TOTAL_BALLOON}";
     }
 
     void UpdateSatiety()
