@@ -84,6 +84,8 @@ public class PlayerAction : MonoBehaviour
         _rigid.velocity = moveVec * _speed;
     }
 
+    public void SetSpeed(float speed) { this._speed = speed; }
+
     // Method to generate a raycast for detecting objects in front of the player
     public void GenerateRay()
     {

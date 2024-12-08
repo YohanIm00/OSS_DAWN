@@ -6,6 +6,7 @@
         "Behaviour",
         "Hori",
         "Interactable",
+        "Lerp",
         "Mathf",
         "Rigidbody",
         "Scriptable"

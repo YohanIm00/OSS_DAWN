@@ -4,13 +4,14 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
     public Queue<MenuSO> receiptQueue = new Queue<MenuSO>(10);
     public Queue<GameObject> servingQueue = new Queue<GameObject>(10);
     public List<MenuSO> servingPaws = new List<MenuSO>(2);
     public GameObject[] completeFood = new GameObject[6];   // Points to display completed menus
     public GameObject[] cookingFood = new GameObject[4];    // Points to display currently cooking menus
     public GameObject[] servingFood = new GameObject[2];    // Points to display serving menus on Wand's paws
-    private PlayerAction _playerAction;
+    public PlayerAction playerAction;
     public PlayerStateMachine playerStateMachine;
     public bool isServing 
     {
@@ -64,9 +65,15 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    public void Awake()
+    {
+        if (instance == null)
+            instance = this;
+    }
+
     private void Start()
     {
-        _playerAction = GetComponent<PlayerAction>();
+        playerAction = GetComponent<PlayerAction>();
         playerStateMachine.Initialize();
 
         for (int i = 0; i < 2; ++i)
@@ -78,21 +85,25 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && isServing)
-            Munch(0);
-        else if(Input.GetKeyDown(KeyCode.G) && isServing)
-            Munch(1);
-
-        if (Input.GetKeyDown(KeyCode.E) && _playerAction.hit.collider != null)
+        if (isServing && GameManager.instance.currentSatiety < 100)
         {
-            _playerAction.hitCustomer = _playerAction.hit.collider.GetComponent<Customer>();
-            playerStateMachine.Update(this, _playerAction);
+            if (Input.GetKeyDown(KeyCode.F) && isServing)
+                Munch(0);
+            else if(Input.GetKeyDown(KeyCode.G) && isServing)
+                Munch(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && playerAction.hit.collider != null)
+        {
+            playerAction.hitCustomer = playerAction.hit.collider.GetComponent<Customer>();
+            playerStateMachine.Update(this, playerAction);
         }
     }
 
     private void Munch(int index)
     {
         DisplayServedFood(servingPaws[index], index, false);
+        GameManager.instance.GainSatiety();
         isFull = false;
     }
 }

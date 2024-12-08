@@ -12,29 +12,46 @@ public class GameManager : MonoBehaviour
 
     [Header("Data")]
     public bool isGame = false;
-    public const float TOTAL_GAME_TIME = 80;
+    // Values for timer
+    private const float TOTAL_GAME_TIME = 80;
     public float currentGameTime = TOTAL_GAME_TIME;
-    [SerializeField] private float timerValue = 0;
-    public int totalBalloon = 1000;
-    public int currentBalloon = 0;
+    private float timerValue = 0;
+    // Values for score
+    private int totalBalloon = 1000;
+    private int currentBalloon = 0;
+    // Values for satiety
+    private const float STOMACH_CAPACITY = 100;
+    public float currentSatiety = 0;
+
     // Audio would be managed by AudioManager later
 
     [Header("UI")]  // It might be better to create UIManager later
-    public TMP_Text txt_timer;
-    public TMP_Text txt_balloon;
-    public Slider sld_balloon;
-    public Slider sld_timer;
+    // UIs for Timer
+    public Slider TimerSlider;
+    public TMP_Text timerText;
+    // UIs for score
+    public Slider balloonSlider;
+    public TMP_Text balloonText;
+    // UIs for satiety
+    public Slider satietySlider;
+    // public TMP_Text satietyText;
     public GameObject finish;
 
     public List<GameObject> customers = new List<GameObject>();
 
     private void Awake() 
     { 
+        if (instance == null)
             instance = this;
-            currentBalloon = gameDataSO.currentBalloon;
+        currentBalloon = gameDataSO.currentBalloon;
     }
 
-    private void Start() { sld_balloon.maxValue = totalBalloon; }
+    private void Start() 
+    { 
+        TimerSlider.maxValue = TOTAL_GAME_TIME;
+        balloonSlider.maxValue = totalBalloon;
+        satietySlider.maxValue = STOMACH_CAPACITY;
+    }
 
     // Update is called once per frame
     private void FixedUpdate()
@@ -43,6 +60,7 @@ public class GameManager : MonoBehaviour
         {
             UpdateTimer();
             UpdateBalloon();
+            UpdateSatiety();
         }
     }
 
@@ -57,6 +75,8 @@ public class GameManager : MonoBehaviour
                 currentBalloon = 0;
         }
     }
+
+    public void GainSatiety() { currentSatiety += 60; }
 
     IEnumerator ToResultClear()
     {
@@ -76,7 +96,7 @@ public class GameManager : MonoBehaviour
     {
         timerValue += Time.deltaTime;
         currentGameTime -= Time.deltaTime;
-        sld_timer.value = timerValue / TOTAL_GAME_TIME;
+        TimerSlider.value = timerValue;
 
         if (currentGameTime < 0 && instance.customers.Count <= 0)
         {
@@ -87,12 +107,46 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(ToResultClear());
         }
         else
-            txt_timer.text = Mathf.Max(currentGameTime, 0).ToString("N0");
+            timerText.text = Mathf.Max(currentGameTime, 0).ToString("N0");
     }
 
     void UpdateBalloon()
     {
-        sld_balloon.value = currentBalloon;
-        txt_balloon.text = $"{currentBalloon} / {totalBalloon}";
+        balloonSlider.value = Mathf.Lerp(balloonSlider.value, currentBalloon, Time.deltaTime * 10);
+        balloonText.text = $"{currentBalloon} / {totalBalloon}";
+    }
+
+    void UpdateSatiety()
+    {
+        if (currentSatiety > 0)
+        {
+            if (currentSatiety >= STOMACH_CAPACITY)
+                StartCoroutine(SpeedDown());
+            currentSatiety -= Time.deltaTime * 0.5f;
+            satietySlider.value = Mathf.Lerp(satietySlider.value, currentSatiety, Time.deltaTime * 10);
+        }
+        else
+            currentSatiety = 0;
+    }
+
+    IEnumerator SpeedDown()
+    {
+        if (PlayerController.instance == null)
+        {
+            Debug.LogError("PlayerController instance is null. Ensure it's initialized.");
+            yield break;
+        }
+
+        if (PlayerController.instance.playerAction == null)
+        {
+            Debug.LogError("PlayerAction is null. Ensure PlayerAction is attached to the PlayerController GameObject.");
+            yield break;
+        }
+
+        PlayerController.instance.playerAction.SetSpeed(1);
+        yield return new WaitForSeconds(3);
+        PlayerController.instance.playerAction.SetSpeed(5);
+        currentSatiety = 0;
+        satietySlider.value = Mathf.Lerp(satietySlider.value, currentSatiety, Time.deltaTime * 10);
     }
 }
