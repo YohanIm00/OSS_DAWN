@@ -7031,7 +7031,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20174f27263a6e14fbd4e5b7a3f3b313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAction: {fileID: 1937380232}
   gameDataSO: {fileID: 11400000, guid: fb9bc283d888dae45adeea545eca1519, type: 2}
+  isInputActivated: 1
   isGame: 0
   currentGameTime: 90
   currentBalloon: 0
@@ -18724,6 +18726,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1937380232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 58497750566647790, guid: f127acfb42961124c87f5d25a42711c8, type: 3}
+  m_PrefabInstance: {fileID: 2146906162452965701}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6049ac0f0737750409ead5ca5d59d2e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1939344565
 GameObject:
   m_ObjectHideFlags: 0
