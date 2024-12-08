@@ -9,9 +9,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public PlayerAction playerAction;
     public GameDataSO gameDataSO;
 
     [Header("Data")]
+    // Values for Character movement
+    public bool isInputActivated = true;
     public bool isGame = false;
     // Values for timer
     private const float TOTAL_GAME_TIME = 90;
@@ -140,21 +143,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpeedDown()
     {
-        if (PlayerController.instance == null)
-        {
-            Debug.LogError("PlayerController instance is null. Ensure it's initialized.");
-            yield break;
-        }
-
-        if (PlayerController.instance.playerAction == null)
-        {
-            Debug.LogError("PlayerAction is null. Ensure PlayerAction is attached to the PlayerController GameObject.");
-            yield break;
-        }
-
-        PlayerController.instance.playerAction.SetSpeed(1);
-        yield return new WaitForSeconds(3);
-        PlayerController.instance.playerAction.SetSpeed(5);
+        playerAction.SetSpeed(1);
+        yield return new WaitForSeconds(2);
+        playerAction.SetSpeed(5);
         currentSatiety = 0;
         satietySlider.value = Mathf.Lerp(satietySlider.value, currentSatiety, Time.deltaTime * 10);
     }

@@ -32,6 +32,7 @@ public class CustomerSpawner : MonoBehaviour
     {
         Debug.Log("Ready to play game");
         GameManager.instance.isGame = false;
+        GameManager.instance.isInputActivated = false;
         ready.SetActive(true);
         go.SetActive(false);
         yield return new WaitForSeconds(1.5f);
@@ -40,10 +41,10 @@ public class CustomerSpawner : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         go.SetActive(false);
         GameManager.instance.isGame = true;
+        GameManager.instance.isInputActivated = true;
         while (GameManager.instance.isGame && GameManager.instance.currentGameTime > 0)
         {
             SpawnCustomer();
-            // yield return new WaitForSeconds(Random.Range(0, 16));
             if (GameManager.instance.currentGameTime > 60)
                 yield return new WaitForSeconds(Random.Range(1, 12));
             else if (GameManager.instance.currentGameTime > 30)

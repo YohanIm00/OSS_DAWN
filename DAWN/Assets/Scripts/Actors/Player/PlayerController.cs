@@ -1,10 +1,10 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController instance;
     public Queue<MenuSO> receiptQueue = new Queue<MenuSO>(10);
     public Queue<GameObject> servingQueue = new Queue<GameObject>(10);
     public List<MenuSO> servingPaws = new List<MenuSO>(2);
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] servingFood = new GameObject[2];    // Points to display serving menus on Wand's paws
     public PlayerAction playerAction;
     public PlayerStateMachine playerStateMachine;
-    public bool isServing 
+    public bool isServing
     {
         get 
         {
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         private set {}
     }
 
-    public bool isFull 
+    public bool isFull
     { 
         get 
         {
@@ -47,30 +47,6 @@ public class PlayerController : MonoBehaviour
     //     isServing = false;
     // }
 
-    public void DisplayServedFood(MenuSO servingMenu, int index, bool isDisplay)
-    {
-        if (isDisplay)
-        {
-            playerStateMachine.TransitionTo(playerStateMachine.servingState);
-            servingFood[index].SetActive(true);
-            servingFood[index].GetComponent<Image>().sprite = servingMenu.GetSprite();
-        }
-        else
-        {
-            servingFood[index].SetActive(false);
-            servingFood[index].GetComponent<Image>().sprite = null;
-            servingPaws[index] = null;
-            if (!isServing)
-                playerStateMachine.TransitionTo(playerStateMachine.waitingState);
-        }
-    }
-    
-    public void Awake()
-    {
-        if (instance == null)
-            instance = this;
-    }
-
     private void Start()
     {
         playerAction = GetComponent<PlayerAction>();
@@ -87,10 +63,10 @@ public class PlayerController : MonoBehaviour
     {
         if (isServing && GameManager.instance.currentSatiety < 100)
         {
-            if (Input.GetKeyDown(KeyCode.F) && isServing)
-                Munch(0);
-            else if(Input.GetKeyDown(KeyCode.G) && isServing)
-                Munch(1);
+            if (Input.GetKeyDown(KeyCode.F))
+                StartCoroutine(Munch(0));
+            else if(Input.GetKeyDown(KeyCode.G))
+                StartCoroutine(Munch(1));
         }
 
         if (Input.GetKeyDown(KeyCode.E) && playerAction.hit.collider != null)
@@ -100,10 +76,36 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Munch(int index)
+    IEnumerator Munch(int index)
     {
+        GameManager.instance.isInputActivated = false;
+
+        Debug.Log("Is Wand Munching!?");
         DisplayServedFood(servingPaws[index], index, false);
-        GameManager.instance.GainSatiety();
+        playerAction._anim.SetTrigger("munch");
         isFull = false;
+
+        yield return new WaitForSeconds(2f);
+
+        GameManager.instance.GainSatiety();
+        GameManager.instance.isInputActivated = true;
+    }
+
+    public void DisplayServedFood(MenuSO servingMenu, int index, bool isDisplay)
+    {
+        if (isDisplay)
+        {
+            playerStateMachine.TransitionTo(playerStateMachine.servingState);
+            servingFood[index].SetActive(true);
+            servingFood[index].GetComponent<Image>().sprite = servingMenu.GetSprite();
+        }
+        else
+        {
+            servingFood[index].SetActive(false);
+            servingFood[index].GetComponent<Image>().sprite = null;
+            servingPaws[index] = null;
+            if (!isServing)
+                playerStateMachine.TransitionTo(playerStateMachine.waitingState);
+        }
     }
 }
