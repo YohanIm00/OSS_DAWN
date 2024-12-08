@@ -7,6 +7,8 @@ public class PlayerAction : MonoBehaviour
     // Player movement speed
     private float _speed = 5;
 
+    public bool isAvailable = true;
+
     // Variables to store input from the player
     private float _horizontal;
     private float _vertical;
@@ -20,7 +22,7 @@ public class PlayerAction : MonoBehaviour
 
     // Components for Rigidbody2D and Animator
     private Rigidbody2D _rigid;
-    private Animator _anim;
+    public Animator _anim;
 
     // Initialize components on awake
     void Awake()
@@ -32,6 +34,13 @@ public class PlayerAction : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.instance.isInputActivated)
+        {
+            _horizontal = 0;
+            _vertical = 0;
+            return;
+        }
+        
         // Update the direction of the ray based on player's movement
         RotateRay();
 
@@ -84,6 +93,8 @@ public class PlayerAction : MonoBehaviour
         _rigid.velocity = moveVec * _speed;
     }
 
+    public void SetSpeed(float speed) { this._speed = speed; }
+
     // Method to generate a raycast for detecting objects in front of the player
     public void GenerateRay()
     {
@@ -102,20 +113,12 @@ public class PlayerAction : MonoBehaviour
 
         // Determine the ray direction based on player's movement input
         if (_horizontal > 0f)
-        {
             _rayDirection = Vector2.right; // Ray points to the right
-        }
         else if (_horizontal < 0f)
-        {
             _rayDirection = Vector2.left; // Ray points to the left
-        }
         else if (_vertical > 0f)
-        {
             _rayDirection = Vector2.up; // Ray points upwards
-        }
         else if (_vertical < 0f)
-        {
             _rayDirection = Vector2.down; // Ray points downwards
-        }
     }
 }

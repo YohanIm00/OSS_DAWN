@@ -1,8 +1,7 @@
 using System;
-using Unity.IO.LowLevel.Unsafe;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
+[Serializable]
 public class PlayerStateMachine
 {
     public PlayerStateSO currentState;
@@ -21,7 +20,7 @@ public class PlayerStateMachine
         currentState.Exit();
         currentState = nextState;
         Debug.Log("Player's state : " + currentState.name);
-        currentState.Enter();
+        nextState.Enter();
     }
 
     public void Update(PlayerController playerController, PlayerAction playerAction)

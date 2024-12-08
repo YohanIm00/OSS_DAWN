@@ -4,8 +4,7 @@ using UnityEngine;
 
 public abstract class NPC : MonoBehaviour, InteractableIF
 {
-    [SerializeField]
-    private SpriteRenderer interactCheckSprite;
+    [SerializeField] private SpriteRenderer interactCheckSprite;
     protected PlayerController player;
     private const float INTERACT_DISTANCE = 2f;
 

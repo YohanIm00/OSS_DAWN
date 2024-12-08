@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "playerServing")]
@@ -9,14 +7,18 @@ public class PlayerServingSO : PlayerStateSO
     {
         if (playerAction.hitCustomer.isOrdered)
         {
-            if (playerAction.hitCustomer.menu == playerController.servingMenu)
+            for (int i = 0; i < playerController.servingPaws.Count; ++i)
             {
-                Debug.Log("Thanks for serving " + playerController.servingMenu);
-                playerAction.hitCustomer.isReceived = true;
-                playerController.DisplayServedFood(playerAction.hitCustomer.menu, false);
+                if (playerAction.hitCustomer.menu == playerController.servingPaws[i])
+                {
+                    Debug.Log("Thanks for serving " + playerController.servingPaws[i]);
+                    playerAction.hitCustomer.isReceived = true;
+                    playerController.DisplayServedFood(playerAction.hitCustomer.menu, i, false);
+                    break;
+                }
+                else
+                    Debug.Log("I didn't order this menu: " + playerController.servingPaws[i]);
             }
-            else
-                Debug.Log("I didn't order this menu: " + playerController.servingMenu);
         }
     }
     public override void Enter() {}

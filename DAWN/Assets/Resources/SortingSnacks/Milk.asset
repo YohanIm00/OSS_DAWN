@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Milk
   m_EditorClassIdentifier: 
   correctKey: Right
-  objectSprite: {fileID: 21300000, guid: 4724f0bfee20463458193a97ba74f295, type: 3}
+  objectSprite: {fileID: 21300000, guid: bf4e603bfa872cf4c8b09cc966262ceb, type: 3}

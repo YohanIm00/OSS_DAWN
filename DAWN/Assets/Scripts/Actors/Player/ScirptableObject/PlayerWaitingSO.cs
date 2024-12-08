@@ -11,9 +11,9 @@ public class PlayerWaitingSO : PlayerStateSO
         {
             Debug.Log("Hit: " + playerAction.hit.collider.name);
             playerAction.hitCustomer.isOrdered = true;
-            playerController.menuQueue.Enqueue(playerAction.hitCustomer.menu);
+            playerController.receiptQueue.Enqueue(playerAction.hitCustomer.menu);
 
-            Debug.Log("Ordered Menu: " + playerController.menuQueue.Peek());
+            Debug.Log("Ordered Menu: " + playerController.receiptQueue.Peek());
         }
     }
     public override void Enter() {}

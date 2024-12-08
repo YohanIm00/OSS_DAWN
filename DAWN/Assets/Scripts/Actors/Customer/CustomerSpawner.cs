@@ -15,7 +15,7 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject go;
 
     [Header("Prefabs")]
-    public GameObject[] pre_customers;
+    public GameObject[] preCustomers;
 
     public void Awake()
     {
@@ -30,7 +30,9 @@ public class CustomerSpawner : MonoBehaviour
 
     IEnumerator GameStart()
     {
+        Debug.Log("Ready to play game");
         GameManager.instance.isGame = false;
+        GameManager.instance.isInputActivated = false;
         ready.SetActive(true);
         go.SetActive(false);
         yield return new WaitForSeconds(1.5f);
@@ -39,16 +41,23 @@ public class CustomerSpawner : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         go.SetActive(false);
         GameManager.instance.isGame = true;
-        while (GameManager.instance.isGame && GameManager.instance.totalGameTime > 0)
+        GameManager.instance.isInputActivated = true;
+        while (GameManager.instance.isGame && GameManager.instance.currentGameTime > 0)
         {
             SpawnCustomer();
-            yield return new WaitForSeconds(Random.Range(0, 16));
+            if (GameManager.instance.currentGameTime > 60)
+                yield return new WaitForSeconds(Random.Range(1, 12));
+            else if (GameManager.instance.currentGameTime > 30)
+                yield return new WaitForSeconds(Random.Range(1, 6));
+            else
+                yield return new WaitForSeconds(Random.Range(1, 4));
         }
     }
 
     private void SpawnCustomer()
     {
         bool isFull = true;
+
         foreach (var s in sits)
             isFull &= s.isUsing;
 
@@ -60,12 +69,13 @@ public class CustomerSpawner : MonoBehaviour
 
         int idx = Random.Range(0, sits.Length);
         Sit selectedSit = sits[idx];
+
         while (selectedSit.isUsing)
         {
             idx = Random.Range(0, sits.Length);
             selectedSit = sits[idx];
         }
-        GameObject customer = Instantiate(pre_customers[Random.Range(0, pre_customers.Length)], entrance.position, Quaternion.identity);
+        GameObject customer = Instantiate(preCustomers[Random.Range(0, preCustomers.Length)], entrance.position, Quaternion.identity);
         customer.GetComponent<Customer>().init(selectedSit);
         GameManager.instance.customers.Add(customer);
     }

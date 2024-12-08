@@ -27,7 +27,7 @@ public class SortingGame : MonoBehaviour
     public GameObject[] commonPoints; // Positions for objects on conveyor
     public GameObject[] feverPoints; // Positions for objects on conveyor
     public Dictionary<string, SortSO> snacks = new Dictionary<string, SortSO>();
-    private List<SortSO> currentConveyor = new List<SortSO>(8);
+    private List<SortSO> currentConveyor = new List<SortSO>(7);
 
     private int score = 0;
     private float timer;
@@ -147,7 +147,7 @@ public class SortingGame : MonoBehaviour
     private IEnumerator ActivateFeverMode()
     {
         isFever = true;
-        feverText.text = "Fever!";
+        feverText.text = "Fever!!";
         // feverEffect.SetActive(true);
 
         yield return new WaitForSeconds(feverDuration);

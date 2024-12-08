@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tiram
   m_EditorClassIdentifier: 
   correctKey: Left
-  objectSprite: {fileID: 21300000, guid: 4599a755e5c6cda4696855b778c1f96f, type: 3}
+  objectSprite: {fileID: 21300000, guid: 7219372647497ab4fa7150c7e80222fa, type: 3}
