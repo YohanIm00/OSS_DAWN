@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
         private set {}
     }
 
+    private bool _isMunching = false;
+
     // public void StartServing(MenuSO servingMenu)
     // {
     //     this.servingMenu = servingMenu;
@@ -63,9 +65,9 @@ public class PlayerController : MonoBehaviour
     {
         if (isServing && GameManager.instance.currentSatiety < 100)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F) && !_isMunching)
                 StartCoroutine(Munch(0));
-            else if(Input.GetKeyDown(KeyCode.G))
+            else if(Input.GetKeyDown(KeyCode.G) && !_isMunching)
                 StartCoroutine(Munch(1));
         }
 
@@ -79,6 +81,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator Munch(int index)
     {
         GameManager.instance.isInputActivated = false;
+        _isMunching = true;
 
         Debug.Log("Is Wand Munching!?");
         DisplayServedFood(servingPaws[index], index, false);
@@ -89,6 +92,7 @@ public class PlayerController : MonoBehaviour
 
         GameManager.instance.GainSatiety();
         GameManager.instance.isInputActivated = true;
+        _isMunching = false;
     }
 
     public void DisplayServedFood(MenuSO servingMenu, int index, bool isDisplay)
