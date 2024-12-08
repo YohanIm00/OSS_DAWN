@@ -6,10 +6,9 @@ using TMPro;
 
 public class SortingGame : MonoBehaviour
 {
-    public static SortingGame instance;
-    
     [Header("Game Data SO")]
     [SerializeField] private GameDataSO gameDataSO;
+    
     [Header("UI Elements")]
     public TMP_Text scoreText;
     public Slider timerSlider;
@@ -34,13 +33,7 @@ public class SortingGame : MonoBehaviour
     private int comboCount = 0;
     private bool isFever = false;
 
-    void Awake()
-    {
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
-    }
+    void Awake() {}
 
     void Start()
     {
@@ -117,12 +110,14 @@ public class SortingGame : MonoBehaviour
             if (isFever)
             {
                 score += baseScore * 2; // Double score during Fever mode
+                AudioManager.instance.PlaySfx(AudioManager.SFX.CorrectSort);
             }
             else if (firstSnack.GetKeyValue() == key)
             {
                 score += isFever ? baseScore * 2 : baseScore;
                 currentConveyor.RemoveAt(0);
                 FixedUpdateConveyor();
+                AudioManager.instance.PlaySfx(AudioManager.SFX.CorrectSort);
                 comboCount++;
 
                 if (comboCount >= comboThreshold && !isFever)
@@ -133,6 +128,7 @@ public class SortingGame : MonoBehaviour
             else
             {
                 comboCount = 0; // Reset combo on incorrect sort
+                AudioManager.instance.PlaySfx(AudioManager.SFX.WrongSort);
             }
 
             UpdateUI();

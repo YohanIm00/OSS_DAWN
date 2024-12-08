@@ -10,6 +10,7 @@ public class OrderingState : CustomerState
     {
         base.Enter(stateMachine);
         ShowEmoji(DataManager.instance.emojis["Order"]);
+        Meow();
         maxTime = customer.orderWaitingTime;
         direction = Vector2.zero;
         Animate();
@@ -27,5 +28,27 @@ public class OrderingState : CustomerState
         
         if (customer.orderWaitingTime < 0)
             stateMachine.ChangeState(stateMachine.Anger);
+    }
+
+    private void Meow()
+    {
+        switch (Random.Range(0, 5))
+        {
+            case 0:
+                AudioManager.instance.PlaySfx(AudioManager.SFX.OrderMeow0);
+                break;
+            case 1:
+                AudioManager.instance.PlaySfx(AudioManager.SFX.OrderMeow1);
+                break;
+            case 2:
+                AudioManager.instance.PlaySfx(AudioManager.SFX.OrderMeow2);
+                break;
+            case 3:
+                AudioManager.instance.PlaySfx(AudioManager.SFX.OrderMeow3);
+                break;
+            case 4:
+                AudioManager.instance.PlaySfx(AudioManager.SFX.OrderMeow4);
+                break;
+        }
     }
 }

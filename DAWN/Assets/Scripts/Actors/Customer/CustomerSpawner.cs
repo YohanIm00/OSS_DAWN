@@ -30,16 +30,18 @@ public class CustomerSpawner : MonoBehaviour
 
     IEnumerator GameStart()
     {
-        Debug.Log("Ready to play game");
         GameManager.instance.isGame = false;
         GameManager.instance.isInputActivated = false;
         ready.SetActive(true);
         go.SetActive(false);
         yield return new WaitForSeconds(1.5f);
+        
         ready.SetActive(false);
         go.SetActive(true);
+        AudioManager.instance.PlaySfx(AudioManager.SFX.MainStart);
         yield return new WaitForSeconds(1.5f);
         go.SetActive(false);
+
         GameManager.instance.isGame = true;
         GameManager.instance.isInputActivated = true;
         while (GameManager.instance.isGame && GameManager.instance.currentGameTime > 0)

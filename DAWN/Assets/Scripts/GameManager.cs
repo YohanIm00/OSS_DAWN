@@ -80,6 +80,8 @@ public class GameManager : MonoBehaviour
         else
         {
             currentBalloon -= Random.Range((int)(maxBalloon * 0.2f), (int)(maxBalloon * 0.5f));
+            AudioManager.instance.PlaySfx(AudioManager.SFX.BalloonPop);
+
             if (currentBalloon < 0)
                 currentBalloon = 0;
         }
@@ -93,6 +95,7 @@ public class GameManager : MonoBehaviour
     IEnumerator ToResultClear()
     {
         finish.SetActive(true);
+        AudioManager.instance.PlaySfx(AudioManager.SFX.MainFinish);
         yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Clear");
     }
@@ -100,6 +103,7 @@ public class GameManager : MonoBehaviour
     IEnumerator ToResultFail()
     {
         finish.SetActive(true);
+        AudioManager.instance.PlaySfx(AudioManager.SFX.MainFinish);
         yield return new WaitForSeconds(4);
         SceneManager.LoadScene("Fail");
     }
@@ -113,6 +117,8 @@ public class GameManager : MonoBehaviour
         if (currentGameTime < 0 && instance.customers.Count <= 0)
         {
             isGame = false;
+            isInputActivated = false;
+            
             if (TOTAL_BALLOON > currentBalloon)
                 StartCoroutine(ToResultFail());
             else
