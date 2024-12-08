@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 using KoreanTyper;
-using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
-using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
@@ -44,7 +43,8 @@ public class DialogueController : MonoBehaviour
 
         if (dialogueQueue.Count == 0 && typingRoutine == null)
         {
-            if(!isAllSaid){
+            if(!isAllSaid)
+            {
                 StartConversation(dialogueText);
             }
             else
@@ -103,7 +103,7 @@ public class DialogueController : MonoBehaviour
         if (dialogueQueue.Count == 0)
         {
             isAllSaid = true;
-            //SceneManager.LoadScene("asldkfm");
+            SceneManager.LoadScene("MainGame");
         }
     }
 
@@ -115,7 +115,7 @@ public class DialogueController : MonoBehaviour
             isConversation = true;
             gameObject.SetActive(true);
         }
-Debug.Log("대화 시작");
+        Debug.Log("대화 시작");
         for (int i = 0; i < dialogueText.speakerData.Length; ++i)
             dialogueQueue.Enqueue(dialogueText.speakerData[i]);
     }
@@ -123,7 +123,7 @@ Debug.Log("대화 시작");
     private void EndConversation()
     {
         isAllSaid = false;
-Debug.Log("대화 끝");
+        Debug.Log("대화 끝");
         if (gameObject.activeSelf)
         {
             gameObject.SetActive(false);

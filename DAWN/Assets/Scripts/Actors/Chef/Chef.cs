@@ -189,6 +189,10 @@ public class Chef : NPC
         cookingCount++;
         MenuSO currentMenu = bakeQueue.Dequeue();
         StartCook(currentMenu);
+        if (currentMenu.GetCookingTime() == 3)
+            AudioManager.instance.PlaySfx(AudioManager.SFX.Baking3s);
+        else
+            AudioManager.instance.PlaySfx(AudioManager.SFX.Baking5s);
 
         Debug.Log("Start to bake " + currentMenu.name + "!");
 

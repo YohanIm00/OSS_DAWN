@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -16,30 +17,48 @@ public class AudioManager : MonoBehaviour
     public float sfxVolume;
     public int channels;
     private AudioSource[] sfxPlayers;
-    private int channelIndex;
+    [SerializeField] private int channelIndex;
     
-    public enum BGM { MainMenu, Prologue, Dialogue, SortGame, MainGame, GameClear, GameOver }
+    public enum BGM { MainMenu, Prologue, SortGame, Dialogue, MainGame, GameClear, GameOver }
     public enum SFX
     {
         // Main UI
-        // [Header("#Main UI")]
-        ButtonClick0,
+        ButtonSelect, ButtonClick,
         // Prologue
-        Earthquake, MeowKitten, Lightbulb,
-        // Dialogue
-        ButtonClick1,
+        Earthquake, MeowKitten, GoodIdea, WandAppear,
+        // Dialogue : Add later...
         // SortGame
-        CorrectSort, WrongSort,
+        SortStart, SortFinish, CorrectSort, WrongSort,
         // MainGame
-        OrderMeow0, OrderMeow1, OrderMeow2,
+        MainStart, MainFinish, OrderMeow0, OrderMeow1, OrderMeow2,  OrderMeow3, OrderMeow4, Baking3s, Baking5s, Serving, BalloonPop, 
         // GameOver
-        Spark, TurnLightOn
+        Spark, Spotlight
     }
 
     private void Awake()
     {
         instance = this;
         Init();
+    }
+
+    private void Start()
+    {
+        StopBgm();
+
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+            PlayBgm(BGM.MainMenu);
+        else if (SceneManager.GetActiveScene().name == "Prologue")
+            PlayBgm(BGM.Prologue);
+        else if (SceneManager.GetActiveScene().name == "SortingGame")
+            PlayBgm(BGM.SortGame);
+        else if (SceneManager.GetActiveScene().name == "Dialogue")
+            PlayBgm(BGM.Dialogue);
+        else if (SceneManager.GetActiveScene().name == "MainGame")
+            PlayBgm(BGM.MainGame);
+        else if (SceneManager.GetActiveScene().name == "GameClear")
+            PlayBgm(BGM.GameClear);
+        else if (SceneManager.GetActiveScene().name == "GameOver")
+            PlayBgm(BGM.GameOver);
     }
 
     private void Init()
@@ -70,10 +89,12 @@ public class AudioManager : MonoBehaviour
     public void PlayBgm(BGM bgm)
     {
         bgmPlayer.clip = bgmClips[(int)bgm];
+        if (bgm == BGM.GameClear || bgm == BGM.GameOver)
+            bgmPlayer.loop = false;
         bgmPlayer.Play();
     }
 
-    public void StopBgm(BGM bgm)
+    public void StopBgm()
     {
         bgmPlayer.Stop();
     }
@@ -86,6 +107,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySfx(SFX sfx)
     {
+        if (sfx == SFX.Baking3s || sfx == SFX.Baking5s)
+            sfxVolume = 0.1f;
+        
         for (int index = 0; index < sfxPlayers.Length; ++index)
         {
             int loopIndex = (index + channelIndex) % sfxPlayers.Length;
@@ -98,6 +122,8 @@ public class AudioManager : MonoBehaviour
             sfxPlayers[loopIndex].clip = sfxClips[(int)sfx];
             sfxPlayers[loopIndex].Play();
         }
+
+        sfxVolume = 0.3f;
     }
 
     public void StopSfx(SFX sfx)

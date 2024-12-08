@@ -13,6 +13,7 @@ public class PlayerServingSO : PlayerStateSO
                 {
                     Debug.Log("Thanks for serving " + playerController.servingPaws[i]);
                     playerAction.hitCustomer.isReceived = true;
+                    AudioManager.instance.PlaySfx(AudioManager.SFX.Serving);
                     playerController.DisplayServedFood(playerAction.hitCustomer.menu, i, false);
                     break;
                 }
