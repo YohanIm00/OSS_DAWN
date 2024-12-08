@@ -15,6 +15,7 @@ public class PlayerServingSO : PlayerStateSO
                     Debug.Log("Thanks for serving " + playerController.servingPaws[i]);
                     playerAction.hitCustomer.isReceived = true;
                     playerController.DisplayServedFood(playerAction.hitCustomer.menu, i, false);
+                    break;
                 }
                 else
                     Debug.Log("I didn't order this menu: " + playerController.servingPaws[i]);
