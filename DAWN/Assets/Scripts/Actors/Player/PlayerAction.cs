@@ -7,6 +7,8 @@ public class PlayerAction : MonoBehaviour
     // Player movement speed
     private float _speed = 5;
 
+    public bool isAvailable = true;
+
     // Variables to store input from the player
     private float _horizontal;
     private float _vertical;
@@ -20,7 +22,7 @@ public class PlayerAction : MonoBehaviour
 
     // Components for Rigidbody2D and Animator
     private Rigidbody2D _rigid;
-    private Animator _anim;
+    public Animator _anim;
 
     // Initialize components on awake
     void Awake()
@@ -32,6 +34,13 @@ public class PlayerAction : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.instance.isInputActivated)
+        {
+            _horizontal = 0;
+            _vertical = 0;
+            return;
+        }
+        
         // Update the direction of the ray based on player's movement
         RotateRay();
 

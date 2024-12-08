@@ -5,7 +5,6 @@ public class PlayerServingSO : PlayerStateSO
 {   
     public override void Execute(PlayerController playerController, PlayerAction playerAction)
     {
-        // This part is for updating
         if (playerAction.hitCustomer.isOrdered)
         {
             for (int i = 0; i < playerController.servingPaws.Count; ++i)
