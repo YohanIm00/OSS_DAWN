@@ -22,6 +22,7 @@ public class AudioManager : MonoBehaviour
     public enum SFX
     {
         // Main UI
+        // [Header("#Main UI")]
         ButtonClick0,
         // Prologue
         Earthquake, MeowKitten, Lightbulb,
@@ -81,5 +82,32 @@ public class AudioManager : MonoBehaviour
     {
         bgmVolume = volume;
         bgmPlayer.volume = bgmVolume;
+    }
+
+    public void PlaySfx(SFX sfx)
+    {
+        for (int index = 0; index < sfxPlayers.Length; ++index)
+        {
+            int loopIndex = (index + channelIndex) % sfxPlayers.Length;
+
+            channelIndex = loopIndex;
+
+            sfxPlayers[loopIndex].clip = sfxClips[(int)sfx];
+            sfxPlayers[loopIndex].Play();
+        }
+    }
+
+    public void StopSfx(SFX sfx)
+    {
+        for (int index = 0; index < sfxPlayers.Length; ++index)
+        {
+            int loopIndex = (index + channelIndex) % sfxPlayers.Length;
+
+            if (sfxPlayers[loopIndex].isPlaying && sfxPlayers[loopIndex].clip == sfxClips[(int)sfx])
+            {
+                sfxPlayers[loopIndex].Stop();
+                break;
+            }
+        }
     }
 }
