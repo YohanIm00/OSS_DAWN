@@ -90,6 +90,9 @@ public class AudioManager : MonoBehaviour
         {
             int loopIndex = (index + channelIndex) % sfxPlayers.Length;
 
+            if(sfxPlayers[loopIndex].isPlaying)
+                continue;
+
             channelIndex = loopIndex;
 
             sfxPlayers[loopIndex].clip = sfxClips[(int)sfx];
@@ -109,5 +112,17 @@ public class AudioManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public bool isPlaying(SFX sfx)
+    {
+        for (int index = 0; index < sfxPlayers.Length; ++index)
+        {
+            int loopIndex = (index + channelIndex) % sfxPlayers.Length;
+
+            if (sfxPlayers[loopIndex].isPlaying && sfxPlayers[loopIndex].clip == sfxClips[(int)sfx])
+                return false;
+        }
+        return true;
     }
 }
