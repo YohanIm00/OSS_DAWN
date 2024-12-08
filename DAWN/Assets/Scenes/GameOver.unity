@@ -701,9 +701,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628773087}
-        m_TargetAssemblyTypeName: MainSceneManager, Assembly-CSharp
-        m_MethodName: btn_MainScene
+      - m_Target: {fileID: 603064702}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -763,50 +763,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70e693f56bd09d4b9d27fd802d8a509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &628773086
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 628773088}
-  - component: {fileID: 628773087}
-  m_Layer: 0
-  m_Name: ButtonManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &628773087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628773086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70e693f56bd09d4b9d27fd802d8a509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &628773088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628773086}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 933.14874, y: 333.54065, z: -8.337554}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  currentType: 3
+  buttonScale: {fileID: 603064698}
 --- !u!1 &797224743
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +852,7 @@ GameObject:
   - component: {fileID: 985044277}
   - component: {fileID: 985044276}
   - component: {fileID: 985044275}
-  - component: {fileID: 985044274}
+  - component: {fileID: 985044278}
   m_Layer: 5
   m_Name: btn_retry
   m_TagString: Untagged
@@ -922,18 +880,6 @@ RectTransform:
   m_AnchoredPosition: {x: 145.19995, y: 52.799988}
   m_SizeDelta: {x: 363, y: 132}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &985044274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985044272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70e693f56bd09d4b9d27fd802d8a509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &985044275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,9 +924,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628773087}
-        m_TargetAssemblyTypeName: MainSceneManager, Assembly-CSharp
-        m_MethodName: btn_MainScene
+      - m_Target: {fileID: 985044278}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1028,6 +974,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985044272}
   m_CullTransparentMesh: 1
+--- !u!114 &985044278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985044272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70e693f56bd09d4b9d27fd802d8a509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentType: 2
+  buttonScale: {fileID: 985044273}
 --- !u!1 &1034479168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997303270}
+  - component: {fileID: 1997303271}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -1864,6 +1825,18 @@ RectTransform:
   m_AnchoredPosition: {x: 2, y: -400}
   m_SizeDelta: {x: 740.4, y: 105.599976}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1997303271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997303269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0516b2a6dad00d4bad4912fbe531b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2025443499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2133,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 153077923}
   - {fileID: 2146262101}
-  - {fileID: 628773088}
   - {fileID: 538965610}
   - {fileID: 2025443503}
   - {fileID: 1307349823}
