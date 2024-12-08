@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
@@ -42,7 +40,6 @@ public class CutsceneController : MonoBehaviour
 
     void LoadNextScene()
     {
-        // Loads the scene named "1stGame"
-        // SceneManager.LoadScene("1stGame");   // Activate this line after implementing the 1st game
+        SceneManager.LoadScene("SortingGame");
     }
 }
