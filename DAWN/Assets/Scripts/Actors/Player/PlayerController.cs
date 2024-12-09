@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] servingFood = new GameObject[2];    // Points to display serving menus on Wand's paws
     public PlayerAction playerAction;
     public PlayerStateMachine playerStateMachine;
+
     public bool isServing
     {
         get 

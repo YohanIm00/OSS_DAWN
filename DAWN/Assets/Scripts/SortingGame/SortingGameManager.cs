@@ -238,7 +238,7 @@ public class SortingGameManager : MonoBehaviour
         gameDataSO.currentBalloon = currentBalloon;
         Debug.Log($"current score {currentBalloon} is stored in gameDataSO");
         Debug.Log($"gameDataSO.currentBalloon = {gameDataSO.currentBalloon}");
-        
+
         finish.SetActive(true);
         AudioManager.instance.PlaySfx(AudioManager.SFX.SortFinish);
         yield return new WaitForSeconds(4);

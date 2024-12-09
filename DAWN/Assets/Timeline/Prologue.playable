@@ -22,10 +22,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 13.5
+    m_Start: 13.8
     m_ClipIn: 0
     m_Asset: {fileID: -2631634222653130685}
-    m_Duration: 16.5
+    m_Duration: 16.2
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8649054492438776899}
     m_EaseInDuration: 0
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.499999999999999
+    m_Start: 3.95
     m_ClipIn: 0
     m_Asset: {fileID: -1045503242831744601}
     m_Duration: 5.5
@@ -1637,7 +1637,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Earthquake
   - m_Version: 1
-    m_Start: 13
+    m_Start: 12.8
     m_ClipIn: 0
     m_Asset: {fileID: 1253139241415196078}
     m_Duration: 2.5
