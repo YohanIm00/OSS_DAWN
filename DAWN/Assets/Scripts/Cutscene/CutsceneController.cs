@@ -1,14 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class CutsceneController : MonoBehaviour
 {
     public PlayableDirector playableDirector;
     private bool isTimelineFinished = false;
     private bool isFirst = true;
-    [SerializeField] Text text;
+    [SerializeField] private TMP_Text forward;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class CutsceneController : MonoBehaviour
         if (isTimelineFinished && isFirst)
         {
             isFirst = false;
-            text.gameObject.SetActive(true); // Displays text once the cutscene ends
+            forward.gameObject.SetActive(true); // Displays text once the cutscene ends
         }
 
         // Waits for player input (pressing Space) to load the next scene
