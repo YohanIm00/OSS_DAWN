@@ -283,3 +283,9 @@ MonoBehaviour:
     illustSprite: {fileID: 0}
     speakerName: "\uD478"
     dialogueText: "\uC88B\uC544, \uC774\uC81C\uBD80\uD130 \uC6B0\uB9AC\uB294 \uB3D9\uC5C5\uC790\uB2E4!"
+  - isIllust: 1
+    isWand: 0
+    characterSprite: {fileID: 0}
+    illustSprite: {fileID: 0}
+    speakerName: "\uD22C\uBA85"
+    dialogueText: 

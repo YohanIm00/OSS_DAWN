@@ -121,7 +121,7 @@ public class DialogueController : MonoBehaviour
         if (dialogueQueue.Count == 0)
         {
             isAllSaid = true;
-            StartCoroutine(SceneChange());
+            // StartCoroutine(SceneChange());
         }
     }
 
@@ -167,10 +167,10 @@ public class DialogueController : MonoBehaviour
         return dialogueQueue.Count;
     }
 
-    IEnumerator SceneChange()
-    {
-        yield return new WaitForSeconds(2f);
+    // IEnumerator SceneChange()
+    // {
+    //     yield return new WaitForSeconds(2f);
         
-        SceneManager.LoadScene("MainGame");
-    }
+    //     SceneManager.LoadScene("MainGame");
+    // }
 }

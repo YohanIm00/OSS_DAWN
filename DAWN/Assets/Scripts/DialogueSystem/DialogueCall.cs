@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class DialogueCall : MonoBehaviour
 {
@@ -13,9 +14,10 @@ public class DialogueCall : MonoBehaviour
     private void Update()
     {
         if (isTalkable)
-        {
             Communicate();
-        }
+        else
+            SceneManager.LoadScene("MainGame");
+        
     }
 
     public void Talk(DialogueText dialog)
