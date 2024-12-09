@@ -8,7 +8,7 @@ public class CutsceneController : MonoBehaviour
     public PlayableDirector playableDirector;
     private bool isTimelineFinished = false;
     private bool isFirst = true;
-    [SerializeField] private TMP_Text forward;
+    [SerializeField] private GameObject forward;
 
     void Start()
     {
