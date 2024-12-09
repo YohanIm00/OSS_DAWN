@@ -67,7 +67,7 @@ public class Chef : NPC
     {
         if (completeQueue.Count == 0)
             return;
-        if (player.isFull)
+        if (player.arePawsFull)
             return;
 
         for (int i = 0; i < player.servingPaws.Count; ++i)
