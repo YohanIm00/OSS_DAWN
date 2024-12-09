@@ -62,7 +62,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!114 &2496457757873844936
 MonoBehaviour:
@@ -182,7 +182,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 30
+  m_SortingOrder: 10
   m_Sprite: {fileID: 2098362653, guid: 39daf4995e868a7438ee9ff492dedf0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -220,8 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 1.2830292e-33
-  m_labelHash: 4.9717703e-21
+  m_CategoryHash: 3.1067886e-38
+  m_labelHash: 1.4043723e-28
   m_SpriteKey: 0
   m_SpriteHash: 402729588
 --- !u!95 &7642879009334446567

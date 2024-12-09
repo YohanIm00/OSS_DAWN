@@ -17,7 +17,7 @@ public class AnnoyingState : CustomerState
         Move();
         if (customer.wayPoints.Count == 0)
         {
-            GameManager.instance.GainBalloon(false);
+            GameManager.instance.GainBalloon(false, customer.menu.GetCookingTime());
             Destroy(gameObject);
         }
     }

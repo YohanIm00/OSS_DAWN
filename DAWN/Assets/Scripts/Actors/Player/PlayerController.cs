@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] servingFood = new GameObject[2];    // Points to display serving menus on Wand's paws
     public PlayerAction playerAction;
     public PlayerStateMachine playerStateMachine;
+
     public bool isServing
     {
         get 
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour
         private set {}
     }
 
-    public bool isFull
+    public bool arePawsFull
     { 
         get 
         {
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
             servingPaws.Add(null);
         
         isServing = false;
-        isFull = false;
+        arePawsFull = false;
     }
 
     private void Update()
@@ -86,11 +87,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Is Wand Munching!?");
         DisplayServedFood(servingPaws[index], index, false);
         playerAction._anim.SetTrigger("munch");
-        isFull = false;
-
-        yield return new WaitForSeconds(2f);
-
         GameManager.instance.GainSatiety();
+        arePawsFull = false;
+
+        yield return new WaitForSeconds(2.5f);
+
         GameManager.instance.isInputActivated = true;
         _isMunching = false;
     }

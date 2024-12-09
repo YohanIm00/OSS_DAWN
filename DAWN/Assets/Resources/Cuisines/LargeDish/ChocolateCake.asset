@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fad0c3de75ed8047836afbd272c599e, type: 3}
   m_Name: ChocolateCake
   m_EditorClassIdentifier: 
-  cookingDuration: 3
+  cookingDuration: 5
   foodSprite: {fileID: 21300000, guid: cd4c05b570f45d1438e3cff5e5a656fd, type: 3}

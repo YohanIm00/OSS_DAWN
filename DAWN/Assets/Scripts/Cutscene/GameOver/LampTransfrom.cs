@@ -1,6 +1,5 @@
 using System.Collections;
 using DG.Tweening;
-using UnityEngine;
 
 public class LampTransform : AbstractParts
 {
