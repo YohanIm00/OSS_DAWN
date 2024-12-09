@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9560172c1a3315e4cb9dea055e24354f, type: 3}
   m_Name: GameDataSO
   m_EditorClassIdentifier: 
-  currentBalloon: 700
+  currentBalloon: 0

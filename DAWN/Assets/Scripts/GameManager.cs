@@ -20,13 +20,15 @@ public class GameManager : MonoBehaviour
     public float currentGameTime = TOTAL_GAME_TIME;
     private float timerValue = 0;
     // Values for score
-    [SerializeField] private const int EXPECTED_NUM_OF_CUSTOMER = 20;
+    private const int EXPECTED_NUM_OF_CUSTOMER = 25;
     private const int TOTAL_BALLOON = 1000;
     [SerializeField] private int currentBalloon = 0;
     [SerializeField] private int maxBalloon = 0;
+    [SerializeField] private int goal;
+    [SerializeField] private int bias;
     // Values for satiety
     private const float STOMACH_CAPACITY = 100;
-    private const float PIECE_OF_CAKE = 60;
+    private const float PIECE_OF_CAKE = 40;
     public float currentSatiety = 0;
 
     // Audio would be managed by AudioManager later
@@ -46,14 +48,12 @@ public class GameManager : MonoBehaviour
     public List<GameObject> customers = new List<GameObject>();
 
     private void Awake() 
-    { 
+    {
         if (instance == null)
             instance = this;
         
         currentBalloon = gameDataSO.currentBalloon;
-        int goal = TOTAL_BALLOON - currentBalloon;
-        int bias = Mathf.RoundToInt(goal * 0.01f) + Mathf.RoundToInt(currentBalloon * 0.01f);
-        maxBalloon = goal / EXPECTED_NUM_OF_CUSTOMER + bias;
+        FixData();
     }
 
     private void Start() 
@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour
         balloonSlider.maxValue = TOTAL_BALLOON;
         satietySlider.maxValue = STOMACH_CAPACITY;
     }
+
+    // private void Update()
+    // {
+    //     FixData();
+    // }
 
     // Update is called once per frame
     private void FixedUpdate()
@@ -74,21 +79,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void FixData()
+    {
+        goal = TOTAL_BALLOON - currentBalloon;
+        bias = Mathf.RoundToInt(goal * 0.02f);
+        maxBalloon = goal / EXPECTED_NUM_OF_CUSTOMER + bias;
+    }
+
     public void GainBalloon(bool plus, float cookingDuration)
     {
         if (plus)
         {
             if (cookingDuration > 4)
-                currentBalloon += Random.Range((int)(maxBalloon * 0.4f), (int)(maxBalloon * 1.2f));
+                currentBalloon += Random.Range(Mathf.Max(1, Mathf.RoundToInt(maxBalloon * 0.6f)), Mathf.Max(4, Mathf.RoundToInt(maxBalloon * 1.4f)));
             else
-                currentBalloon += Random.Range((int)(maxBalloon * 0.6f), (int)(maxBalloon * 0.8f));
+                currentBalloon += Random.Range(Mathf.Max(2, Mathf.RoundToInt(maxBalloon * 0.9f)), Mathf.Max(3, maxBalloon));
         }
         else
         {
             if (cookingDuration > 4)
-                currentBalloon -= Random.Range((int)(maxBalloon * 0.2f), (int)(maxBalloon * 0.6f));
+                currentBalloon -= Random.Range(Mathf.Max(2, Mathf.RoundToInt(maxBalloon * 0.5f)), Mathf.Max(8, Mathf.RoundToInt(maxBalloon * 1.5f)));
             else
-                currentBalloon -= Random.Range((int)(maxBalloon * 0.3f), (int)(maxBalloon * 0.5f));
+                currentBalloon -= Random.Range(Mathf.Max(4, Mathf.RoundToInt(maxBalloon * 0.6f)), Mathf.Max(6, Mathf.RoundToInt(maxBalloon * 0.8f)));
             
             AudioManager.instance.PlaySfx(AudioManager.SFX.BalloonPop);
 
