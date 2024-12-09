@@ -23,7 +23,7 @@ public class DataManager : MonoBehaviour
 
     private void LoadMenus()
     {
-        MenuSO[] loadData = Resources.LoadAll<MenuSO>("Debug");
+        MenuSO[] loadData = Resources.LoadAll<MenuSO>("Cuisines");
 
         foreach (MenuSO menu in loadData)
         {
