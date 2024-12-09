@@ -66,13 +66,13 @@ public class PlayerController : MonoBehaviour
     {
         if (isServing && GameManager.instance.currentSatiety < 100)
         {
-            if (Input.GetKeyDown(KeyCode.F) && !_isMunching)
+            if (Input.GetKeyDown(KeyCode.E) && !_isMunching)
                 StartCoroutine(Munch(0));
-            else if(Input.GetKeyDown(KeyCode.G) && !_isMunching)
+            else if(Input.GetKeyDown(KeyCode.R) && !_isMunching)
                 StartCoroutine(Munch(1));
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && playerAction.hit.collider != null)
+        if (Input.GetKeyDown(KeyCode.S) && playerAction.hit.collider != null)
         {
             playerAction.hitCustomer = playerAction.hit.collider.GetComponent<Customer>();
             playerStateMachine.Update(this, playerAction);
