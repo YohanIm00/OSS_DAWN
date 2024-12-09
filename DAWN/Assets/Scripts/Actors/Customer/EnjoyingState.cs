@@ -13,7 +13,7 @@ public class EnjoyingState : CustomerState
         ShowEmoji(DataManager.instance.emojis["Enjoy"]);  // Implement this after creating DataManager
         direction = Vector2.zero;
         Animate();
-        GameManager.instance.GainBalloon(true);
+        GameManager.instance.GainBalloon(true, customer.menu.GetCookingTime());
     }
 
     public override void Exit() {}

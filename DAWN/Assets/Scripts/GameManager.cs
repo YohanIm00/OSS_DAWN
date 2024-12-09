@@ -51,8 +51,9 @@ public class GameManager : MonoBehaviour
             instance = this;
         
         currentBalloon = gameDataSO.currentBalloon;
-        int bias = Mathf.RoundToInt((TOTAL_BALLOON - currentBalloon) * 0.01f);
-        maxBalloon = (TOTAL_BALLOON - currentBalloon) / EXPECTED_NUM_OF_CUSTOMER + bias;
+        int goal = TOTAL_BALLOON - currentBalloon;
+        int bias = Mathf.RoundToInt(goal * 0.01f) + Mathf.RoundToInt(currentBalloon * 0.01f);
+        maxBalloon = goal / EXPECTED_NUM_OF_CUSTOMER + bias;
     }
 
     private void Start() 
@@ -73,13 +74,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GainBalloon(bool plus)
+    public void GainBalloon(bool plus, float cookingDuration)
     {
         if (plus)
-            currentBalloon += Random.Range((int)(maxBalloon * 0.4f), maxBalloon);
+        {
+            if (cookingDuration > 4)
+                currentBalloon += Random.Range((int)(maxBalloon * 0.4f), (int)(maxBalloon * 1.2f));
+            else
+                currentBalloon += Random.Range((int)(maxBalloon * 0.6f), (int)(maxBalloon * 0.8f));
+        }
         else
         {
-            currentBalloon -= Random.Range((int)(maxBalloon * 0.2f), (int)(maxBalloon * 0.5f));
+            if (cookingDuration > 4)
+                currentBalloon -= Random.Range((int)(maxBalloon * 0.2f), (int)(maxBalloon * 0.6f));
+            else
+                currentBalloon -= Random.Range((int)(maxBalloon * 0.3f), (int)(maxBalloon * 0.5f));
+            
             AudioManager.instance.PlaySfx(AudioManager.SFX.BalloonPop);
 
             if (currentBalloon < 0)
@@ -149,8 +159,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator SpeedDown()
     {
-        playerAction.SetSpeed(1);
-        yield return new WaitForSeconds(2);
+        playerAction.SetSpeed(2);
+        yield return new WaitForSeconds(1.5f);
         playerAction.SetSpeed(5);
         currentSatiety = 0;
         satietySlider.value = Mathf.Lerp(satietySlider.value, currentSatiety, Time.deltaTime * 10);
