@@ -50,6 +50,11 @@ public class PlayerController : MonoBehaviour
     //     isServing = false;
     // }
 
+    private void Awake()
+    {
+        GameManager.instance.currentBalloon = GameManager.instance.gameDataSO.currentBalloon;
+    }
+
     private void Start()
     {
         playerAction = GetComponent<PlayerAction>();
@@ -66,13 +71,13 @@ public class PlayerController : MonoBehaviour
     {
         if (isServing && GameManager.instance.currentSatiety < 100)
         {
-            if (Input.GetKeyDown(KeyCode.F) && !_isMunching)
+            if (Input.GetKeyDown(KeyCode.E) && !_isMunching)
                 StartCoroutine(Munch(0));
-            else if(Input.GetKeyDown(KeyCode.G) && !_isMunching)
+            else if(Input.GetKeyDown(KeyCode.R) && !_isMunching)
                 StartCoroutine(Munch(1));
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && playerAction.hit.collider != null)
+        if (Input.GetKeyDown(KeyCode.S) && playerAction.hit.collider != null)
         {
             playerAction.hitCustomer = playerAction.hit.collider.GetComponent<Customer>();
             playerStateMachine.Update(this, playerAction);
@@ -87,10 +92,13 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Is Wand Munching!?");
         DisplayServedFood(servingPaws[index], index, false);
         playerAction._anim.SetTrigger("munch");
-        GameManager.instance.GainSatiety();
         arePawsFull = false;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
+
+        GameManager.instance.GainSatiety();
+
+        yield return new WaitForSeconds(0.5f);
 
         GameManager.instance.isInputActivated = true;
         _isMunching = false;

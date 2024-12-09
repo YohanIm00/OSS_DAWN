@@ -112,7 +112,7 @@ MonoBehaviour:
     speakerName: "\uD478"
     dialogueText: "\uC88B\uC544!! \uC5B4\uCC28\uD53C \uB354 \uC62C \uC190\uB2D8\uB3C4
       \uC5C6\uC73C\uB2C8 \uC9C0\uAE08 \uB9CC\uB4E4\uC5B4\uC8FC\uBA74 \uB418\uACA0\uB2E4.
-      \r\n\uC8FC\uBB38\uC740, \uBC8C\uAFC0 \uCF00\uC774\uD06C!\n\uC544, \uC7AC\uB8CC\uB294
+      \r\n\uC8FC\uBB38\uC740, \uBC8C\uAFC0 \uCF00\uC774\uD06C! \uC544, \uC7AC\uB8CC\uB294
       \uB0B4\uAC00 \uAC00\uC838\uC654\uC73C\uB2C8\uAE4C \uAC71\uC815 \uBD99\uB4E4\uC5B4
       \uB9E4\uB77C\uACE0."
   - isIllust: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 6b3733f99c991614a8c09db014b38b26, type: 3}
     illustSprite: {fileID: 0}
     speakerName: "\uC644\uB4DC"
-    dialogueText: ......
+    dialogueText: ...............
   - isIllust: 0
     isWand: 0
     characterSprite: {fileID: 21300000, guid: 5c49e87b98315e346921175b364fd3b2, type: 3}
@@ -152,7 +152,7 @@ MonoBehaviour:
     isWand: 1
     characterSprite: {fileID: 21300000, guid: 7ec34df6f4af79642b9559da81f19339, type: 3}
     illustSprite: {fileID: 0}
-    speakerName: "\uD478"
+    speakerName: "\uC644\uB4DC"
     dialogueText: '!!'
   - isIllust: 0
     isWand: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 07a3213a5204e264c9c9c09cccde8d6c, type: 3}
     illustSprite: {fileID: 0}
     speakerName: "\uD478"
-    dialogueText: "\uC774\uC57C~ \uBC8C\uAFC0\uB85C \uB9CC\uB4E4\uC5C8\uB294\uB370\uB3C4
-      \uAE30\uAE54\uB098\uB124."
+    dialogueText: "\uC774\uC57C, \uBC8C\uAFC0\uB85C \uB9CC\uB4E4\uC5C8\uB294\uB370\uB3C4
+      \uAE30\uAE54\uB098\uB124. \uB9DB\uC788\uB2E4~!"
   - isIllust: 0
     isWand: 0
     characterSprite: {fileID: 21300000, guid: 07a3213a5204e264c9c9c09cccde8d6c, type: 3}
@@ -261,8 +261,8 @@ MonoBehaviour:
     isWand: 0
     characterSprite: {fileID: 21300000, guid: ee96e3dd9b3685d43977273885e5be42, type: 3}
     illustSprite: {fileID: 0}
-    speakerName: "\uC644\uB4DC"
-    dialogueText: "\uB0B4\uAC00 \uBE75\uC744 \uB9CC\uB4E4 \uD14C\uB2C8 \uB10C \uADF8\uAC78
+    speakerName: "\uD478"
+    dialogueText: "\uBE75\uC740 \uB0B4\uAC00 \uAD6C\uC6B8 \uD14C\uB2C8 \uB10C \uADF8\uAC78
       \uC190\uB2D8\uAED8 \uB4DC\uB9AC\uBA74\uC11C \uD48D\uC120\uC744 \uBAA8\uC73C\uBA74
       \uB3FC.\n\uC5B4\uB54C, \uC880 \uB04C\uB9AC\uC9C0 \uC54A\uC544?"
   - isIllust: 0

@@ -221,6 +221,11 @@ public class SortingGameManager : MonoBehaviour
 
         if (currentGameTime < 0)
         {
+            Debug.Log("Game Over! Final Score: " + currentBalloon);
+            gameDataSO.currentBalloon = currentBalloon;
+            Debug.Log($"current score {currentBalloon} is stored in gameDataSO");
+            Debug.Log($"gameDataSO.currentBalloon = {gameDataSO.currentBalloon}");
+
             isGame = false;
             isInputActivated = false;
             comboObject.SetActive(false);
@@ -234,11 +239,6 @@ public class SortingGameManager : MonoBehaviour
 
     IEnumerator GameFinish()
     {
-        Debug.Log("Game Over! Final Score: " + currentBalloon);
-        gameDataSO.currentBalloon = currentBalloon;
-        Debug.Log($"current score {currentBalloon} is stored in gameDataSO");
-        Debug.Log($"gameDataSO.currentBalloon = {gameDataSO.currentBalloon}");
-
         finish.SetActive(true);
         AudioManager.instance.PlaySfx(AudioManager.SFX.SortFinish);
         yield return new WaitForSeconds(4);

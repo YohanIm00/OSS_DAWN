@@ -14,7 +14,7 @@ public abstract class NPC : MonoBehaviour, InteractableIF
     void Update()
     {
         _Update();
-        if (Input.GetKeyDown(KeyCode.E) && IsInteract())
+        if (Input.GetKeyDown(KeyCode.S) && IsInteract())
             Interact();
 
         if (interactCheckSprite.gameObject.activeSelf && !IsInteract())
