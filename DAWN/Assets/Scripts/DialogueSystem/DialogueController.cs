@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 using KoreanTyper;
+
 
 public class DialogueController : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private GameObject wand;
     [SerializeField] private GameObject pu;
     [SerializeField] private GameObject illustration;
-    [SerializeField] private GameObject tiramisu;   //todo SetActive() related task: implement later
 
     private Queue<DialogueText.SpeakerData> dialogueQueue = new Queue<DialogueText.SpeakerData>();
 
@@ -25,7 +25,10 @@ public class DialogueController : MonoBehaviour
     private static bool isConversation = false;
     public static bool IsConversation
     {
-        get { return isConversation; }
+        get
+        { 
+            return isConversation;
+        }
     }
 
     private DialogueText.SpeakerData temp;
@@ -37,8 +40,10 @@ public class DialogueController : MonoBehaviour
         pu.SetActive(false);
         illustration.SetActive(false);
     }
+
     public void DisplayNextText(DialogueText dialogueText)
     {
+        // gameObject.SetActive(true);
         forwardMark.SetActive(false);
 
         if (dialogueQueue.Count == 0 && typingRoutine == null)
@@ -65,12 +70,24 @@ public class DialogueController : MonoBehaviour
 
         if (dialogueQueue.Count > 0 && typingRoutine == null)
         {
+            if(dialogueQueue.Peek().speakerName == "투명")
+                gameObject.SetActive(false);
+            else
+                gameObject.SetActive(true);
+
             if(dialogueQueue.Peek().isIllust)
             {
                 illustration.SetActive(true);
                 wand.SetActive(false);
                 pu.SetActive(false);
-                illustration.GetComponent<Image>().sprite = dialogueQueue.Peek().illustSprite;
+                if (dialogueQueue.Peek().illustSprite != null)
+                    illustration.GetComponent<Image>().sprite = dialogueQueue.Peek().illustSprite;
+
+                // if (dialogueQueue.Peek().illustSprite.name == "3")
+                // {
+                //     tiramisu.GetComponent<Image>().sprite = dialogueQueue.Peek().illustSprite;
+                //     tiramisu.SetActive(true);
+                // }
             }
             else if (dialogueQueue.Peek().characterSprite != null)
             {
@@ -89,7 +106,7 @@ public class DialogueController : MonoBehaviour
             }
             else
             {
-                illustration.SetActive(true);
+                illustration.SetActive(false);
                 wand.SetActive(false);
                 pu.SetActive(false);
             }
@@ -97,13 +114,14 @@ public class DialogueController : MonoBehaviour
             temp = dialogueQueue.Dequeue();
             nameText.text = temp.speakerName;
             conversationText.text = temp.dialogueText;
-            typingRoutine = StartCoroutine(TypingRoutine());
+            if (gameObject.activeSelf)
+                typingRoutine = StartCoroutine(TypingRoutine());
         }
 
         if (dialogueQueue.Count == 0)
         {
             isAllSaid = true;
-            SceneManager.LoadScene("MainGame");
+            StartCoroutine(SceneChange());
         }
     }
 
@@ -111,7 +129,6 @@ public class DialogueController : MonoBehaviour
     {
         if (!gameObject.activeSelf)
         {
-            
             isConversation = true;
             gameObject.SetActive(true);
         }
@@ -143,5 +160,17 @@ public class DialogueController : MonoBehaviour
         }
         forwardMark.SetActive(true);
         typingRoutine = null;
+    }
+
+    public int GetDialogueQSize()
+    {
+        return dialogueQueue.Count;
+    }
+
+    IEnumerator SceneChange()
+    {
+        yield return new WaitForSeconds(2f);
+        
+        SceneManager.LoadScene("MainGame");
     }
 }
