@@ -7033,13 +7033,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAction: {fileID: 1937380232}
   gameDataSO: {fileID: 11400000, guid: fb9bc283d888dae45adeea545eca1519, type: 2}
-  isInputActivated: 1
   isGame: 0
+  isInputActivated: 1
   currentGameTime: 90
   currentBalloon: 0
   maxBalloon: 0
   currentSatiety: 0
-  TimerSlider: {fileID: 582791178}
+  timerSlider: {fileID: 582791178}
   timerText: {fileID: 161578647}
   balloonSlider: {fileID: 487296986}
   balloonText: {fileID: 1152750905}
@@ -7083,7 +7083,7 @@ MonoBehaviour:
   - {fileID: 480866537}
   entrance: {fileID: 611174544}
   ready: {fileID: 390655778}
-  go: {fileID: 76540018}
+  start: {fileID: 76540018}
   preCustomers:
   - {fileID: 3915292020551068156, guid: 6797e982e535fe144a3c0518a92c535f, type: 3}
   - {fileID: 3915292020551068156, guid: c98690c66812af94783bf527f75deab6, type: 3}
