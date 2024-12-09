@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         finish.SetActive(true);
         AudioManager.instance.PlaySfx(AudioManager.SFX.MainFinish);
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene("Clear");
+        SceneManager.LoadScene("GameClear");
     }
 
     IEnumerator ToResultFail()
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         finish.SetActive(true);
         AudioManager.instance.PlaySfx(AudioManager.SFX.MainFinish);
         yield return new WaitForSeconds(4);
-        SceneManager.LoadScene("Fail");
+        SceneManager.LoadScene("GameOver");
     }
 
     void UpdateTimer()

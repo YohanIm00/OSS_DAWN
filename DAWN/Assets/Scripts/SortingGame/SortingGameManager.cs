@@ -50,6 +50,7 @@ public class SortingGameManager : MonoBehaviour
 
     private void Awake()
     {
+        gameDataSO.Init();
         timerSlider.maxValue = TOTAL_GAME_TIME;
 
         LoadSnacks();
@@ -220,8 +221,8 @@ public class SortingGameManager : MonoBehaviour
 
         if (currentGameTime < 0)
         {
-            Debug.Log("Game Over! Final Score: " + currentBalloon);
             gameDataSO.currentBalloon = currentBalloon;
+            Debug.Log("Game Over! Final Score: " + currentBalloon);
 
             isGame = false;
             isInputActivated = false;
