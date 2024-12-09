@@ -50,6 +50,11 @@ public class PlayerController : MonoBehaviour
     //     isServing = false;
     // }
 
+    private void Awake()
+    {
+        GameManager.instance.currentBalloon = GameManager.instance.gameDataSO.currentBalloon;
+    }
+
     private void Start()
     {
         playerAction = GetComponent<PlayerAction>();
@@ -87,10 +92,13 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Is Wand Munching!?");
         DisplayServedFood(servingPaws[index], index, false);
         playerAction._anim.SetTrigger("munch");
-        GameManager.instance.GainSatiety();
         arePawsFull = false;
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
+
+        GameManager.instance.GainSatiety();
+
+        yield return new WaitForSeconds(0.5f);
 
         GameManager.instance.isInputActivated = true;
         _isMunching = false;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
     // Values for score
     private const int EXPECTED_NUM_OF_CUSTOMER = 25;
     private const int TOTAL_BALLOON = 1000;
-    [SerializeField] private int currentBalloon = 0;
+    public int currentBalloon = 0;
     [SerializeField] private int maxBalloon = 0;
     [SerializeField] private int goal;
     [SerializeField] private int bias;
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
             instance = this;
         
-        currentBalloon = gameDataSO.currentBalloon;
+        // currentBalloon = gameDataSO.currentBalloon;
         FixData();
     }
 
