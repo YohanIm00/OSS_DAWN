@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int goal;
     [SerializeField] private int bias;
     // Values for satiety
-    private const float STOMACH_CAPACITY = 100;
-    private const float PIECE_OF_CAKE = 40;
+    public const float STOMACH_CAPACITY = 100;
+    private const float PIECE_OF_CAKE = 60;
     public float currentSatiety = 0;
 
     // Audio would be managed by AudioManager later

@@ -4540,6 +4540,7 @@ MonoBehaviour:
   oven3: {fileID: 856733491}
   oven4: {fileID: 733560606}
   menu: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!212 &303814965
 SpriteRenderer:
   m_ObjectHideFlags: 0
