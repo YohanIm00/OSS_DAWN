@@ -36,7 +36,7 @@
 - **<a href="https://github.com/RuneLune" target="_blank"> 박승용 </a>**_동영상 및 사운드 편집
 - **<a href="https://github.com/JisubShim" target="_blank"> 심지섭 </a>**_동영상 제작 및 선별 (Vidu)
 - **<a href="https://github.com/YohanIm00" target="_blank"> 임요한 </a>**_PV 시나리오 집필
-- **<a href="https://github.com" target="_blank"> 정윤석 </a>**_정지 이미지 제작 (MidJourney)
+- **<a href="https://github.com/seokkkkkk" target="_blank"> 정윤석 </a>**_정지 이미지 제작 (MidJourney)
 ### 후속 개발
 - **<a href="https://github.com/YohanIm00" target="_blank"> 임요한 </a>**_게임 신 재구성 및 추가 기능 구현
 - **<a href="https://blog.naver.com/pz_jb_008" target="_blank"> 임다혜 </a>**_게임 전체 아트워크 개편
