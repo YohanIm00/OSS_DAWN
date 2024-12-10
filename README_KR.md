@@ -6,7 +6,7 @@
 
 ---
 
-## 🎥 게임 프로모션 영상 (PV)
+## 🎥 게임 프로모션 영상
 [![게임 PV](https://img.youtube.com/vi/G1nTNvpd6xU/maxresdefault.jpg)](https://www.youtube.com/watch?v=G1nTNvpd6xU)
 ▲ DAWM PV (95s) : 누르면 해당 링크로 이동합니다.
 
@@ -28,7 +28,7 @@
 
 ---
 
-## 💡 동기
+## 💡 제작 동기
 DAWN은 게임개발 동아리 PLUM의 여름방학 프로그램인 2024 PLUM JAM에서 탄생한 작품입니다.  
 PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발 해커톤으로, 당시 키워드는 '티라미수 케이크'와 '풍선'이었습니다.  
 이를 어떻게 아우를까 고민하던 끝에, '매우 높은 곳을 풍선 다발로 올라가고자 티라미수를 파는 고양이'로 이야기의 가닥이 잡혔습니다.
@@ -101,9 +101,77 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 ---
 
 ## 📚 참고 자료
-- **게임 영감**: [관련 게임/기사/미디어 링크]
-- **Unity 문서**: [Unity 공식 문서](https://unity.com/)
-- **에셋**: [사용된 에셋 링크]
+### PV
+- 동영상 제작 AI Vidu Studio  
+  http://www.vidu.studio
+- Vidu 프롬프트 작성 가이드  
+https://pkocx4o26p.feishu.cn/docx/UCc6dHBE3ohwqxxCgDPcSEMinMc
+- MidJourney 공식 문서  
+https://docs.midjourney.com/
+- Midjourney 프롬프트 제작 채널  
+https://www.midjourney.com/auth/signin?callbackUrl=%2Frooms%2F44a30f92-a8c1-470b-a553-86f49add2a7a
+- Bao, Fan, et al., "Vidu: a highly consistent, dynamic and skilled text-to-video generator with diffusion models."  
+- Cheng, Evelyn. “Chinese AI startup takes aim at OpenAI’s Sora with image-to-video tool launch”  
+https://www.cnbc.com/2024/11/14/chinese-ai-startup-shengshu-launches-image-to-video-tool-rivaling-sora.html
+- Monge, Jim Clyde. “Vidu is the New AI Video Generator We Should Pay Attention to”  
+https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attention-to-e6a12a07fe97
+
+### 게임
+**[영감]**
+- Disney·Pixar 영화 "업(2009)"  
+  https://www.disneyplus.com/en-kr/movies/up/3XiRSXriK0E8
+- 컴투스, 액션퍼즐패밀리 "삼촌의 니편 내편"  
+  https://namu.wiki/w/%EB%8F%8C%EC%95%84%EC%98%A8%20%EC%95%A1%EC%85%98%20%ED%8D%BC%EC%A6%90%20%ED%8C%A8%EB%B0%80%EB%A6%AC#s-2.3
+  https://www.youtube.com/watch?v=IcLeiSNtSkA&t=9s
+- 아툰즈, 비비빅 "뿌띠빠띠"  
+  https://namu.wiki/w/%EB%BF%8C%EB%9D%A0%EB%B9%A0%EB%9D%A0
+  https://www.youtube.com/watch?v=trNmfPZuuaM
+
+**[개발]**
+- Unity 공식 문서  
+  https://unity.com/
+- 골드메탈_유니티 게임 개발 플레이리스트  
+  https://www.youtube.com/@goldmetal/playlists
+- Sunny Valley Studio_How to reuse Animation Clip for other characters in Unity  
+  https://www.youtube.com/watch?v=6mNak-mQZpc
+- Root Games_(FREE COURSE) Make awesome CUTSCENES in Unity using Timeline  
+  https://www.youtube.com/watch?v=MpYIoAoE0bE&t=134s
+- 상태(State) 패턴 - 완벽 마스터하기  
+  https://inpa.tistory.com/entry/GOF-%F0%9F%92%A0-%EC%83%81%ED%83%9CState-%ED%8C%A8%ED%84%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EC%9E%90
+
+**[에셋]**
+- Modern Interiors RPG Tileset  
+  https://limezu.itch.io/moderninteriors   
+- 배경음악  
+  https://pixabay.com/music/acoustic-group-corporate-ukulele-optimistic-light-262592/  
+  https://pixabay.com/music/modern-classical-the-way-home-6674/  
+  https://pixabay.com/music/traditional-jazz-wiggle-until-you-giggle-217437/  
+  https://pixabay.com/music/smooth-jazz-10-chocolate-lofi-cafe-upbeat-257740/  
+  https://pixabay.com/music/traditional-jazz-cafe-music-163375/  
+  https://pixabay.com/music/acoustic-group-calm-acoustic-60-seconds-267027/
+  https://pixabay.com/music/jingles-piano-cassical-brand-motive-logo-9997/
+- 효과음  
+  https://pixabay.com/sound-effects/menu-selection-102220/  
+  https://pixabay.com/sound-effects/90s-game-ui-7-185100/  
+  https://pixabay.com/sound-effects/ui-click-43196/  
+  https://pixabay.com/sound-effects/quake-and-break-99034/  
+  https://pixabay.com/sound-effects/kitten-meowing-105618/  
+  https://pixabay.com/sound-effects/ding-idea-40142/  
+  https://pixabay.com/sound-effects/piano-glide-259500/  
+  https://pixabay.com/sound-effects/referee-whistle-blow-gymnasium-6320/  
+  https://pixabay.com/sound-effects/bellding-254774/  
+  https://pixabay.com/sound-effects/correct-2-46134/  
+  https://pixabay.com/sound-effects/wrong-47985/  
+  https://pixabay.com/sound-effects/door-chimes-66502/  
+  https://pixabay.com/sound-effects/bell-chime-238836/  
+  https://pixabay.com/sound-effects/cali-meow-242762/  
+  https://pixabay.com/sound-effects/annoyed-cat-meow-193067/  
+  https://pixabay.com/sound-effects/short-meow-kitten-230900/  
+  https://pixabay.com/sound-effects/cookies-are-ready-95956/  
+  https://pixabay.com/sound-effects/place-glass-object-81857/  
+  https://pixabay.com/sound-effects/balloon-pop-48030/  
+  https://pixabay.com/sound-effects/electricity-sound-6066/  
+  https://pixabay.com/sound-effects/spotlight-91359/
 
 ---
 
