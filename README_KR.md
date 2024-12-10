@@ -2,6 +2,7 @@
 
 # 🐈‍⬛ DAWN
 베이커리 펠리즈에서 이뤄지는 좌충우돌 제과점 타이쿤, **DAWN**.  
+README.md를 영어로 읽고 싶다면 [여기](https://github.com/YohanIm00/OSS_DAWN/tree/main)를 누르세요!
   
 <ins>※ 게임을 플레이하기 전에 **조작 키를 반드시 확인**하시기를 권해드립니다.</ins>
 
