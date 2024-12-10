@@ -1,7 +1,7 @@
 ![Banner](asset/README/README_banner.png)
 
 # 🐈‍⬛ DAWN
-A chaotic bakery tycoon adventure set in Bakery Feliz, **DAWN**.  
+**DAWN** is a chaotic bakery tycoon adventure in Bakery Feliz.  
   
 <ins>※ We highly recommend checking the **control keys** before playing the game.</ins>
 
@@ -27,18 +27,34 @@ A chaotic bakery tycoon adventure set in Bakery Feliz, **DAWN**.
 
 ---
 
-
 ## 👥 Contributors
-- **Your Name** (Role: Developer)
-- **Contributor 2 Name** (Role)
-- **Contributor 3 Name** (Role)
+### Initial Development
+- **<a href="https://github.com/Hyuni02" target="_blank"> Sunghyun Jeon </a>** - Original planner of DAWN, implemented game logic, and conducted overall development.
+- **<a href="https://github.com/JisubShim" target="_blank"> Jisub Shim </a>** - Implemented the chef and interaction systems, refactored the overall code.
+- **<a href="https://github.com/YohanIm00" target="_blank"> Yohan Im </a>** - Designed artwork, implemented the player, and handled minor development tasks.
+
+### Game PV
+- **<a href="https://github.com/RuneLune" target="_blank"> Seungyong Park </a>** - Edited video and sound.
+- **<a href="https://github.com/JisubShim" target="_blank"> Jisub Shim </a>** - Created and selected video content (Vidu).
+- **<a href="https://github.com/YohanIm00" target="_blank"> Yohan Im </a>** - Wrote the PV script.
+- **<a href="https://github.com" target="_blank"> Yoonseok Jung </a>** - Produced still images (MidJourney).
+
+### Follow-up Development
+- **<a href="https://github.com/YohanIm00" target="_blank"> Yohan Im </a>** - Reconstructed game scenes and implemented additional features.
+- **<a href="https://blog.naver.com/pz_jb_008" target="_blank"> Dahye Im </a>** - Redesigned the entire game artwork.
 
 ---
 
 ## 💡 Motivation
-Inspired by [state your inspiration], our goal is to deliver an engaging and delightful experience combining simulation and storytelling.
+![PLUM JAM](asset/README/Motivation0.png)  
+DAWN was created as part of the 2024 PLUM JAM, a summer program hosted by the PLUM game development club.  
+PLUM JAM is a game development hackathon where participants create games based on given keywords.  
+At the time, the keywords were 'Tiramisu Cake' and 'Balloon.'  
+After much deliberation on how to integrate these themes, the idea of "a cat selling tiramisu to ascend to great heights with a bundle of balloons" was born.  
+![DAWN_ver0](asset/README/Motivation2.png)
 
 ---
+
 
 ## 📋 Index
 1. [Synopsis](#-synopsis)
