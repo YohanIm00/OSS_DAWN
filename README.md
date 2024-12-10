@@ -29,7 +29,7 @@
 
 ## 👥 Contributors
 ### Initial Development
-- **<a href="https://github.com/Hyuni02" target="_blank"> Sunghyun Jeon </a>** - Original planner of DAWN, implemented game logic, and conducted overall development.
+- **<a href="https://github.com/Hyuni02" target="_blank"> Seonghyun Jeon </a>** - Original planner of DAWN, implemented game logic, and conducted overall development.
 - **<a href="https://github.com/JisubShim" target="_blank"> Jisub Shim </a>** - Implemented the chef and interaction systems, refactored the overall code.
 - **<a href="https://github.com/YohanIm00" target="_blank"> Yohan Im </a>** - Designed artwork, implemented the player, and handled minor development tasks.
 
@@ -37,7 +37,7 @@
 - **<a href="https://github.com/RuneLune" target="_blank"> Seungyong Park </a>** - Edited video and sound.
 - **<a href="https://github.com/JisubShim" target="_blank"> Jisub Shim </a>** - Created and selected video content (Vidu).
 - **<a href="https://github.com/YohanIm00" target="_blank"> Yohan Im </a>** - Wrote the PV script.
-- **<a href="https://github.com/seokkkkkk" target="_blank"> Yoonseok Jung </a>** - Produced still images (MidJourney).
+- **<a href="https://github.com/seokkkkkk" target="_blank"> Yunseok Jeong </a>** - Produced still images (MidJourney).
 
 ### Follow-up Development
 - **<a href="https://github.com/YohanIm00" target="_blank"> Yohan Im </a>** - Reconstructed game scenes and implemented additional features.
