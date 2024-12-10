@@ -336,6 +336,87 @@ https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55
       - Abstract state (`CustomerState`) provides the structure, while specific behaviors are implemented in concrete states (`EnjoyingState`, `OrderingState`, etc.).  
       - This approach ensures modular and maintainable code for varying customer behaviors.  
 
+   - **DOTWEEN**: Elements used in cutscenes
+    - **AbstractPart.cs**
+    ```csharp
+    using DG.Tweening;
+    
+    public abstract class AbstractParts : MonoBehaviour
+    {
+        protected Image image;
+        protected Tween tween;
+    
+        void OnEnable()
+        {
+            image = gameObject.GetComponent<Image>();
+            StartCoroutine(Alter());
+        }
+        protected abstract IEnumerator Alter();
+    }
+    ```
+
+    - **LetterTransform.cs**
+    ```csharp
+    using DG.Tweening;
+    
+    public class LetterTransform : AbstractParts
+    {
+        protected override IEnumerator Alter()
+        {
+            Transform transform = image.transform;
+            yield return transform.DOPunchScale(new Vector3(0.5f, 0.5f, 0), 0.5f, 10, 1f);
+        }
+    }
+    ```
+
+    - **Explanation**:  
+      - Almost all supplementary effects in cutscenes, such as movement, scaling, fading, and shaking, were implemented using the **DOTween library**.  
+      - In Unity, most elements dealing with sprites are either `SpriteRenderer` or `Image`. This abstraction accommodates both cases by creating an abstract class (`AbstractParts`).  
+      - The actual functional behavior is handled using **coroutines**, with specific details provided in child classes like `LetterTransform`.  
+
+  - **ScriptableObject**: For managing game data
+    - **MenuSO**
+    ```csharp
+    public class MenuSO : ScriptableObject
+    {
+        protected float cookingDuration;
+        protected Sprite foodSprite;
+    
+        public virtual float GetCookingTime() { return cookingDuration; }
+        public virtual Sprite GetSprite() { return foodSprite; }
+    }
+    ```
+
+    - **BreadSO**
+    ```csharp
+    [CreateAssetMenu(menuName = "BreadSO")]
+    public class BreadSO : MenuSO
+    { }
+    ```
+
+    - **DataManager**
+    ```csharp
+    public class DataManager : MonoBehaviour
+    {
+        public Dictionary<string, MenuSO> menus = new Dictionary<string, MenuSO>();
+    
+        private void Start() { LoadMenus(); }
+    
+        private void LoadMenus()
+        {
+            MenuSO[] loadData = Resources.LoadAll<MenuSO>("Cuisines");
+    
+            foreach (MenuSO menu in loadData)
+                menus.Add(menu.name, menu);
+        }
+    }
+    ```
+
+    - **Explanation**:  
+      - Most of the in-game data is managed using **ScriptableObject assets**.  
+      - Creating a `MenuSO` asset allows you to modify and manage its internal values directly within the Unity Editor.  
+      - The `BreadSO` class inherits from `MenuSO` to accommodate potential future menu additions.  
+      - The `DataManager` class loads pre-created ScriptableObject assets and integrates the data into the game.  
 
 ---
 
