@@ -171,11 +171,10 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
     
         private void Init()
         {
-            // Initialize bgmPlayer
             GameObject bgmObject = new GameObject("BGM Player");
             bgmObject.transform.parent = transform;
             bgmPlayer = new AudioSource();
-    
+        
             bgmPlayer = bgmObject.AddComponent<AudioSource>();
             bgmPlayer.playOnAwake = false;
             bgmPlayer.loop = true;
@@ -196,8 +195,8 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
     ```
     : 전체 게임에 계속 관여해야 하는 요소는 싱글톤 패턴을 활용하여 제작했습니다.  
     : 배경 음악은 각 장면마다 정해진 음악이 따로 있으므로 열거형 자료 enum BGM으로 선언하였습니다.  
-    : 또한 싱글톤으로 제작된 만큼 ```AudioManager.instance.VolumeController(0)```의 함수를 어디서든 호출할 수 있습니다.
-    
+    : 또한 싱글톤으로 제작된 만큼 함수를 ```AudioManager.instance.VolumeController(0)``` 형태로 어디서든 호출할 수 있습니다.
+  
   - 상태 패턴 : Player, Customer
     - CustomerStateMachine.cs
     ```csharp
@@ -229,11 +228,9 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
     {
         protected CustomerStateMachine stateMachine;
         protected Customer customer;
-        protected Vector2 direction = Vector2.zero;
     
         public virtual void Enter(CustomerStateMachine stateMachine)
         {
-            Debug.Log($"State : {GetType().Name}");
             this.stateMachine = stateMachine;
             customer = GetComponent<Customer>();
             customer.timer.fillAmount = 1;
@@ -246,8 +243,6 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
     ```
     - EnjoyingState.cs
     ```csharp
-    using UnityEngine;
-
     public class EnjoyingState : CustomerState
     {
         private float maxTime;
@@ -273,29 +268,101 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
     }
     ```
     : 상호작용에 따라 행동 양상이 달라야 하는 오브젝트는 상태 패턴을 활용하여 제작했습니다.  
-    : 모든 상태의 근간이 되는 클래스를 추상클래스로 선언하고 이를 상속하여 각 상태를 구체화했습니다.
-    : 이렇게 만들어진 여러 상태를 상황에 맞게 오갈 수 있도록 상태 머신을 선언했습니다.
-    : 상태 머신은 아래 코드와 같이 해당 상태를 반영해야 하는 객체 내부에 삽입되어 작동됩니다.
+    : 모든 상태의 근간이 되는 클래스를 추상클래스로 선언하고 이를 상속하여 각 상태를 구체화했습니다.  
+    : 여러 상태를 상황에 맞게 오갈 수 있도록 상태 머신을 만들고, 이를 아래 코드와 같이 주인격이 되는 객체 내부에 삽입하였습니다.
+    - Customer.cs
+    ```csharp
+    public class Customer : MonoBehaviour
+    {
+        public CustomerStateMachine stateMachine;
     
+        private void Awake() { stateMachine = gameObject.AddComponent<CustomerStateMachine>();}
+    
+        public void Update() { stateMachine.currentState._Update();}
+    
+        public void OnDestroy() { GameManager.instance.customers.Remove(gameObject); }
+    }
+    ```
   - DOTWEEN : Cutscene에 들어가는 요소
-    - ㅇㅇ
-      
-    - 설명 설명
+    - AbstractPart.cs
+    ```csharp
+    using DG.Tweening;
+    
+    public abstract class AbstractParts : MonoBehaviour
+    {
+        protected Image image;
+        protected Tween tween;
+    
+        void OnEnable()
+        {
+            image = gameObject.GetComponent<Image>();
+            StartCoroutine(Alter());
+        }
+        protected abstract IEnumerator Alter();
+    }
+    ```
+    - LetterTransform.cs
+    ```csharp
+    using DG.Tweening;
+    
+    public class LetterTransform : AbstractParts
+    {
+        protected override IEnumerator Alter()
+        {
+            Transform transform = image.transform;
+            yield return transform.DOPunchScale(new Vector3(0.5f, 0.5f, 0), 0.5f, 10, 1f);
+        }
+    }
+    ```
+    : 컷신 내에서 이동, 크기 변형, 페이드, 흔들림 등의 부가 요소는 거의 다 DOTween 라이브러리를 활용하였습니다.  
+    : 유니티에서 스프라이트를 다루는 요소는 대부분 SpriteRenderer와 Image로 구성되어 있기 때문에 두 경우를 상정하고 추상 클래스를 만들었습니다.  
+    : 실제로 동작하는 함수는 Coroutine의 형식을 빌렸으며, 자식 클래스에서 이를 더욱 상세히 설정하였습니다. 
   - ScriptableObject : 게임 데이터 전반
-    - DataManager
-     
     - MenuSO
-      
+    ```csharp
+    public class MenuSO : ScriptableObject
+    {
+        protected float cookingDuration;
+        protected Sprite foodSprite;
+    
+        public virtual float GetCookingTime() { return cookingDuration; }
+        public virtual Sprite GetSprite() { return foodSprite; }
+    }
+    ```
     - BreadSO
-      
-    - 설명 설명
+    ```csharp
+    [CreateAssetMenu(menuName = "BreadSO")]
+    public class BreadSO : MenuSO
+    { }
+    ```
+    - DataManager
+    ```csharp
+    public class DataManager : MonoBehaviour
+    {
+        public Dictionary<string, MenuSO> menus = new Dictionary<string, MenuSO>();
+    
+        private void Start() { LoadMenus(); }
+    
+        private void LoadMenus()
+        {
+            MenuSO[] loadData = Resources.LoadAll<MenuSO>("Cuisines");
+    
+            foreach (MenuSO menu in loadData)
+                menus.Add(menu.name, menu);
+        }
+    }
+    ```
+    - 게임 내 데이터는 대부분 ScriptableObject 에셋으로 관리했습니다.
+    - MenuSO의 에셋을 만들면 내부 값을 유니티 에디터 안에서 수정·관리할 수 있습니다.
+    - BreadSO에서 MenuSO를 상속하는 까닭은 추후 추가될 다른 메뉴를 고려했기 때문입니다.
+    - DataManager에서는 사전에 만들어진 SO 에셋의 데이터를 불러와서 게임에 반영합니다.
 
 ---
 
 ## 📜 라이선스
-- DAWN은 [CC BY-NC 4.0]([link-to-license-file](https://github.com/YohanIm00/OSS_DAWN/blob/main/LICENSE)) 라이선스를 따릅니다.
-- 코드의 수정 및 배포는 가능합니다. 앞으로도 꾸준히 수정될 코드이므로 피드백주시면 적극 반영하도록 하겠습니다.
-- 그러나 게임 내 모든 아트워크의 원저작권은 따로 있습니다. 따라서 해당 프로젝트 내 아트워크 수정 및 상업 목적의 재배포는 지양해주시기 바랍니다.
+- DAWN은 [CC BY-NC 4.0](https://github.com/YohanIm00/OSS_DAWN/blob/main/LICENSE) 라이선스를 따릅니다.
+- 코드의 수정 및 배포는 가능합니다. 앞으로도 꾸준히 개발될 프로젝트이므로 코드 관련하여 피드백주시면 적극 반영하도록 하겠습니다.
+- 그러나 게임 내 모든 아트워크는 원저작자가 따로 있습니다. 따라서 해당 프로젝트 내 아트워크 수정 및 상업 목적의 재배포는 지양해주시기 바랍니다.
 
 ---
 
