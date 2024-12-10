@@ -140,7 +140,7 @@ https://github.com/user-attachments/assets/104ba434-0cb4-4484-b46b-3eed2a7faebf
   - 제때 주문을 받지 않는다면, 손님이 화가 난 채로 밖을 나가버립니다.
   - 화난 고양이 손님은 그 대가로 풍선을 터뜨려버리니 조심하세요!
 
-https://github.com/user-attachments/assets/70548aa5-bafe-405d-a8ce-8984cd90c76f
+https://github.com/user-attachments/assets/8d208f0a-827e-4df0-a9bc-1af138e30eb8
 
 - 주문을 받고서 주방장(푸)에게 다가가 S키를 누르면 요리를 시작합니다.
   - 주문은 한 번에 10개씩 받을 수 있으며, 동시에 최대 4개의 메뉴를 조리할 수 있습니다.
@@ -155,10 +155,7 @@ https://github.com/user-attachments/assets/34d52ec0-2934-4d97-854a-602c63b5059b
 https://github.com/user-attachments/assets/e33bb205-342f-4510-8bfc-52ac79a69e9d
 
 - 완성된 요리를 들고 손님에게 가서 S키를 누르면 서빙을 할 수 있습니다.
-  - 주문한 요리가 맞다면 손님이 이를 맛있게 먹고 바로 풍선을 줄 것입니다.
-
-https://github.com/user-attachments/assets/8d208f0a-827e-4df0-a9bc-1af138e30eb8
-
+  - 주문한 요리가 맞다면 손님이 이를 맛있게 먹고 바로 풍선을 줄 것입니다.  
   - 주문한 요리와 다르다면, 아무 반응을 하지 않습니다. 다시 한 번 주문을 확인하세요!
   - 뿐만 아니라 **요리를 손에 든 채**로는 주문을 받을 수 없습니다! 손에 든 걸 먼저 손님께 드린 뒤에 받도록 합시다.
 
@@ -167,11 +164,11 @@ https://github.com/user-attachments/assets/e38536f7-1a1b-4a6c-9153-6433d3f904f5
 - 혹시 서빙 과정에서 착오가 생겨서 음식이 남아버렸다면... E키나 R키를 눌러서 손에 들고 있는 음식을 먹을 수 있습니다.
   - 음식을 먹으면 먹은 후에 포만도가 일정 값 차게 됩니다. 
 
-https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55
+https://github.com/user-attachments/assets/a116463d-8da6-4d42-b49b-0d26bd47ee7d
 
   - 포만도가 가득 차게 될 경우 잠시 동안 느려지므로 주의하세요!
 
-https://github.com/user-attachments/assets/a116463d-8da6-4d42-b49b-0d26bd47ee7d  
+https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55
 
 ---
 
