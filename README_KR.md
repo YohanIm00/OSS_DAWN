@@ -1,4 +1,4 @@
-![게임 배너](https://drive.google.com/file/d/1LtO1M25-J6RblH2DAuX32SKcgR34GNaa/view?usp=sharing)
+![게임 배너](asset/README/README_banner.png)
 
 # 🐈‍⬛ DAWN
 
