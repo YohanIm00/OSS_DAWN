@@ -121,10 +121,14 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 - 20개의 주문을 연속으로 올바르게 처리한다면 FEVER가 활성화됩니다.
   - FEVER 시간 중에는 어느 방향키를 눌러도 점수가 오릅니다.
   - FEVER는 3초 동안 지속됩니다.
-    ![Sort1](https://github.com/user-attachments/assets/99338225-7158-4399-98dc-376f9c6f90ae)
+
+https://github.com/user-attachments/assets/993116aa-4535-436f-b4dd-035a43bcf69d
+
 - 어떤 상황에서든 방향키를 잘못 누르면 점수가 깎입니다.
   - 현재 점수가 클수록 깎이는 폭도 크게 늘어나므로 주의하도록 합시다.
-    ![Sort2](https://github.com/user-attachments/assets/8d9ee83d-a4f7-49ad-b641-351a0b8b9a05)
+
+https://github.com/user-attachments/assets/104ba434-0cb4-4484-b46b-3eed2a7faebf
+
 - 제한 시간 안에 최대한 높은 점수를 내보세요!
   - ~해당 점수는 메인 게임의 초기값으로 넘어갑니다.~
   - 넘어가야 했으나, 의도와 달리 제대로 넘어가지 않는 것을 확인했습니다.
@@ -135,27 +139,39 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 - 손님의 주문이 들어오면 손님에게 다가가 S키를 눌러 주문을 받습니다.
   - 제때 주문을 받지 않는다면, 손님이 화가 난 채로 밖을 나가버립니다.
   - 화난 고양이 손님은 그 대가로 풍선을 터뜨려버리니 조심하세요!
-    ![Bake5](https://github.com/user-attachments/assets/a337ec14-bad8-48b3-bec2-07f55b594fd0)
+
+https://github.com/user-attachments/assets/70548aa5-bafe-405d-a8ce-8984cd90c76f
+
 - 주문을 받고서 주방장(푸)에게 다가가 S키를 누르면 요리를 시작합니다.
   - 주문은 한 번에 10개씩 받을 수 있으며, 동시에 최대 4개의 메뉴를 조리할 수 있습니다.
   - 조리 시간은 메뉴에 따라 3초 혹은 5초가 걸립니다.
-    ![Bake1](https://github.com/user-attachments/assets/15bee0c5-d93e-4752-9a6d-cd29cb2fdfcc)
-    ![Bake2](https://github.com/user-attachments/assets/35fa3628-e097-4101-8f38-1cd364448422)
+
+https://github.com/user-attachments/assets/34d52ec0-2934-4d97-854a-602c63b5059b
 
 - 요리가 끝나면, 오븐 특유의 요리 완료 소리가 들린 뒤 카운터에 해당 메뉴가 진열됩니다.
   - 마찬가지로 카운터에서 S키를 누르면 완성된 순서대로 요리를 집을 수 있습니다.
   - 요리는 한 번에 두 개씩 들고 다닐 수 있습니다.
-    ![Bake3](https://github.com/user-attachments/assets/ddd551fb-7600-4c2e-a272-c15529e1a1f4)
+
+https://github.com/user-attachments/assets/e33bb205-342f-4510-8bfc-52ac79a69e9d
+
 - 완성된 요리를 들고 손님에게 가서 S키를 누르면 서빙을 할 수 있습니다.
   - 주문한 요리가 맞다면 손님이 이를 맛있게 먹고 바로 풍선을 줄 것입니다.
+
+https://github.com/user-attachments/assets/8d208f0a-827e-4df0-a9bc-1af138e30eb8
+
   - 주문한 요리와 다르다면, 아무 반응을 하지 않습니다. 다시 한 번 주문을 확인하세요!
-    ![Bake4](https://github.com/user-attachments/assets/06a2935e-cf86-41c6-9728-b861f7a902f3)
   - 뿐만 아니라 **요리를 손에 든 채**로는 주문을 받을 수 없습니다! 손에 든 걸 먼저 손님께 드린 뒤에 받도록 합시다.
-    
+
+https://github.com/user-attachments/assets/e38536f7-1a1b-4a6c-9153-6433d3f904f5
+
 - 혹시 서빙 과정에서 착오가 생겨서 음식이 남아버렸다면... E키나 R키를 눌러서 손에 들고 있는 음식을 먹을 수 있습니다.
-  - 음식을 먹으면 먹은 후에 포만도가 일정 값 차게 됩니다.
+  - 음식을 먹으면 먹은 후에 포만도가 일정 값 차게 됩니다. 
+
+https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55
+
   - 포만도가 가득 차게 될 경우 잠시 동안 느려지므로 주의하세요!
-- 제한 시간 안에 풍선 1,000개를 모으면 성공입니다.  
+
+https://github.com/user-attachments/assets/a116463d-8da6-4d42-b49b-0d26bd47ee7d  
 
 ---
 
