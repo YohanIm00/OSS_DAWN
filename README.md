@@ -2,8 +2,9 @@
 
 # 🐈‍⬛ DAWN
 **DAWN** is a chaotic bakery tycoon adventure in Bakery Feliz.  
+If you wanna see a Korean README.md, [CLICK HERE](https://github.com/YohanIm00/OSS_DAWN/blob/main/README_KR.md)!
   
-<ins>※ We highly recommend checking the **control keys** before playing the game.</ins>
+<ins>※ We highly recommend checking the **control keys** before playing the game.</ins>  
 
 ---
 
