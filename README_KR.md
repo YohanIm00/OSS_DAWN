@@ -40,7 +40,7 @@ README.md를 영어로 읽고 싶다면 [여기](https://github.com/YohanIm00/OS
 - **<a href="https://github.com/seokkkkkk" target="_blank"> 정윤석 </a>**_정지 이미지 제작 (MidJourney)
 ### 후속 개발
 - **<a href="https://github.com/YohanIm00" target="_blank"> 임요한 </a>**_게임 신 재구성 및 추가 기능 구현
-- **<a href="https://blog.naver.com/pz_jb_008" target="_blank"> 임다혜 </a>**_게임 전체 아트워크 개편
+- **<a href="https://blog.naver.com/pz_jb_008" target="_blank"> 피자찐빵 </a>**_게임 전체 아트워크 개편
 
 ---
 
