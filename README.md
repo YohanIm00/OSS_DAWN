@@ -123,12 +123,60 @@ The goal is 1,000 balloons! Will our Wand manage to gather enough balloons to re
 ---
 
 ## 🕹️ How to Play
-1. Start the game by selecting **New Game** from the main menu.
-2. Manage your bakery by:
-   - Baking items from recipes.
-   - Serving customers efficiently.
-   - Expanding your business with upgrades.
-3. Follow the storyline to uncover exciting twists.
+### Sorting Game
+![SortingGame](asset/README/Sort0.png)  
+- A simple sorting game that can be played using only the right and left arrow keys.  
+- If you correctly process 20 consecutive orders, FEVER mode will be activated.  
+  - During FEVER mode, pressing any arrow key will increase your score.  
+  - FEVER mode lasts for 3 seconds.  
+
+https://github.com/user-attachments/assets/993116aa-4535-436f-b4dd-035a43bcf69d  
+
+- If you press the wrong arrow key at any point, your score will decrease.  
+  - The higher your current score, the more points you will lose, so be careful!  
+
+https://github.com/user-attachments/assets/104ba434-0cb4-4484-b46b-3eed2a7faebf  
+
+- Aim for the highest score possible within the time limit!  
+  - ~The score is supposed to carry over as the initial value in the main game.~  
+  - However, it was discovered that this functionality does not work as intended.  
+  - This issue will be addressed in the "Development Status" section later.  
+
+### Main Game
+![MainGame](asset/README/Bake0.png)  
+- When a customer places an order, approach them and press the **S key** to take their order.  
+  - If you don’t take the order on time, the customer will leave angrily.  
+  - Angry cat customers will pop balloons as a consequence, so be careful!  
+
+https://github.com/user-attachments/assets/8d208f0a-827e-4df0-a9bc-1af138e30eb8  
+
+- After taking an order, approach the chef Pu and, press the **S key** to start cooking.  
+  - You can take up to 10 orders at a time and cook up to 4 menu items simultaneously.  
+  - Cooking time depends on the menu item and is either 3 seconds or 5 seconds.  
+
+https://github.com/user-attachments/assets/34d52ec0-2934-4d97-854a-602c63b5059b  
+
+- Once the cooking is complete, you’ll hear the oven’s signature completion sound, and the dish will appear on the counter.  
+  - Similarly, press the **S key** at the counter to pick up the dishes in the order they were prepared.  
+  - You can carry up to two dishes at a time.  
+
+https://github.com/user-attachments/assets/e33bb205-342f-4510-8bfc-52ac79a69e9d  
+
+- Take the completed dishes to the customer and press the **S key** to serve them.  
+  - If the dish matches the customer’s order, they’ll eat it happily and reward you with balloons.  
+  - If the dish doesn’t match the order, there will be no reaction. Double-check the orders!  
+  - Additionally, you **cannot take new orders while holding dishes.** Serve the dishes first, then take the next order.  
+
+https://github.com/user-attachments/assets/e38536f7-1a1b-4a6c-9153-6433d3f904f5  
+
+- If a mistake during serving leaves you with leftover food, you can press **E** or **R** to eat the food in your hands.  
+  - Eating food will increase your fullness level.  
+
+https://github.com/user-attachments/assets/a116463d-8da6-4d42-b49b-0d26bd47ee7d  
+
+  - However, if your fullness level maxes out, you’ll temporarily slow down, so watch out!  
+
+https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55  
 
 ---
 
