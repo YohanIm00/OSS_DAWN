@@ -178,6 +178,9 @@ https://github.com/user-attachments/assets/a116463d-8da6-4d42-b49b-0d26bd47ee7d
 
 https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55  
 
+![Punishment](asset/README/Punishment.png)
+▲ Oh dear, it seems Wand ended up getting scolded... Let’s be careful so that Pu doesn’t scold us too.
+
 ---
 
 ## ⚙️ Implemented Features
