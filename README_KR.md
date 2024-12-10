@@ -527,3 +527,7 @@ https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attent
   - 티라미수 케이크 주문 시 화면에 미니게임 표시
 - 전체 스토리 확장 및 캐릭터 추가
 - 도트 그래픽 작업 완수, 게임에 추가 반영
+
+---
+
+<a property="dct:title" rel="cc:attributionURL" href="https://github.com/YohanIm00/OSS_DAWN">DAWN</a>은 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
