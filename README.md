@@ -55,21 +55,50 @@ After much deliberation on how to integrate these themes, the idea of "a cat sel
 
 ---
 
+## 📖 Story
+### Synopsis
+![Synopsis](asset/README/Story0.png)  
+There is Wand the black cat with an exceptional talent for making tiramisu cakes.  
+One day, he gotta be captivated by the sudden appearance of the colossal cat tower, MT.CATUS.  
+As Wand gazes at the tower in awe, a familiar meow echoes from the peak.  
+Realizing it’s his sibling, Wand starts pondering how to overcome this situation.  
+At that moment, a brilliant idea flashes through Wand’s mind:  
 
-## 📋 Index
-1. [Synopsis](#-synopsis)
-2. [Operation Keys](#-operation-keys)
-3. [How to Play](#-how-to-play)
-4. [Implementation](#-implementation)
-5. [License](#-license)
-6. [References](#-references)
-7. [Development Matters](#-development-matters)
+"Trade tiramisu cakes for balloons, and use them to float to the top!"  
 
----
+The goal is 1,000 balloons! Will our Wand manage to gather enough balloons to reunite with their sibling?
 
-## 📖 Synopsis
-[Provide a brief story or concept of your game. For example:]  
-Step into the world of bakery tycoon, where you manage your bakery, bake delicious treats, and navigate through an interactive storyline featuring unique characters.
+### Characters
+![Characters](asset/README/Story1.png)  
+▲ Character concept art: Wand on the left, Pu on the right.
+
+- **Wand**  
+  - A black domestic shorthair cat with striking amber eyes.  
+  - Known as "Tiramisu Hand" for their unique ability to turn any ingredient into a tiramisu cake.  
+  - Typically very quiet, often leaving others confused about what they want to say.  
+
+- **Pu**  
+  - A gray-patterned Scottish Fold cat, usually seen with their eyes closed.  
+  - The head chef of Bakery Feliz, with great pride in their culinary skills.  
+  - For some unknown reason, Pu seems to understand Wand’s unspoken words perfectly.  
+
+- **(Future Characters)**  
+  - Look forward to the next version for new additions!
+
+### Setting
+- **The Village**  
+  - A common hillside neighborhood that looks like it could exist anywhere, but it’s uniquely inhabited only by cats.  
+
+- **MT.CATUS**  
+  ![MT.CATUS](asset/README/Story2.png)  
+  - An ultra-high "cat tower" that suddenly appeared in the center of the village.  
+  - The top of the tower features a prominent sign reading "MT.CATUS."  
+
+- **Bakery Feliz**  
+  ![Bakery Feliz](asset/README/Story3.png)  
+  - A bakery run by Pu.  
+  - Due to the nocturnal nature of most cats, the number of customers increases as time goes on.  
+  - Interestingly, Pu runs the bakery based on their whims and often closes during peak hours.  
 
 ---
 
