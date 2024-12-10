@@ -144,18 +144,139 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 - **주요 구현 사항**
   - 싱글톤 패턴 : AudioManager, GameManager 등
     - AudioManager
-      
-    - 설명 설명
+    ```csharp
+    public class AudioManager : MonoBehaviour
+    {
+        public static AudioManager instance;
+        public AudioClip[] bgmClips;
+        public float bgmVolume;
+        private AudioSource bgmPlayer;
+        public enum BGM { MainMenu, Prologue }
+    
+        private void Awake()
+        {
+            instance = this;
+            Init();
+        }
+    
+        private void Start()
+        {
+            bgmPlayer.Stop();
+    
+            if (SceneManager.GetActiveScene().name == "MainMenu")
+                PlayBgm(BGM.MainMenu);
+            else if (SceneManager.GetActiveScene().name == "Prologue")
+                PlayBgm(BGM.Prologue);
+        }
+    
+        private void Init()
+        {
+            // Initialize bgmPlayer
+            GameObject bgmObject = new GameObject("BGM Player");
+            bgmObject.transform.parent = transform;
+            bgmPlayer = new AudioSource();
+    
+            bgmPlayer = bgmObject.AddComponent<AudioSource>();
+            bgmPlayer.playOnAwake = false;
+            bgmPlayer.loop = true;
+            bgmPlayer.volume = bgmVolume;
+        }
+    
+        public void PlayBgm(BGM bgm)
+        {
+            bgmPlayer.clip = bgmClips[(int)bgm];
+            bgmPlayer.Play();
+        }
+    
+        public void VolumeController(float volume)
+        {
+            bgmVolume = volume;
+            bgmPlayer.volume = bgmVolume;
+        }
+    ```
+    : 전체 게임에 계속 관여해야 하는 요소는 싱글톤 패턴을 활용하여 제작했습니다.  
+    : 배경 음악은 각 장면마다 정해진 음악이 따로 있으므로 열거형 자료 enum BGM으로 선언하였습니다.  
+    : 또한 싱글톤으로 제작된 만큼 ```AudioManager.instance.VolumeController(0)```의 함수를 어디서든 호출할 수 있습니다.
+    
   - 상태 패턴 : Player, Customer
-    - Customer.cs
-      
-    - CustomerStateMachin.cs
-      
-    - EnteringState.cs
-         
-    - AnnoyingState.cs
-      
-    - 설명 설명
+    - CustomerStateMachine.cs
+    ```csharp
+    public class CustomerStateMachine : MonoBehaviour
+    {
+        public CustomerState Order;
+        public CustomerState Enjoy;
+        public CustomerState currentState;
+        
+        private void Start()
+        {
+            Order = gameObject.AddComponent<OrderingState>();
+            Enjoy = gameObject.AddComponent<EnjoyingState>();
+    
+            ChangeState(Order);
+        }
+    
+        public void ChangeState(CustomerState newState)
+        {
+            currentState?.Exit();
+            currentState = newState;
+            currentState?.Enter(this);
+        }
+    }
+    ```
+    - CustomerState.cs
+    ```csharp
+    public abstract class CustomerState : MonoBehaviour
+    {
+        protected CustomerStateMachine stateMachine;
+        protected Customer customer;
+        protected Vector2 direction = Vector2.zero;
+    
+        public virtual void Enter(CustomerStateMachine stateMachine)
+        {
+            Debug.Log($"State : {GetType().Name}");
+            this.stateMachine = stateMachine;
+            customer = GetComponent<Customer>();
+            customer.timer.fillAmount = 1;
+        }
+    
+        public abstract void _Update();
+        public abstract void Exit();
+    }
+
+    ```
+    - EnjoyingState.cs
+    ```csharp
+    using UnityEngine;
+
+    public class EnjoyingState : CustomerState
+    {
+        private float maxTime;
+    
+        public override void Enter(CustomerStateMachine stateMachine)
+        {
+            base.Enter(stateMachine);
+            customer.enjoyingTime += Random.Range(0, 2);
+            maxTime = customer.enjoyingTime;
+            GameManager.instance.GainBalloon(true, customer.menu.GetCookingTime());
+        }
+    
+        public override void Exit() {}
+    
+        public override void _Update()
+        {
+            customer.enjoyingTime -= Time.deltaTime;
+            customer.timer.fillAmount = customer.enjoyingTime / maxTime;
+            
+            if (customer.enjoyingTime < 0)
+                stateMachine.ChangeState(stateMachine.Leave);
+        }
+    }
+    ```
+    : 상호작용에 따라 행동 양상이 달라야 하는 오브젝트는 상태 패턴을 활용하여 제작했습니다.  
+    : 모든 상태의 근간이 되는 클래스를 추상클래스로 선언하고 이를 상속하여 각 상태를 구체화했습니다.
+    : 이렇게 만들어진 여러 상태를 상황에 맞게 오갈 수 있도록 상태 머신을 선언했습니다.
+    : 상태 머신은 아래 코드와 같이 해당 상태를 반영해야 하는 객체 내부에 삽입되어 작동됩니다.
+    
   - DOTWEEN : Cutscene에 들어가는 요소
     - ㅇㅇ
       
