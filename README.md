@@ -1,14 +1,32 @@
-# DAWN
+![Banner](asset/README/README_banner.png)
 
-Welcome to **DAWN**, an exciting bakery tycoon game where creativity meets business strategy!
+# 🐈‍⬛ DAWN
+A chaotic bakery tycoon adventure set in Bakery Feliz, **DAWN**.  
+  
+<ins>※ We highly recommend checking the **control keys** before playing the game.</ins>
+
+---
+
+## 📋 Table of Contents
+1. [Game PV](#-game-pv)
+2. [Contributors](#-contributors)
+3. [Motivation](#-motivation)
+4. [Story](#-story)
+5. [Control Keys](#-control-keys)
+6. [How to Play](#-how-to-play)
+7. [Implemented Features](#-implemented-features)
+8. [License](#-license)
+9. [References](#-references)
+10. [Development Status](#-development-status)
 
 ---
 
-## 🎥 Game Promotional Video
-Check out our 60-second promotional video for a sneak peek into the game's world and features:
-[![Game PV](link-to-your-thumbnail-or-image)](link-to-your-video)
+## 🎥 Game PV
+[![Game PV](https://img.youtube.com/vi/G1nTNvpd6xU/maxresdefault.jpg)](https://www.youtube.com/watch?v=G1nTNvpd6xU)  
+▲ DAWN PV (95s): Click to visit the link.
 
 ---
+
 
 ## 👥 Contributors
 - **Your Name** (Role: Developer)
