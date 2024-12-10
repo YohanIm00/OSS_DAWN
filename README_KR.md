@@ -58,11 +58,12 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 다른 건 다 못해도 티라미수 케이크 만드는 재능 하나만큼은 일품인 검은 고양이 완드.  
 어느 날 갑작스레 솟아오른 초거대 캣타워 MT.CATUS에 마음을 완전히 사로잡히고 만다.  
 그렇게 넋을 놓고 타워를 오르려던 찰나, 타워의 꼭대기로부터 익숙한 울음소리가 들린다.    
-그게 동생이라는 사실을 깨달은 완드는 이 난관을 어떻게 극복할지 고민하다 다음의 결론을 내린다.  
+그게 동생이라는 사실을 깨달은 완드는 이 난관을 어떻게 해결할지 고민한다.  
+그때 완드의 머리를 엄청난 아이디어가 하나 번뜩이는데,  
   
 '티라미수 케이크와 풍선을 맞바꿔서, 그걸 타고 올라가야겠다!'  
   
-완드의 목표는 풍선 1,000개! 과연, 우리의 완드는 풍선을 충분히 모아 동생과 다시 만날 수 있을 것인가...
+목표는 풍선 1,000개! 과연 우리의 완드는 풍선을 충분히 모아 동생과 다시 만날 수 있을 것인가...
 
 ### 등장인물
 ![Characters](asset/README/Story1.png)
@@ -134,14 +135,23 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 - 손님의 주문이 들어오면 손님에게 다가가 S키를 눌러 주문을 받습니다.
   - 제때 주문을 받지 않는다면, 손님이 화가 난 채로 밖을 나가버립니다.
   - 화난 고양이 손님은 그 대가로 풍선을 터뜨려버리니 조심하세요!
+    ![Bake5](https://github.com/user-attachments/assets/a337ec14-bad8-48b3-bec2-07f55b594fd0)
 - 주문을 받고서 주방장(푸)에게 다가가 S키를 누르면 요리를 시작합니다.
-  - 요리는 주문의 종류에 따라 3초 혹은 5초가 걸립니다.
+  - 주문은 한 번에 10개씩 받을 수 있으며, 동시에 최대 4개의 메뉴를 조리할 수 있습니다.
+  - 조리 시간은 메뉴에 따라 3초 혹은 5초가 걸립니다.
+    ![Bake1](https://github.com/user-attachments/assets/15bee0c5-d93e-4752-9a6d-cd29cb2fdfcc)
+    ![Bake2](https://github.com/user-attachments/assets/35fa3628-e097-4101-8f38-1cd364448422)
+
 - 요리가 끝나면, 오븐 특유의 요리 완료 소리가 들린 뒤 카운터에 해당 메뉴가 진열됩니다.
   - 마찬가지로 카운터에서 S키를 누르면 완성된 순서대로 요리를 집을 수 있습니다.
   - 요리는 한 번에 두 개씩 들고 다닐 수 있습니다.
+    ![Bake3](https://github.com/user-attachments/assets/ddd551fb-7600-4c2e-a272-c15529e1a1f4)
 - 완성된 요리를 들고 손님에게 가서 S키를 누르면 서빙을 할 수 있습니다.
   - 주문한 요리가 맞다면 손님이 이를 맛있게 먹고 바로 풍선을 줄 것입니다.
   - 주문한 요리와 다르다면, 아무 반응을 하지 않습니다. 다시 한 번 주문을 확인하세요!
+    ![Bake4](https://github.com/user-attachments/assets/06a2935e-cf86-41c6-9728-b861f7a902f3)
+  - 뿐만 아니라 **요리를 손에 든 채**로는 주문을 받을 수 없습니다! 손에 든 걸 먼저 손님께 드린 뒤에 받도록 합시다.
+    
 - 혹시 서빙 과정에서 착오가 생겨서 음식이 남아버렸다면... E키나 R키를 눌러서 손에 들고 있는 음식을 먹을 수 있습니다.
   - 음식을 먹으면 먹은 후에 포만도가 일정 값 차게 됩니다.
   - 포만도가 가득 차게 될 경우 잠시 동안 느려지므로 주의하세요!
@@ -398,10 +408,10 @@ https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attent
 - Disney·Pixar 영화 "업(2009)"  
   https://www.disneyplus.com/en-kr/movies/up/3XiRSXriK0E8
 - 컴투스, 액션퍼즐패밀리 "삼촌의 니편 내편"  
-  https://namu.wiki/w/%EB%8F%8C%EC%95%84%EC%98%A8%20%EC%95%A1%EC%85%98%20%ED%8D%BC%EC%A6%90%20%ED%8C%A8%EB%B0%80%EB%A6%AC#s-2.3
+  https://namu.wiki/w/%EB%8F%8C%EC%95%84%EC%98%A8%20%EC%95%A1%EC%85%98%20%ED%8D%BC%EC%A6%90%20%ED%8C%A8%EB%B0%80%EB%A6%AC#s-2.3  
   https://www.youtube.com/watch?v=IcLeiSNtSkA&t=9s
 - 아툰즈, 비비빅 "뿌띠빠띠"  
-  https://namu.wiki/w/%EB%BF%8C%EB%9D%A0%EB%B9%A0%EB%9D%A0
+  https://namu.wiki/w/%EB%BF%8C%EB%9D%A0%EB%B9%A0%EB%9D%A0  
   https://www.youtube.com/watch?v=trNmfPZuuaM
 
 **[개발]**
@@ -472,9 +482,10 @@ https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attent
 - 게임 종료와 장면 간 이동
 - 오디오 매니저
 
-### 직면한 과제
+### 현재 과제
 - ScriptableObject의 한계
   - 유니터 에디터 내에서는 값을 쓰고 불러오는 게 가능했으나, 빌드 이후에는 불가능
+  - 달리 말하면, 빌드 이후에는 유니터 에디터에서 가장 마지막에 변경한 값만 불러옴
   - ScriptableObject는 저장해둔 데이터를 불러오는 데에는 유용하게 쓸 수 있는 것으로 보임
   - 그러나 해당 ScriptableObject의 값을 특정 신에서 바꾸는 것은 되지 않는 것으로 판명
 - 내부 구조 문제
@@ -482,7 +493,8 @@ https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attent
   - 싱글톤 패턴이 과도하게 쓰여서 게임을 확장할수록 메모리 관리에 난항을 겪을 가능성이 큼
 - 가끔씩 한 자리에 두 명의 손님이 앉는 경우
 - 플레이어가 먹는 행동과 관련한 몇몇 버그
-  - 타이밍에 따라 먹는 동안 이동이 되기도 하는 등
+  - 타이밍에 따라 먹는 동안 이동이 되거나 먹고 나서 이동이 안 되는 등 문제가 많다...
+  - 게임의 밸런스 측면에서도 Munch()는 반드시 개선해야 한다: 플레이어가 활용할 수 있는 하나의 도구가 되었으면 함
 
 ### 향후 계획
 - json을 활용하여 저장해야 데이터를 따로 관리
