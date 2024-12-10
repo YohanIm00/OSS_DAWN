@@ -85,7 +85,7 @@ The goal is 1,000 balloons! Will our Wand manage to gather enough balloons to re
 - **(Future Characters)**  
   - Look forward to the next version for new additions!
 
-### Setting
+### Environment
 - **The Village**  
   - A common hillside neighborhood that looks like it could exist anywhere, but it’s uniquely inhabited only by cats.  
 
@@ -102,12 +102,23 @@ The goal is 1,000 balloons! Will our Wand manage to gather enough balloons to re
 
 ---
 
-## 🎮 Operation Keys
-Here are the default controls for the game:
-- **WASD/Arrow Keys**: Move character
-- **Space**: Interact
-- **E**: Open Inventory
-- **Esc**: Pause Menu
+## 🎮 Control Keys
+### Sorting Game
+- **Arrow Keys**  
+  - (Left Arrow): Serve tiramisu.  
+  - (Right Arrow): Serve milk.
+
+### Main Game
+- **Arrow Keys**  
+  Move the character up, down, left, and right.  
+- **Spacebar**  
+  Interact during cutscenes and dialogues.  
+- **S** : **S**erving  
+  - (Customers): Take orders, serve completed dishes.  
+  - (Chef): Place orders, collect prepared dishes.  
+- **E, R** : l**E**ft & **R**ight  
+  - (E): Eat the food in the left hand.  
+  - (R): Eat the food in the right hand.
 
 ---
 
