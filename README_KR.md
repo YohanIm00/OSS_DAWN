@@ -1,4 +1,4 @@
-![게임 배너](asset/README/README_banner.png)
+![Banner](asset/README/README_banner.png)
 
 # 🐈‍⬛ DAWN
 베이커리 펠리즈에서 이뤄지는 좌충우돌 제과점 타이쿤, **DAWN**.  
@@ -8,7 +8,7 @@
 ---
 
 ## 📋 목차
-1. [PV](#-PV)
+1. [게임 PV](#-게임-PV)
 2. [프로젝트 기여자](#-프로젝트-기여자)
 3. [제작 동기](#-제작-동기)
 4. [스토리](#-스토리)
@@ -17,43 +17,46 @@
 7. [구현](#-구현)
 8. [라이선스](#-라이선스)
 9. [참고 자료](#-참고-자료)
-10. [개발 사항](#-개발-사항)
+10. [개발 현항](#-개발-현항)
 
 ---
 
-## 🎥 PV
-[![게임 PV](https://img.youtube.com/vi/G1nTNvpd6xU/maxresdefault.jpg)](https://www.youtube.com/watch?v=G1nTNvpd6xU)
+## 🎥 게임 PV
+[![Game PV](https://img.youtube.com/vi/G1nTNvpd6xU/maxresdefault.jpg)](https://www.youtube.com/watch?v=G1nTNvpd6xU)
 ▲ DAWM PV (95s) : 누르면 해당 링크로 이동합니다.
 
 ---
 
 ## 👥 프로젝트 기여자
 ### 최초 개발
-- **[전성현](https://github.com/Hyuni02)**_DAWN 최초 기획, 게임 로직 구현 및 전체 개발
-- **[심지섭](https://github.com/JisubShim)**_주방장 구현 및 상호작용 개발, 전체 코드 리팩토링
-- **[임요한](https://github.com/YohanIm00)**_아트 디자인, 플레이어 구현 등 간단한 개발
+- **<a href="https://github.com/Hyuni02" target="_blank"> 전성현 </a>**_DAWN 최초 기획, 게임 로직 구현 및 전체 개발
+- **<a href="https://github.com/JisubShim" target="_blank"> 심지섭 </a>**_주방장 구현 및 상호작용 개발, 전체 코드 리팩토링
+- **<a href="https://github.com/YohanIm00" target="_blank"> 임요한 </a>**_아트 디자인, 플레이어 구현 등 간단한 개발
 ### 게임 PV
-- **[박승용](https://github.com/RuneLune)**_동영상 및 사운드 편집
-- **[심지섭](https://github.com/JisubShim)**_동영상 제작 및 선별 (Vidu)
-- **[임요한](https://github.com/YohanIm00)**_PV 시나리오 집필
-- **[정윤석](https://github.com)**_정지 이미지 제작 (MidJourney)
+- **<a href="https://github.com/RuneLune" target="_blank"> 박승용 </a>**_동영상 및 사운드 편집
+- **<a href="https://github.com/JisubShim" target="_blank"> 심지섭 </a>**_동영상 제작 및 선별 (Vidu)
+- **<a href="https://github.com/YohanIm00" target="_blank"> 임요한 </a>**_PV 시나리오 집필
+- **<a href="https://github.com" target="_blank"> 정윤석 </a>**_정지 이미지 제작 (MidJourney)
 ### 후속 개발
-- **[임요한](https://github.com/YohanIm00)**_게임 신 재구성 및 추가 기능 구현
-- **[임다혜](https://blog.naver.com/pz_jb_008)**_게임 전체 아트워크 개편
+- **<a href="https://github.com/YohanIm00" target="_blank"> 임요한 </a>**_게임 신 재구성 및 추가 기능 구현
+- **<a href="https://blog.naver.com/pz_jb_008" target="_blank"> 임다혜 </a>**_게임 전체 아트워크 개편
 
 ---
 
 ## 💡 제작 동기
+![PLUM JAM](asset/README/Motivation0.png)
 DAWN은 게임개발 동아리 PLUM의 여름방학 프로그램인 2024 PLUM JAM에서 탄생한 작품입니다.  
 PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발 해커톤으로, 당시 키워드는 '티라미수 케이크'와 '풍선'이었습니다.  
 이를 어떻게 아우를까 고민하던 끝에, '매우 높은 곳을 풍선 다발로 올라가고자 티라미수를 파는 고양이'로 이야기의 가닥이 잡혔습니다.
+![DAWN_ver0](asset/README/Motivation2.png)
 
 ---
 
 ## 📖 스토리
-### 시놉시스  
+### 시놉시스
+![Synopsis](asset/README/Story0.png)
 다른 건 다 못해도 티라미수 케이크 만드는 재능 하나만큼은 일품인 검은 고양이 완드.  
-어느 날 갑작스레 솟아오른 초거대 캣타워 Mt.Catus에 마음을 완전히 사로잡히고 만다.  
+어느 날 갑작스레 솟아오른 초거대 캣타워 MT.CATUS에 마음을 완전히 사로잡히고 만다.  
 그렇게 넋을 놓고 타워를 오르려던 찰나, 타워의 꼭대기로부터 익숙한 울음소리가 들린다.    
 그게 동생이라는 사실을 깨달은 완드는 이 난관을 어떻게 극복할지 고민하다 다음의 결론을 내린다.  
   
@@ -62,6 +65,8 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 완드의 목표는 풍선 1,000개! 과연, 우리의 완드는 풍선을 충분히 모아 동생과 다시 만날 수 있을 것인가...
 
 ### 등장인물
+![Characters](asset/README/Story1.png)
+▲ 캐릭터 컨셉아트: 왼쪽이 완드, 오른쪽이 푸이다.
 - 완드(Wand)
   - 검은 털의 도메스틱 숏헤어 고양이, 호박색 홍채가 돋보인다.
   - 어떤 재료를 가져다 주더라도 그걸 모두 티라미수 케이크로 만들고 만다. 통칭 "티라미수 손".
@@ -76,10 +81,12 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 ### 배경
 - 달동네
   - 우리네 주변에 보일 법한 흔하디 흔한 달동네. 특이하게도 오직 고양이들만 살고 있다.
-- MT.CATUS
+- MT.CATUS  
+  ![MT.CATUS](asset/README/Story2.png)
   - 달동네 중앙에 난데없이 솟아난 초고층의 "캣 타워"
   - 캣 타워의 상단에는 MT.CATUS라는 간판이 떡하니 붙어 있다.
 - 베이커리 펠리즈(Feliz)
+  ![Bakery Feliz](asset/README/Story3.png)
   - 푸가 운영하는 베이커리.
   - 고양이가 대부분 야행성인 탓인지, 시간이 지날수록 손님이 많아진다.
   - 푸의 흥미 위주로 하는 장사라서 피크 타임에는 되려 문을 닫는다고 한다. 
@@ -451,7 +458,7 @@ https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attent
 
 ---
 
-## 🛠️ 개발 사항
+## 🛠️ 개발 현항
 ### 개발 완료
 - 메인 메뉴 디자인
 - 플레이어, NPC 등의 요소
@@ -467,8 +474,8 @@ https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attent
   - ScriptableObject는 저장해둔 데이터를 불러오는 데에는 유용하게 쓸 수 있는 것으로 보임
   - 그러나 해당 ScriptableObject의 값을 특정 신에서 바꾸는 것은 되지 않는 것으로 판명
 - 내부 구조 문제
-  - 초기 게임부터가 20시간 만에 만들어지다 보니, 구조가 다소 혼재되어 있음
-  - 싱글톤 패턴이 과도하게 쓰여서 메모리 누수가 발생할 확률이 꽤 높음
+  - 초기 게임부터가 20시간 만에 만들어지다 보니, 구조가 다소 뒤죽박죽인 면이 있음
+  - 싱글톤 패턴이 과도하게 쓰여서 게임을 확장할수록 메모리 관리에 난항을 겪을 가능성이 큼
 - 가끔씩 한 자리에 두 명의 손님이 앉는 경우
 - 플레이어가 먹는 행동과 관련한 몇몇 버그
   - 타이밍에 따라 먹는 동안 이동이 되기도 하는 등
