@@ -420,21 +420,100 @@ https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55
 
 ---
 
-
----
-
 ## 📜 License
-This project is licensed under the [License Name] License.  
-See the [LICENSE](link-to-license-file) file for details.
+- DAWN is licensed under [CC BY-NC 4.0](https://github.com/YohanIm00/OSS_DAWN/blob/main/LICENSE).  
+- Modifications and redistribution of the code are allowed. As this project will continue to be developed, feedback on the code is highly encouraged and will be actively incorporated.  
+- However, all artwork used in the game belongs to the original creators. Therefore, modification or redistribution of the artwork for commercial purposes is discouraged.  
 
 ---
 
 ## 📚 References
-- **Game Inspirations**: [Games/Articles/Media Links]
-- **Unity Documentation**: [Unity Official Docs](https://unity.com/)
-- **Assets**: [Link to assets used]
+### PV
+- AI video creation: **Vidu Studio**  
+  http://www.vidu.studio  
+- Vidu Prompt Writing Guide  
+  https://pkocx4o26p.feishu.cn/docx/UCc6dHBE3ohwqxxCgDPcSEMinMc  
+- MidJourney Official Documentation  
+  https://docs.midjourney.com/  
+- MidJourney Prompt Creation Channel  
+  https://www.midjourney.com/auth/signin?callbackUrl=%2Frooms%2F44a30f92-a8c1-470b-a553-86f49add2a7a  
+- Bao, Fan, et al., *"Vidu: a highly consistent, dynamic and skilled text-to-video generator with diffusion models."*  
+- Cheng, Evelyn. *"Chinese AI startup takes aim at OpenAI’s Sora with image-to-video tool launch."*  
+  https://www.cnbc.com/2024/11/14/chinese-ai-startup-shengshu-launches-image-to-video-tool-rivaling-sora.html  
+- Monge, Jim Clyde. *"Vidu is the New AI Video Generator We Should Pay Attention to."*  
+  https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attention-to-e6a12a07fe97  
+
+### Games
+**[Inspirations]**
+- Disney·Pixar movie *"Up (2009)"*  
+  https://www.disneyplus.com/en-kr/movies/up/3XiRSXriK0E8  
+- Com2uS, Action Puzzle Family *"Uncle's side of you"*  
+  https://namu.wiki/w/%EB%8F%8C%EC%95%84%EC%98%A8%20%EC%95%A1%EC%85%98%20%ED%8D%BC%EC%A6%90%20%ED%8C%A8%EB%B0%80%EB%A6%AC#s-2.3  
+  https://www.youtube.com/watch?v=IcLeiSNtSkA&t=9s  
+- Atoonz, VVVic *"Bread'n Butter"*  
+  https://namu.wiki/w/%EB%BF%8C%EB%9D%A0%EB%B9%A0%EB%9D%A0  
+  https://www.youtube.com/watch?v=trNmfPZuuaM  
+
+**[Development]**
+- Unity Official Documentation  
+  https://unity.com/  
+- Goldmetal_Unity Game Development Playlist(KR)  
+  https://www.youtube.com/@goldmetal/playlists  
+- Sunny Valley Studio_How to reuse Animation Clip for other characters in Unity  
+  https://www.youtube.com/watch?v=6mNak-mQZpc  
+- Root Games_(FREE COURSE) Make awesome CUTSCENES in Unity using Timeline  
+  https://www.youtube.com/watch?v=MpYIoAoE0bE&t=134s  
+- Tarodev_DOTWEEN is the BEST Unity asset in the WORLD and I'll fight anybody who disagrees  
+  https://www.youtube.com/watch?v=Y8cv-rF5j6c  
+- David Dunnings_EaseyEase - All 41 ease types  
+  https://www.youtube.com/watch?v=uhEZ8hzwPTU  
+- WER's GAME DEVELOP YOUTUBE_[Unity/MiddleClass] Scriptable Object(KR)  
+  https://www.youtube.com/watch?v=7Qt4QNhM4nY  
+- State Pattern - Master It Completely(KR)  
+  https://inpa.tistory.com/entry/GOF-%F0%9F%92%A0-%EC%83%81%ED%83%9CState-%ED%8C%A8%ED%84%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EC%9E%90  
+
+**[Assets]**
+- Modern Interiors RPG Tileset  
+  https://limezu.itch.io/moderninteriors  
+- DOTWEEN Plugin  
+  https://dotween.demigiant.com/  
+- KoreanTyper  
+  https://github.com/KimYC1223/KoreanTyper  
+
+- **Background Music**  
+  https://pixabay.com/music/acoustic-group-corporate-ukulele-optimistic-light-262592/  
+  https://pixabay.com/music/modern-classical-the-way-home-6674/  
+  https://pixabay.com/music/traditional-jazz-wiggle-until-you-giggle-217437/  
+  https://pixabay.com/music/smooth-jazz-10-chocolate-lofi-cafe-upbeat-257740/  
+  https://pixabay.com/music/traditional-jazz-cafe-music-163375/  
+  https://pixabay.com/music/acoustic-group-calm-acoustic-60-seconds-267027/  
+  https://pixabay.com/music/jingles-piano-cassical-brand-motive-logo-9997/  
+
+- **Sound Effects**  
+  https://pixabay.com/sound-effects/menu-selection-102220/  
+  https://pixabay.com/sound-effects/90s-game-ui-7-185100/  
+  https://pixabay.com/sound-effects/ui-click-43196/  
+  https://pixabay.com/sound-effects/quake-and-break-99034/  
+  https://pixabay.com/sound-effects/kitten-meowing-105618/  
+  https://pixabay.com/sound-effects/ding-idea-40142/  
+  https://pixabay.com/sound-effects/piano-glide-259500/  
+  https://pixabay.com/sound-effects/referee-whistle-blow-gymnasium-6320/  
+  https://pixabay.com/sound-effects/bellding-254774/  
+  https://pixabay.com/sound-effects/correct-2-46134/  
+  https://pixabay.com/sound-effects/wrong-47985/  
+  https://pixabay.com/sound-effects/door-chimes-66502/  
+  https://pixabay.com/sound-effects/bell-chime-238836/  
+  https://pixabay.com/sound-effects/cali-meow-242762/  
+  https://pixabay.com/sound-effects/annoyed-cat-meow-193067/  
+  https://pixabay.com/sound-effects/short-meow-kitten-230900/  
+  https://pixabay.com/sound-effects/cookies-are-ready-95956/  
+  https://pixabay.com/sound-effects/place-glass-object-81857/  
+  https://pixabay.com/sound-effects/balloon-pop-48030/  
+  https://pixabay.com/sound-effects/electricity-sound-6066/  
+  https://pixabay.com/sound-effects/spotlight-91359/  
 
 ---
+
 
 ## 🛠️ Development Matters
 ### Current Status
