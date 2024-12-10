@@ -42,7 +42,7 @@ If you wanna see a Korean README.md, [CLICK HERE](https://github.com/YohanIm00/O
 
 ### Follow-up Development
 - **<a href="https://github.com/YohanIm00" target="_blank"> Yohan Im </a>** - Reconstructed game scenes and implemented additional features.
-- **<a href="https://blog.naver.com/pz_jb_008" target="_blank"> Dahye Im </a>** - Redesigned the entire game artwork.
+- **<a href="https://blog.naver.com/pz_jb_008" target="_blank"> PZJB </a>** - Redesigned the entire game artwork.
 
 ---
 
