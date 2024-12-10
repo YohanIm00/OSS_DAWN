@@ -1,19 +1,30 @@
-# 게임 이름
+![게임 배너](https://drive.google.com/file/d/1LtO1M25-J6RblH2DAuX32SKcgR34GNaa/view?usp=sharing)
 
-**게임 이름**에 오신 것을 환영합니다! 창의력과 경영 전략이 만나는 흥미로운 제과점 경영 게임입니다.
+# 🐈‍⬛ DAWN
+
+**DAWN**을 찾아오신 모든 여러분, 환영합니다! DAWN은 흥미로운 제과점 타이쿤 게임입니다.
 
 ---
 
 ## 🎥 게임 프로모션 영상 (PV)
-게임의 세계와 기능을 엿볼 수 있는 60초 프로모션 영상을 확인해 보세요:
-[![Game PV](link-to-your-thumbnail-or-image)](link-to-your-video)
+[![게임 PV](https://img.youtube.com/vi/G1nTNvpd6xU/maxresdefault.jpg)](https://www.youtube.com/watch?v=G1nTNvpd6xU)
+▲ DAWM PV (95s) : 누르면 해당 링크로 이동합니다.
 
 ---
 
-## 👥 기여자
-- **당신의 이름** (역할: 개발자)
-- **기여자 2 이름** (역할)
-- **기여자 3 이름** (역할)
+## 👥 프로젝트 기여자
+### 최초 개발
+- **[전성현](https://github.com/Hyuni02)**_DAWN 최초 기획, 게임 로직 구현 및 전체 개발
+- **[심지섭](https://github.com/JisubShim)**_주방장 구현 및 상호작용 개발, 전체 코드 리팩토링
+- **[임요한](https://github.com/YohanIm00)**_아트 디자인, 플레이어 구현 등 간단한 개발
+### 게임 PV
+- **[박승용](https://github.com/RuneLune)**_동영상 및 사운드 편집
+- **[심지섭](https://github.com/JisubShim)**_동영상 제작 및 선별 (Vidu)
+- **[임요한](https://github.com/YohanIm00)**_PV 시나리오 집필
+- **[정윤석](https://github.com)**_정지 이미지 제작 (MidJourney)
+### 후속 개발
+- **[임요한](https://github.com/YohanIm00)**_게임 신 재구성 및 추가 기능 구현
+- **[임다혜](https://blog.naver.com/pz_jb_008)**_게임 전체 아트워크 개편
 
 ---
 
