@@ -514,17 +514,56 @@ https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55
 
 ---
 
+## 🛠️ Development Status
+### Completed
+- Main menu design  
+- Player, NPC, and other elements  
+- Sub sorting game  
+- Main tycoon game  
+- Dialogue system  
+- Game over and scene transitions  
+- Audio manager  
 
-## 🛠️ Development Matters
-### Current Status
-[Briefly describe the current development stage, e.g., "Prototype Completed" or "Beta Testing"]
+### Current Issues
+- **Limitations of ScriptableObject**  
+  - Values can be written and retrieved within the Unity Editor but are inaccessible after building the game.  
+  - In other words, after the build, only the last value modified in the Unity Editor can be retrieved.  
+  - While ScriptableObject is useful for loading pre-saved data, it seems unsuitable for modifying values during user's gameplay.  
 
-### Challenges Faced
-[Discuss technical or design challenges you’ve faced during development.]
+- **Internal Structure Problems**  
+  - The initial game was developed within 20 hours, resulting in a somewhat chaotic structure.  
+  - Overuse of the Singleton pattern may lead to difficulties in memory management as the game expands.  
+
+- **Occasional Overlapping of Customers**  
+  - Two customers sometimes occupy the same position.  
+
+- **Bugs Related to Player Eating Actions**  
+  - Depending on timing, the player can move while eating or becomes unable to move after eating...  
+  - From a balance perspective, the `Munch()` action needs improvement: it should function as a useful option for the player.  
 
 ### Future Plans
-- Add new features like [feature idea].
-- Expand the storyline with more chapters.
+- **Implement Data Management Using JSON**  
+  - Separate and manage data beyond just the number of balloons, such as other necessary game variables.  
+  - Develop objects like `DataManager` or `StageManager` to load stage-specific data dynamically.  
+
+- **Refactor the Entire Game Structure**  
+  - Minimize the use of Singleton patterns (limit to `GameManager`, `AudioManager`, etc.).  
+  - Apply and refine the state pattern for the chef.  
+  - Split overly attached functions in components like `GameManager` or `CustomerSpawner`.  
+  - Introduce a `UIManager` and improve `DataManager` functionalities using **SOLID principles**.  
+
+- **Fix Existing Bugs and Add New Features**  
+  - For example, add an animation where the chef glares at the player when satiety is maxed out.  
+
+- **Add Settings Button to the Main Menu**  
+  - Allow players to customize control keys to their preferences.  
+  - Implement standard features like adjusting BGM and SFX volume.  
+
+- **Enhance Main Game Features**  
+  - Display a mini-game screen when customers order tiramisu cakes.  
+
+- **Expand the Overall Story and Add Characters**  
+- **Complete and Integrate Pixel Art Graphics**  
 
 ---
 
