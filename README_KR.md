@@ -1,7 +1,6 @@
 ![게임 배너](asset/README/README_banner.png)
 
 # 🐈‍⬛ DAWN
-
 베이커리 펠리즈에서 이뤄지는 좌충우돌 제과점 타이쿤, **DAWN**.  
   
 <ins>※ 게임을 플레이하기 전에 **조작 키를 반드시 확인**하시기를 권해드립니다.</ins>
@@ -52,7 +51,7 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 ---
 
 ## 📖 스토리
-**[시놉시스]**  
+### 시놉시스  
 다른 건 다 못해도 티라미수 케이크 만드는 재능 하나만큼은 일품인 검은 고양이 완드.  
 어느 날 갑작스레 솟아오른 초거대 캣타워 Mt.Catus에 마음을 완전히 사로잡히고 만다.  
 그렇게 넋을 놓고 타워를 오르려던 찰나, 타워의 꼭대기로부터 익숙한 울음소리가 들린다.    
@@ -62,7 +61,7 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
   
 완드의 목표는 풍선 1,000개! 과연, 우리의 완드는 풍선을 충분히 모아 동생과 다시 만날 수 있을 것인가...
 
-**[등장인물]**
+### 등장인물
 - 완드(Wand)
   - 검은 털의 도메스틱 숏헤어 고양이, 호박색 홍채가 돋보인다.
   - 어떤 재료를 가져다 주더라도 그걸 모두 티라미수 케이크로 만들고 만다. 통칭 "티라미수 손".
@@ -74,7 +73,7 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 - (추후 캐릭터 추가 예정)
   - 다음 버전을 기대해주세요!
 
-**[배경]**
+### 배경
 - 달동네
   - 우리네 주변에 보일 법한 흔하디 흔한 달동네. 특이하게도 오직 고양이들만 살고 있다.
 - MT.CATUS
@@ -88,39 +87,39 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 ---
 
 ## 🎮 조작 키
-게임의 기본 조작키는 다음과 같습니다.  
-  
-**[분류 게임]**
+### 분류 게임
 - **방향키**  
 (왼쪽 방향키) 티라미수 주기  
 (오른쪽 방향기) 우유 주기
 
-**[메인 게임]**
+### 메인 게임
 - **방향키**  
 캐릭터 상하좌우 이동
 - **스페이스바**  
 컷신 및 대화 신 내 상호작용
-- **S**  
+- **S**  : **S**erving
 (손님) 주문 받기, 완성된 음식 주기  
 (주방장) 주문 넣기, 완성된 음식 받기
-- **E, R**  
+- **E, R**  : l**E**ft & **R**ight
 (E) 왼손에 든 음식 먹기
 (R) 오른손에 든 음식 먹기
 
 ---
 
 ## 🕹️ 게임 방법
-**[분류 게임]**
+### 분류 게임
 - 간단한 분류 게임으로 오른쪽 방향키와 왼쪽 방향키만으로 플레이할 수 있습니다.
 - 20개의 주문을 연속으로 올바르게 처리한다면 FEVER가 활성화됩니다.
   - FEVER가 활성화되는 동안에는 어느 방향키를 눌러도 점수가 오릅니다.
-  - FEVER는 3초 동안 지속됩니다. 
+  - FEVER는 3초 동안 지속됩니다.
+- 어느 상황에서든 방향키를 잘못 누르면 점수가 깎입니다.
+  - 현재 점수가 클수록 깎이는 폭도 크게 늘어나므로 주의하도록 합시다.
 - 제한 시간 안에 최대한 높은 점수를 내보세요!
   - ~해당 점수는 메인 게임의 초기값으로 넘어갑니다.~
   - 넘어가야 했으나, 의도와 달리 제대로 넘어가지 않는 것을 확인했습니다.
   - 관련 문제는 "개발 현황" 단락에서 후술하도록 하겠습니다.
 
-**[메인 게임]**
+### 메인 게임
 - 손님의 주문이 들어오면 손님에게 다가가 S키를 눌러 주문을 받습니다.
   - 제때 주문을 받지 않는다면, 손님이 화가 난 채로 밖을 나가버립니다.
   - 화난 고양이 손님은 그 대가로 풍선을 터뜨려버리니 조심하세요!
@@ -142,10 +141,33 @@ PLUM JAM은 주어진 키워드를 활용하여 게임을 만드는 게임개발
 ## ⚙️ 구현
 - **엔진**: Unity
 - **프로그래밍 언어**: C#  
-- **주요 기능**:
-  - 실시간 제과점 관리 시스템.
-  - 커스터마이징 가능한 레시피와 업그레이드.
-  - 독특한 캐릭터가 등장하는 스토리 진행.
+- **주요 구현 사항**
+  - 싱글톤 패턴 : AudioManager, GameManager 등
+    - AudioManager
+      
+    - 설명 설명
+  - 상태 패턴 : Player, Customer
+    - Customer.cs
+      
+    - CustomerStateMachin.cs
+      
+    - EnteringState.cs
+         
+    - AnnoyingState.cs
+      
+    - 설명 설명
+  - DOTWEEN : Cutscene에 들어가는 요소
+    - ㅇㅇ
+      
+    - 설명 설명
+  - ScriptableObject : 게임 데이터 전반
+    - DataManager
+     
+    - MenuSO
+      
+    - BreadSO
+      
+    - 설명 설명
 
 ---
 
@@ -192,19 +214,29 @@ https://generativeai.pub/vidu-is-the-new-ai-video-generator-we-should-pay-attent
   https://www.youtube.com/watch?v=6mNak-mQZpc
 - Root Games_(FREE COURSE) Make awesome CUTSCENES in Unity using Timeline  
   https://www.youtube.com/watch?v=MpYIoAoE0bE&t=134s
+- Tarodev_DOTWEEN is the BEST Unity asset in the WORLD and I'll fight anybody who disagrees  
+  https://www.youtube.com/watch?v=Y8cv-rF5j6c
+- David Dunnings_EaseyEase - All 41 ease types  
+  https://www.youtube.com/watch?v=uhEZ8hzwPTU
+- WER's GAME DEVELOP YOUTUBE_[Unity/MiddleClass] Scriptable Object  
+- https://www.youtube.com/watch?v=7Qt4QNhM4nY
 - 상태(State) 패턴 - 완벽 마스터하기  
   https://inpa.tistory.com/entry/GOF-%F0%9F%92%A0-%EC%83%81%ED%83%9CState-%ED%8C%A8%ED%84%B4-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EC%9E%90
 
 **[에셋]**
 - Modern Interiors RPG Tileset  
-  https://limezu.itch.io/moderninteriors   
+  https://limezu.itch.io/moderninteriors
+- DOTWEEN PlugIn  
+  https://dotween.demigiant.com/
+- KoreanTyper  
+  https://github.com/KimYC1223/KoreanTyper
 - 배경음악  
   https://pixabay.com/music/acoustic-group-corporate-ukulele-optimistic-light-262592/  
   https://pixabay.com/music/modern-classical-the-way-home-6674/  
   https://pixabay.com/music/traditional-jazz-wiggle-until-you-giggle-217437/  
   https://pixabay.com/music/smooth-jazz-10-chocolate-lofi-cafe-upbeat-257740/  
   https://pixabay.com/music/traditional-jazz-cafe-music-163375/  
-  https://pixabay.com/music/acoustic-group-calm-acoustic-60-seconds-267027/
+  https://pixabay.com/music/acoustic-group-calm-acoustic-60-seconds-267027/  
   https://pixabay.com/music/jingles-piano-cassical-brand-motive-logo-9997/
 - 효과음  
   https://pixabay.com/sound-effects/menu-selection-102220/  
