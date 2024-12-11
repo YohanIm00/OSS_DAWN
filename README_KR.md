@@ -171,7 +171,7 @@ https://github.com/user-attachments/assets/a116463d-8da6-4d42-b49b-0d26bd47ee7d
 
 https://github.com/user-attachments/assets/cfe9a394-ec34-4da0-8a28-196500c2df55
 
-![Punishment](asset/README/Punishment.png)
+![Punishment_KR](asset/README/Punishment_KR.png)
 ▲ 저런, 결국에는 혼났다고 하네요... 우리는 푸에게 혼나지 않게끔 조심하도록 합시다.
 
 ---
